@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:room_sublease/utils/app_image.dart';
+import 'package:room_sublease/view/components/common_image/common_image.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
 
 // ignore: must_be_immutable
@@ -29,13 +31,7 @@ class CommonAppbar extends StatelessWidget implements PreferredSizeWidget {
             size: 30.sp,
           ),
         ),
-        title: CommonText(
-          text: title,
-          fontSize: 18.sp,
-          left: 0,
-          fontWeight: FontWeight.w700,
-          color: const Color(0xFF2A2A2A),
-        ),
+        title: CommonImage(imageSrc: AppImage.ffff,imageType: ImageType.png,height: 25,width: 25,),
       
         );
   }

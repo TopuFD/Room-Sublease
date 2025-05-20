@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CommonText extends StatelessWidget {
   const CommonText({
@@ -52,7 +53,7 @@ class CommonText extends StatelessWidget {
         maxLines: maxLines,
         overflow: overflow,
         softWrap: softWrap,
-        style: TextStyle(
+        style: GoogleFonts.manrope(
             fontSize: fontSize.sp,
             fontWeight: fontWeight,
             color: color,

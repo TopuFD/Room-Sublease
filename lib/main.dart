@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/core/dependency.dart';
 import 'package:room_sublease/helper/prefs_helper.dart';
 
@@ -52,8 +53,8 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        // getPages: AppRoute.pages,
-        // initialRoute: AppRoute.splashScreen,
+        getPages: AppRoute.pages,
+        initialRoute: AppRoute.splashScreen,
       ),
     );
   }

@@ -106,7 +106,7 @@ class OtherHelper {
       builder: (context, child) => Theme(
           data: Theme.of(context).copyWith(
             colorScheme: const ColorScheme.light(
-              primary: AppColors.blue,
+              primary: AppColors.blueDeep,
             ),
           ),
           child: child!),

@@ -30,7 +30,7 @@ class CustomScaffold extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
-            colors: [AppColors.brown500, AppColors.brown400], // Gradient Colors
+            colors: [AppColors.blueDeep, AppColors.blueDeep], // Gradient Colors
           ),
         ),
         child: body,

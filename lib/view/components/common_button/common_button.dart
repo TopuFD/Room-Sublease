@@ -7,7 +7,6 @@ import '../../../utils/app_color.dart';
 
 import '../common_text/common_text.dart';
 
-
 class CommonButton extends StatelessWidget {
   final VoidCallback? onTap;
   final String titleText;
@@ -29,11 +28,11 @@ class CommonButton extends StatelessWidget {
       {this.onTap,
       required this.titleText,
       this.titleColor = AppColors.white,
-      this.buttonColor = const Color(0xFF075B5D),
+      this.buttonColor = AppColors.blueDeep,
       this.titleSize = 20,
-      this.buttonRadius = 16,
+      this.buttonRadius = 50,
       this.titleWeight = FontWeight.w500,
-      this.buttonHeight = 58,
+      this.buttonHeight = 56,
       this.borderWidth = 1,
       this.isLoading = false,
       this.buttonWidth = double.infinity,
@@ -52,7 +51,6 @@ class CommonButton extends StatelessWidget {
         style: ButtonStyle(
             padding: WidgetStateProperty.all(EdgeInsets.zero),
             backgroundColor: WidgetStateProperty.all(buttonColor),
-            
             shape: WidgetStateProperty.all(
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(buttonRadius.r),
