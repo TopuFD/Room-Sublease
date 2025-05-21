@@ -65,7 +65,7 @@ class NotificationScreen extends StatelessWidget {
       child: Row(
         children: [
           10.width,
-          SvgPicture.asset(AppIcons.notification2),
+          SvgPicture.asset(AppIcons.visibilityOff),
           10.width,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

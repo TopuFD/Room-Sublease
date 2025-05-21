@@ -31,13 +31,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: currentIndex == 0
-          ? AppColors.brown50
-          : currentIndex == 1
-              ? AppColors.brown10
-              : AppColors.brown,
-    ));
     return Scaffold(
       backgroundColor: currentIndex == 0
           ? AppColors.brown50
@@ -102,14 +95,29 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     setState(() {
                       currentIndex++;
                     });
+
+                    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+                      statusBarColor: currentIndex == 0
+                          ? AppColors.brown50
+                          : currentIndex == 1
+                              ? const Color(0xFFF5E2D1)
+                              : const Color(0xFFFFC7C2),
+                    ));
                   } else {
                     Get.toNamed(AppRoute.signupChooserScreen);
+
+                    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+                      statusBarColor: AppColors.blue50,
+                    ));
                   }
                 },
                 titleText: "Next"),
             CommonButton(
               onTap: () {
                 Get.toNamed(AppRoute.signupChooserScreen);
+                SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+                  statusBarColor: AppColors.blue50,
+                ));
               },
               titleText: "Skip",
               buttonColor: AppColors.transparent,

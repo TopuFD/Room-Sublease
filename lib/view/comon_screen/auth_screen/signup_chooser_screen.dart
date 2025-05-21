@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/utils/app_color.dart';
 import 'package:room_sublease/utils/app_image.dart';
@@ -12,6 +14,7 @@ class SignupChooserScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       backgroundColor: AppColors.blue50,
       appBar: AppBar(
@@ -50,7 +53,11 @@ class SignupChooserScreen extends StatelessWidget {
               width: 330,
             ),
             150.height,
-            CommonButton(onTap: () {}, titleText: "Next"),
+            CommonButton(
+                onTap: () {
+                  Get.toNamed(AppRoute.signinScreen);
+                },
+                titleText: "Next"),
             CommonButton(
               onTap: () {},
               titleText: "Skip",

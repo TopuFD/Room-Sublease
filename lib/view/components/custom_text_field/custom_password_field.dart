@@ -33,7 +33,7 @@ class CustomPasswordFieldState extends State<CustomPasswordField> {
         hintText: widget.hintText,
         prefixIcon: Padding(
           padding:  EdgeInsets.all(13.r),
-          child: SvgPicture.asset(AppIcons.home),
+          child: SvgPicture.asset(AppIcons.visibilityOff),
         ),
         suffixIcon: IconButton(
           icon: Icon(

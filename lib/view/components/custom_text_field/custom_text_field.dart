@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:room_sublease/extentions/extentions.dart';
-import 'package:room_sublease/utils/app_icons.dart';
 import '../../../utils/app_color.dart';
 import '../common_text/common_text.dart';
 
@@ -28,11 +25,11 @@ class CustomTextField extends StatefulWidget {
       this.optionalText = "",
       this.textStyle,
       this.hintStyle,
-      this.fillColor = AppColors.white,
+      this.fillColor = const Color(0xFFFCF3EC),
       this.suffixIcon,
       this.suffixIconColor,
       this.fieldBorderRadius,
-      this.fieldBorderColor = Colors.transparent,
+      this.fieldBorderColor = const Color(0xFFE9DFD8),
       this.isPassword = false,
       this.isPrefixIcon = true,
       this.readOnly = false,
@@ -84,107 +81,86 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 10.h),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CommonText(
-            text: widget.titleText,
-            fontSize: 18,
-            color: AppColors.black,
-          ),
-          10.height,
-          Container(
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  // ignore: deprecated_member_use
-                  color: Colors.black.withOpacity(0.2),
-                  blurRadius: 8,
-                  offset: Offset(0, 1),
-                  spreadRadius: 0,
-                )
-              ],
-              borderRadius: BorderRadius.circular(16),
-            ),
-            child: TextFormField(
-              onTap: widget.onTap,
-              inputFormatters: widget.inputFormatters,
-              onFieldSubmitted: widget.onFieldSubmitted,
-              readOnly: widget.readOnly,
-              controller: widget.controller,
-              focusNode: widget.focusNode,
-              maxLength: widget.maxLength,
-              keyboardType: widget.keyboardType,
-              textInputAction: widget.textInputAction,
-              cursorColor: widget.cursorColor,
-              style: widget.textStyle,
-              onChanged: widget.onChanged,
-              maxLines: widget.maxLines,
-              obscureText: widget.isPassword ? obscureText : false,
-              validator: widget.validator,
-              showCursor:
-                  widget.keyboardType == TextInputType.none ? false : true,
-              decoration: InputDecoration(
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 16.h, horizontal: 14.w),
-                labelText: widget.labelText,
-                hintText: widget.hindText,
-                labelStyle: widget.textStyle,
-                hintStyle:
-                    widget.hintStyle ?? TextStyle(color: Color(0xFF9E9E9E)),
-                fillColor: widget.fillColor,
-                filled: true,
-                prefixIcon: widget.prefixIcon,
-                suffixIcon: widget.isPassword
-                    ? GestureDetector(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        CommonText(
+          text: widget.titleText,
+          fontSize: 18,
+          color: Color(0xFF141415),
+        ),
+        SizedBox(
+          height: 40,
+          child: TextFormField(
+            onTap: widget.onTap,
+            inputFormatters: widget.inputFormatters,
+            onFieldSubmitted: widget.onFieldSubmitted,
+            readOnly: widget.readOnly,
+            controller: widget.controller,
+            focusNode: widget.focusNode,
+            maxLength: widget.maxLength,
+            keyboardType: widget.keyboardType,
+            textInputAction: widget.textInputAction,
+            cursorColor: widget.cursorColor,
+            style: widget.textStyle,
+            onChanged: widget.onChanged,
+            maxLines: widget.maxLines,
+            obscureText: widget.isPassword ? obscureText : false,
+            validator: widget.validator,
+            showCursor:
+                widget.keyboardType == TextInputType.none ? false : true,
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.only(bottom: 2),
+              labelText: widget.labelText,
+              hintText: widget.hindText,
+              labelStyle: widget.textStyle,
+              hintStyle:
+                  widget.hintStyle ?? TextStyle(color: Color(0xFF9E9E9E)),
+              fillColor: widget.fillColor,
+              filled: true,
+              prefixIcon: widget.prefixIcon,
+              suffixIcon: widget.isPassword
+                  ? Padding(
+                      padding: EdgeInsets.only(bottom: 15),
+                      child: GestureDetector(
                         onTap: toggle,
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                              left: 16, right: 16, top: 10, bottom: 10),
-                          child: obscureText
-                              ? SizedBox(
-                                  height: 30.h,
-                                  width: 30.w,
-                                  child:
-                                      SvgPicture.asset(AppIcons.visibilityOff))
-                              : SizedBox(
-                                  height: 30.h,
-                                  width: 30.w,
-                                  child:
-                                      SvgPicture.asset(AppIcons.visibilityOn2),
-                                ),
-                        ),
-                      )
-                    : Padding(
-                        padding: const EdgeInsets.all(1.0),
-                        child: widget.suffixIcon,
+                        child: obscureText
+                            ? SizedBox(
+                                height: 30.h,
+                                width: 30.w,
+                                child: Icon(Icons.visibility_off))
+                            : SizedBox(
+                                height: 30.h,
+                                width: 30.w,
+                                child: Icon(Icons.visibility),
+                              ),
                       ),
-                suffixIconColor: widget.suffixIconColor,
-                border: OutlineInputBorder(
-                    borderRadius:
-                        BorderRadius.circular(widget.fieldBorderRadius ?? 16.r),
-                    borderSide:
-                        BorderSide(color: Color(0x3F000000), width: 1.5),
-                    gapPadding: 0),
-                focusedBorder: OutlineInputBorder(
-                    borderRadius:
-                        BorderRadius.circular(widget.fieldBorderRadius ?? 16.r),
-                    borderSide:
-                        BorderSide(color: Color(0x3F000000), width: 1.5),
-                    gapPadding: 0),
-                enabledBorder: OutlineInputBorder(
-                    borderRadius:
-                        BorderRadius.circular(widget.fieldBorderRadius ?? 16.r),
-                    borderSide:
-                        BorderSide(color: Color(0x3F000000), width: 1.5),
-                    gapPadding: 0),
+                    )
+                  : Padding(
+                      padding: EdgeInsets.only(bottom: 15),
+                      child: widget.suffixIcon,
+                    ),
+              suffixIconColor: widget.suffixIconColor,
+              border: UnderlineInputBorder(
+                borderSide: BorderSide(
+                    color: widget.fieldBorderColor,
+                    width: 1.5),
+              ),
+              focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(
+                    color: widget.fieldBorderColor,
+                    width: 1.5),
+              ),
+              enabledBorder: UnderlineInputBorder(
+                borderSide: BorderSide(
+                    color: widget.fieldBorderColor,
+                    width: 1.5),
               ),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 

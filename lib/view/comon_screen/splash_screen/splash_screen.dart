@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/utils/app_color.dart';
@@ -20,11 +21,18 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(Duration(seconds: 4), () {
       Get.offAllNamed(AppRoute.onboardingScreen);
+          SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: AppColors.brown50,
+    ));
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: AppColors.blueDeep,
+    ));
     return Scaffold(
       backgroundColor: AppColors.blueDeep,
       body: SizedBox(
