@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/core/dependency.dart';
 import 'package:room_sublease/helper/prefs_helper.dart';
-import 'package:room_sublease/utils/app_color.dart';
 
 void main() {
   action();
@@ -19,7 +18,7 @@ action() async {
   DependencyInjection di = DependencyInjection();
   di.dependencies();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.white,
+    statusBarColor: Color(0xFFFCF3EC),
     statusBarIconBrightness: Brightness.dark,
   ));
 }
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: AppColors.white,
+      statusBarColor:  Color(0xFFFCF3EC),
     ));
     return ScreenUtilInit(
       designSize: const Size(393, 852),
@@ -58,7 +57,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         getPages: AppRoute.pages,
-        initialRoute: AppRoute.splashScreen,
+        initialRoute: AppRoute.bottomNavScreen,
       ),
     );
   }

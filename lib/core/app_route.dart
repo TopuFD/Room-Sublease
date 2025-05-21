@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:room_sublease/view/comon_screen/auth_screen/signin_screen.dart';
 import 'package:room_sublease/view/comon_screen/auth_screen/signup_chooser_screen.dart';
+import 'package:room_sublease/view/comon_screen/bottom_nav_bar_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/complete_profile_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/select_fun_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/verify_identity.dart';
@@ -22,6 +23,7 @@ class AppRoute {
   static const String completeProfileScreen = "/completeProfileScreen";
   static const String verifyItentity = "/verifyItentity";
   static const String verifyWaitingScreen = "/verifyWaitingScreen";
+  static const String bottomNavScreen = "/bottomNavScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -63,6 +65,10 @@ class AppRoute {
     GetPage(
         name: verifyWaitingScreen,
         page: () => VerifyWaitingScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: bottomNavScreen,
+        page: () => CommonBottomNavBar(),
         transition: Transition.rightToLeftWithFade),
   ];
 }

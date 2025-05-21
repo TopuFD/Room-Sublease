@@ -5,6 +5,6 @@ class BottomNavController extends GetxController {
   var selectedIndex = 0.obs;
 
   void changeIndex(int index) {
-    selectedIndex.value = index; // Update the index properly
+    selectedIndex.value = index;
   }
 }

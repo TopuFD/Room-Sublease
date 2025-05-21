@@ -44,9 +44,9 @@ class CustomToggleTab extends StatelessWidget {
                 return Container(
                   margin: EdgeInsets.only(right: 10.w),
                   padding:
-                      EdgeInsets.symmetric(vertical: 10.h, horizontal: 30.w),
+                      EdgeInsets.symmetric(vertical: 10.h, horizontal: 15.w),
                   decoration: BoxDecoration(
-                    border: Border.all(color: AppColors.blueDeep),
+                   
                     color:currentIndex == index? AppColors.blueDeep:color,
                     borderRadius: BorderRadius.circular(30.r),
                   ),
