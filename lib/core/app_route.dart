@@ -4,6 +4,7 @@ import 'package:room_sublease/view/comon_screen/auth_screen/signup_chooser_scree
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/complete_profile_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/select_fun_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/verify_identity.dart';
+import 'package:room_sublease/view/comon_screen/complete_profile_screens/verify_waiting_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/yourself_screen.dart';
 import 'package:room_sublease/view/comon_screen/image_viewer_screen.dart';
 import 'package:room_sublease/view/comon_screen/splash_screen/onboarding_screen.dart';
@@ -20,6 +21,7 @@ class AppRoute {
   static const String yourselfScreen = "/yourselfScreen";
   static const String completeProfileScreen = "/completeProfileScreen";
   static const String verifyItentity = "/verifyItentity";
+  static const String verifyWaitingScreen = "/verifyWaitingScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -57,6 +59,10 @@ class AppRoute {
     GetPage(
         name: verifyItentity,
         page: () => VerifyIdentity(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: verifyWaitingScreen,
+        page: () => VerifyWaitingScreen(),
         transition: Transition.rightToLeftWithFade),
   ];
 }

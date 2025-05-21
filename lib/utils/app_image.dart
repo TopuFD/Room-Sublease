@@ -7,5 +7,7 @@ class AppImage {
   static const onboard2 = "asset/image/onboard2.png";
   static const onboard3 = "asset/image/onboard3.png";
   static const welcome = "asset/image/welcome.png";
+  static const verify = "asset/image/verify.png";
+  static const wait = "asset/image/wait.png";
 
 }

@@ -7,5 +7,7 @@ class AppIcons {
   static const instagram = "asset/icon/instagram.svg";
   static const upload = "asset/icon/upload.svg";
   static const cross = "asset/icon/cross.svg";
+  static const loc = "asset/icon/loc.svg";
+  static const check = "asset/icon/check.svg";
 
 }

@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:room_sublease/controller/auth_controller/complete_profile_controller.dart';
+import 'package:room_sublease/core/app_route.dart';
 
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/helper/other_helper.dart';
@@ -114,7 +115,9 @@ class CompleteProfileScreen extends StatelessWidget {
                 ),
               ),
               33.height,
-              CommonButton(titleText: "Continue"),
+              CommonButton(titleText: "Continue",onTap: () {
+                Get.toNamed(AppRoute.verifyItentity);
+              },),
               24.height,
             ],
           ),
