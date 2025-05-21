@@ -27,6 +27,7 @@ class CustomTextField extends StatefulWidget {
       this.hintStyle,
       this.fillColor = const Color(0xFFFCF3EC),
       this.suffixIcon,
+
       this.suffixIconColor,
       this.fieldBorderRadius,
       this.fieldBorderColor = const Color(0xFFE9DFD8),
@@ -37,7 +38,9 @@ class CustomTextField extends StatefulWidget {
       super.key,
       this.prefixIcon,
       this.storyWordCount = "",
-      this.onTap});
+      this.onTap,
+      this.fieldHeight = 40,
+      });
 
   final String? title;
   final TextEditingController? controller;
@@ -63,6 +66,7 @@ class CustomTextField extends StatefulWidget {
   final Widget? prefixIcon;
   final double? fieldBorderRadius;
   final VoidCallback? onTap;
+  final double? fieldHeight;
 
   final Color fieldBorderColor;
   final bool isPassword;
@@ -91,7 +95,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           color: Color(0xFF141415),
         ),
         SizedBox(
-          height: 40,
+          height: widget.fieldHeight,
           child: TextFormField(
             onTap: widget.onTap,
             inputFormatters: widget.inputFormatters,

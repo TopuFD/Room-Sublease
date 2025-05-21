@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,6 +15,7 @@ import 'package:room_sublease/view/components/common_image/common_image.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
 import 'package:room_sublease/view/components/custom_text_field/custom_text_field.dart';
 
+// ignore: must_be_immutable
 class YourselfScreen extends StatelessWidget {
   YourselfScreen({super.key});
   final CompleteProfileController controller =
@@ -86,7 +86,7 @@ class YourselfScreen extends StatelessWidget {
                         child: AnimatedContainer(
                           duration: Duration(milliseconds: 600),
                           height: 90,
-                          width: 115,
+                          width: 100,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               border: controller.selectedGender.value ==
@@ -99,7 +99,7 @@ class YourselfScreen extends StatelessWidget {
                                   : Color(0xFFFCF3EC)),
                           child: Padding(
                             padding: EdgeInsets.symmetric(
-                                horizontal: 16, vertical: 16),
+                                horizontal: 12, vertical: 16),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -195,7 +195,7 @@ class YourselfScreen extends StatelessWidget {
               CommonButton(
                 titleText: "Continue",
                 onTap: () {
-                  Get.toNamed(AppRoute.yourselfScreen);
+                  Get.toNamed(AppRoute.completeProfileScreen);
                 },
               ),
               20.height,

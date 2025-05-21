@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 import 'package:room_sublease/view/comon_screen/auth_screen/signin_screen.dart';
 import 'package:room_sublease/view/comon_screen/auth_screen/signup_chooser_screen.dart';
-import 'package:room_sublease/view/comon_screen/auth_screen/signup_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/complete_profile_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/select_fun_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/verify_identity.dart';

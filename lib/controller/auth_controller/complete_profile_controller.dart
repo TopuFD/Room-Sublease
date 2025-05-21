@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class CompleteProfileController extends GetxController {
 
-  //====================================================for select fun screen
+  //====================================================================================for select fun screen
   final funyList = <Map<String, dynamic>>[
     {'title': 'Pilates', 'color': Color(0xFFFDDEC3), "isBorder": false},
     {'title': 'Yoga', 'color': Color(0xFFFCF3EC), "isBorder": true},
@@ -70,7 +70,7 @@ class CompleteProfileController extends GetxController {
   }
 
 
-  //=============================================================for select gender
+  //==========================================================================================for select gender
   List genderList = [
     "Male",
     "Female",
@@ -78,7 +78,7 @@ class CompleteProfileController extends GetxController {
   ];
   RxString selectedGender = "Male".obs;
 
-  //=============================================================for upload images
+  //================================================================================for upload images
   RxList images = [].obs;
 
 }
