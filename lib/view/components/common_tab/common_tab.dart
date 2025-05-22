@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:room_sublease/utils/app_color.dart';
@@ -19,8 +18,7 @@ class CustomToggleTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-
-      padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 4.h),
+      padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 4.h),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30.r),
       ),
@@ -30,8 +28,7 @@ class CustomToggleTab extends StatelessWidget {
           return GestureDetector(
             onTap: () => onChange(index),
             child: TweenAnimationBuilder<Color?>(
-              duration: Duration(
-                  milliseconds: 700),
+              duration: Duration(milliseconds: 700),
               tween: ColorTween(
                 begin: currentIndex == index
                     ? Colors.transparent
@@ -46,15 +43,14 @@ class CustomToggleTab extends StatelessWidget {
                   padding:
                       EdgeInsets.symmetric(vertical: 10.h, horizontal: 15.w),
                   decoration: BoxDecoration(
-                   
-                    color:currentIndex == index? AppColors.blueDeep:color,
+                    color: currentIndex == index ? AppColors.blueDeep : color,
                     borderRadius: BorderRadius.circular(30.r),
                   ),
                   child: CommonText(
                     text: tabs[index],
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                    color: currentIndex == index ? Colors.white : Colors.black,
                   ),
                 );
               },

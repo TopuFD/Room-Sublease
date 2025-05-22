@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:room_sublease/controller/bottom_nav_controller/bottom_nav_controller.dart';
+import 'package:room_sublease/view/screens/add_screen/add_post_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/home_screen.dart';
 
 import '../../Utils/app_icons.dart';
@@ -15,7 +16,7 @@ class CommonBottomNavBar extends StatelessWidget {
 
     List<Widget> pages = [
       HomeScreen(),
-      SizedBox(),
+      AddPostScreen(),
       SizedBox(),
       SizedBox(),
     ];
@@ -33,7 +34,8 @@ class CommonBottomNavBar extends StatelessWidget {
           onTap: (index) {
             navController.selectedIndex.value = index;
           },
-          backgroundColor: Colors.white,
+          backgroundColor: Color(0xFFFCF3EC),
+          elevation: 0,
           type: BottomNavigationBarType.fixed,
           selectedItemColor: const Color(0xFF075B5D),
           unselectedItemColor: Colors.grey,
@@ -51,7 +53,7 @@ class CommonBottomNavBar extends StatelessWidget {
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 navController.selectedIndex.value == 1
-                    ? "asset/icon/add2.svg"
+                    ? AppIcons.home1
                     : AppIcons.add,
               ),
               label: 'Add',

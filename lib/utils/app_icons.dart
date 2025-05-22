@@ -24,4 +24,8 @@ class AppIcons {
   static const favorite = "asset/icon/favorite.svg";
   static const location = "asset/icon/location.svg";
   static const degree = "asset/icon/degree.svg";
+  static const roommat = "asset/icon/roommat.svg";
+  static const subleas = "asset/icon/subleas.svg";
+  static const friend = "asset/icon/friend.svg";
+  static const post = "asset/icon/post.svg";
 }
