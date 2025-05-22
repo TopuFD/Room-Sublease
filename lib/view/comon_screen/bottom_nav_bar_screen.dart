@@ -5,6 +5,7 @@ import 'package:room_sublease/controller/bottom_nav_controller/bottom_nav_contro
 import 'package:room_sublease/view/screens/add_screen/add_post_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/home_screen.dart';
 import 'package:room_sublease/view/screens/message_screens/message_screen.dart';
+import 'package:room_sublease/view/screens/profile_screens/profile_screen.dart';
 
 import '../../Utils/app_icons.dart';
 
@@ -19,7 +20,7 @@ class CommonBottomNavBar extends StatelessWidget {
       HomeScreen(),
       AddPostScreen(),
       MessageScreen(),
-      SizedBox(),
+      ProfileScreen(),
     ];
 
     return Scaffold(

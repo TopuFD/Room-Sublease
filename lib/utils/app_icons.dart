@@ -30,4 +30,11 @@ class AppIcons {
   static const post = "asset/icon/post.svg";
   static const send = "asset/icon/send.svg";
   static const imoji = "asset/icon/imoji.svg";
+  static const profile2 = "asset/icon/profile2.svg";
+  static const subscription = "asset/icon/subscription.svg";
+  static const term = "asset/icon/term.svg";
+  static const privacy = "asset/icon/privacy.svg";
+  static const logout = "asset/icon/logout.svg";
+  static const edit = "asset/icon/edit.svg";
+  static const edit2 = "asset/icon/edit2.svg";
 }

@@ -13,6 +13,11 @@ import 'package:room_sublease/view/comon_screen/splash_screen/splash_screen.dart
 import 'package:room_sublease/view/screens/home_screen/roommat_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/subleas_details_screen.dart';
 import 'package:room_sublease/view/screens/message_screens/messaging_screen.dart';
+import 'package:room_sublease/view/screens/profile_screens/edit_profile_screen.dart';
+import 'package:room_sublease/view/screens/profile_screens/privacy_policy_screen.dart';
+import 'package:room_sublease/view/screens/profile_screens/profile_details_screen.dart';
+import 'package:room_sublease/view/screens/profile_screens/subscription_screen.dart';
+import 'package:room_sublease/view/screens/profile_screens/term_condition_screen.dart';
 
 class AppRoute {
   static const String imageViewer = "/imageViewer";
@@ -30,6 +35,11 @@ class AppRoute {
   static const String roommatDetailsScreen = "/roommatDetailsScreen";
   static const String subleasDetailsScreen = "/subleasDetailsScreen";
   static const String messagingScreen = "/messagingScreen";
+  static const String profileDetailsScreen = "/profileDetailsScreen";
+  static const String editProfileScreen = "/editProfileScreen";
+  static const String subscriptionScreen = "/subscriptionScreen";
+  static const String termConditionScreen = "/termConditionScreen";
+  static const String privacyPolicyScreen = "/privacyPolicyScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -87,6 +97,30 @@ class AppRoute {
     GetPage(
         name: messagingScreen,
         page: () => MessagingScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: messagingScreen,
+        page: () => MessagingScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: profileDetailsScreen,
+        page: () => ProfileDetailsScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: editProfileScreen,
+        page: () => EditProfileScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: subscriptionScreen,
+        page: () => SubscriptionScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: termConditionScreen,
+        page: () => TermConditionScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: privacyPolicyScreen,
+        page: () => PrivacyPolicyScreen(),
         transition: Transition.rightToLeftWithFade),
   ];
 }

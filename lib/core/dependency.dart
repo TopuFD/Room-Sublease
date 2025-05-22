@@ -3,6 +3,7 @@ import 'package:room_sublease/controller/auth_controller/complete_profile_contro
 import 'package:room_sublease/controller/bottom_nav_controller/bottom_nav_controller.dart';
 import 'package:room_sublease/controller/expandable_text_controller.dart';
 import 'package:room_sublease/controller/home_controller/home_controller.dart';
+import 'package:room_sublease/controller/profile_controller/edit_profile_controller.dart';
 
 class DependencyInjection extends Bindings {
   @override
@@ -11,5 +12,6 @@ class DependencyInjection extends Bindings {
     Get.lazyPut(() => HomeController(), fenix: true);
     Get.lazyPut(() => ExpandableTextController(), fenix: true);
     Get.lazyPut(() => BottomNavController(), fenix: true);
+    Get.lazyPut(() => EditProfileController(), fenix: true);
   }
 }
