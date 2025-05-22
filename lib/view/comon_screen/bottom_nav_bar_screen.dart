@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:room_sublease/controller/bottom_nav_controller/bottom_nav_controller.dart';
 import 'package:room_sublease/view/screens/add_screen/add_post_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/home_screen.dart';
+import 'package:room_sublease/view/screens/message_screens/message_screen.dart';
 
 import '../../Utils/app_icons.dart';
 
@@ -17,7 +18,7 @@ class CommonBottomNavBar extends StatelessWidget {
     List<Widget> pages = [
       HomeScreen(),
       AddPostScreen(),
-      SizedBox(),
+      MessageScreen(),
       SizedBox(),
     ];
 

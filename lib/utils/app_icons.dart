@@ -28,4 +28,6 @@ class AppIcons {
   static const subleas = "asset/icon/subleas.svg";
   static const friend = "asset/icon/friend.svg";
   static const post = "asset/icon/post.svg";
+  static const send = "asset/icon/send.svg";
+  static const imoji = "asset/icon/imoji.svg";
 }

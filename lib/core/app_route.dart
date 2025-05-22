@@ -12,6 +12,7 @@ import 'package:room_sublease/view/comon_screen/splash_screen/onboarding_screen.
 import 'package:room_sublease/view/comon_screen/splash_screen/splash_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/roommat_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/subleas_details_screen.dart';
+import 'package:room_sublease/view/screens/message_screens/messaging_screen.dart';
 
 class AppRoute {
   static const String imageViewer = "/imageViewer";
@@ -28,6 +29,7 @@ class AppRoute {
   static const String bottomNavScreen = "/bottomNavScreen";
   static const String roommatDetailsScreen = "/roommatDetailsScreen";
   static const String subleasDetailsScreen = "/subleasDetailsScreen";
+  static const String messagingScreen = "/messagingScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -81,6 +83,10 @@ class AppRoute {
     GetPage(
         name: subleasDetailsScreen,
         page: () => SubleasDetailsScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: messagingScreen,
+        page: () => MessagingScreen(),
         transition: Transition.rightToLeftWithFade),
   ];
 }
