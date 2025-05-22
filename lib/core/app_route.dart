@@ -10,6 +10,7 @@ import 'package:room_sublease/view/comon_screen/complete_profile_screens/yoursel
 import 'package:room_sublease/view/comon_screen/image_viewer_screen.dart';
 import 'package:room_sublease/view/comon_screen/splash_screen/onboarding_screen.dart';
 import 'package:room_sublease/view/comon_screen/splash_screen/splash_screen.dart';
+import 'package:room_sublease/view/screens/home_screen/roommat_details_screen.dart';
 
 class AppRoute {
   static const String imageViewer = "/imageViewer";
@@ -24,6 +25,7 @@ class AppRoute {
   static const String verifyItentity = "/verifyItentity";
   static const String verifyWaitingScreen = "/verifyWaitingScreen";
   static const String bottomNavScreen = "/bottomNavScreen";
+  static const String roommatDetailsScreen = "/roommatDetailsScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -69,6 +71,10 @@ class AppRoute {
     GetPage(
         name: bottomNavScreen,
         page: () => CommonBottomNavBar(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: roommatDetailsScreen,
+        page: () => RoommatDetailsScreen(),
         transition: Transition.rightToLeftWithFade),
   ];
 }
