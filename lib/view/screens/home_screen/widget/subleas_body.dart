@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/view/screens/home_screen/widget/sublease_card.dart';
 
@@ -14,8 +16,13 @@ class SubleasBody extends StatelessWidget {
         children: [
           10.height,
           ...List.generate(5, (index) {
-            return Container(
-                margin: EdgeInsets.only(bottom: 15), child: SubleaseCard());
+            return GestureDetector(
+              onTap: () {
+                Get.toNamed(AppRoute.subleasDetailsScreen);
+              },
+              child: Container(
+                  margin: EdgeInsets.only(bottom: 15), child: SubleaseCard()),
+            );
           })
         ],
       ),

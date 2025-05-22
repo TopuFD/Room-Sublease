@@ -74,6 +74,7 @@ class RoommatCard extends StatelessWidget {
                 width: Get.width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(28),
+                  // ignore: deprecated_member_use
                   color: Colors.black.withOpacity(0.4),
                 ),
               ),

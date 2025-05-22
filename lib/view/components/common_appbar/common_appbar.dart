@@ -29,8 +29,8 @@ class CommonAppbar extends StatelessWidget implements PreferredSizeWidget {
           Get.back();
         },
         child: Icon(
-          Icons.arrow_back,
-          size: 30.sp,
+          Icons.arrow_back_ios,
+          size: 24.sp,
         ),
       ),
       title: title.isNotEmpty

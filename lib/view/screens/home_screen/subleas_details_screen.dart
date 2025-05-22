@@ -9,14 +9,11 @@ import 'package:room_sublease/utils/app_icons.dart';
 import 'package:room_sublease/view/components/common_appbar/common_appbar.dart';
 import 'package:room_sublease/view/components/common_image/common_image.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
-import 'package:room_sublease/view/screens/home_screen/widget/roommat_card.dart';
 
 // ignore: must_be_immutable
-class RoommatDetailsScreen extends StatelessWidget {
-  RoommatDetailsScreen({super.key});
-
+class SubleasDetailsScreen extends StatelessWidget {
+  SubleasDetailsScreen({super.key});
   final HomeController homeController = Get.put(HomeController());
-
   List images = [
     "https://www.shutterstock.com/image-illustration/3d-illustration-house-modern-style-600nw-2557750481.jpg",
     "https://i.pinimg.com/736x/f6/b4/76/f6b4766338f8214ba8302afac02eb18e.jpg"
@@ -25,14 +22,53 @@ class RoommatDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonAppbar(title: "Sabrina Wah"),
+      backgroundColor: Color(0xFFFCF3EC),
+      appBar: CommonAppbar(
+        title: " ",
+        bgColor: Color(0xFFFCF3EC),
+      ),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: Column(
             children: [
-              20.height,
-              RoommatCard(),
+              SizedBox(
+                width: Get.width,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    CommonImage(
+                      imageSrc:
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2-x5vE0brboTxYw_enQTr0nuaGSVAIdn0dw&s",
+                      imageType: ImageType.network,
+                      height: 100,
+                      width: 100,
+                      borderRadius: 100,
+                    ),
+                    15.height,
+                    CommonText(
+                      text: "Harold Keith",
+                      fontSize: 20,
+                      bottom: 4,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xFF161312),
+                    ),
+                    CommonText(
+                      text: "Compatibility: 94%",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xCC161312),
+                    ),
+                    CommonText(
+                      text: "haroldk@gmail.com",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0x99161312),
+                    ),
+                  ],
+                ),
+              ),
               15.height,
               Align(
                 alignment: Alignment.centerLeft,
@@ -44,22 +80,16 @@ class RoommatDetailsScreen extends StatelessWidget {
                   color: Color(0xFF161312),
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(12.r)),
-                child: CommonText(
-                  text:
-                      "Lorem ipsum dolor sit amet consectetur. Auctor mauris ultrices quis nascetur vestibulum viverra. Imperdiet egestas eu tellus adipiscing. Quis adipiscing vel id id. Feugiat gravida quis fames sit lectus netus.",
-                  fontSize: 16,
-                  maxLines: 10,
-                  textAlign: TextAlign.start,
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xFF606061),
-                ),
+              CommonText(
+                text:
+                    "Lorem ipsum dolor sit amet consectetur. Auctor mauris ultrices quis nascetur vestibulum viverra. Imperdiet egestas eu tellus adipiscing. Quis adipiscing vel id id. Feugiat gravida quis fames sit lectus netus.",
+                fontSize: 16,
+                maxLines: 10,
+                textAlign: TextAlign.start,
+                fontWeight: FontWeight.w500,
+                color: Color(0xFF606061),
               ),
-              15.height,
+              10.height,
               Row(
                 children: [
                   SvgPicture.asset(AppIcons.degree),
@@ -164,28 +194,6 @@ class RoommatDetailsScreen extends StatelessWidget {
                 ),
               ),
               funActivity(),
-
-              //========================================================================more picture
-              15.height,
-              Align(
-                alignment: Alignment.centerLeft,
-                child: CommonText(
-                  text: "More Pictures of Amelia",
-                  fontSize: 16,
-                  bottom: 3,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xFF161312),
-                ),
-              ),
-              5.height,
-              CommonImage(
-                imageSrc:
-                    "https://img.freepik.com/premium-photo/beautiful-young-girl-with-professional-makeup-hairstyle-sitting-restaurant_2221-592.jpg",
-                imageType: ImageType.network,
-                height: 350,
-                width: Get.width,
-              ),
-              15.height,
             ],
           ),
         ),
@@ -203,7 +211,7 @@ class RoommatDetailsScreen extends StatelessWidget {
 
         return Container(
           height: 50,
-          margin: EdgeInsets.symmetric(vertical: 5.h,horizontal: 0),
+          margin: EdgeInsets.symmetric(vertical: 5.h, horizontal: 0),
           padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 2),
           decoration: BoxDecoration(
             color: color,
