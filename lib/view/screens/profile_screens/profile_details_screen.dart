@@ -11,6 +11,7 @@ import 'package:room_sublease/view/components/common_appbar/common_appbar.dart';
 import 'package:room_sublease/view/components/common_image/common_image.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
 
+// ignore: must_be_immutable
 class ProfileDetailsScreen extends StatelessWidget {
   ProfileDetailsScreen({super.key});
   final HomeController homeController = Get.put(HomeController());

@@ -15,7 +15,7 @@ class AppIcons {
   static const message = "asset/icon/message.svg";
   static const profile = "asset/icon/profile.svg";
   static const home1 = "asset/icon/home1.svg";
-  static const addIcon = "asset/icon/addIcon.svg";
+  static const addIcon = "asset/icon/add11.svg";
   static const message1 = "asset/icon/message1.svg";
   static const profile1 = "asset/icon/profile1.svg";
   static const notification = "asset/icon/notification.svg";

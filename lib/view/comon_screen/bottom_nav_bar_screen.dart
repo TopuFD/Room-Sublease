@@ -55,7 +55,7 @@ class CommonBottomNavBar extends StatelessWidget {
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 navController.selectedIndex.value == 1
-                    ? AppIcons.home1
+                    ? AppIcons.addIcon
                     : AppIcons.add,
               ),
               label: 'Add',

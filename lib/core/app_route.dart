@@ -18,6 +18,7 @@ import 'package:room_sublease/view/screens/profile_screens/privacy_policy_screen
 import 'package:room_sublease/view/screens/profile_screens/profile_details_screen.dart';
 import 'package:room_sublease/view/screens/profile_screens/subscription_screen.dart';
 import 'package:room_sublease/view/screens/profile_screens/term_condition_screen.dart';
+import 'package:room_sublease/view/screens/profile_screens/widget/fun_activity.dart';
 
 class AppRoute {
   static const String imageViewer = "/imageViewer";
@@ -40,6 +41,7 @@ class AppRoute {
   static const String subscriptionScreen = "/subscriptionScreen";
   static const String termConditionScreen = "/termConditionScreen";
   static const String privacyPolicyScreen = "/privacyPolicyScreen";
+  static const String funActivity = "/funActivity";
 
   static List<GetPage> pages = [
     GetPage(
@@ -121,6 +123,10 @@ class AppRoute {
     GetPage(
         name: privacyPolicyScreen,
         page: () => PrivacyPolicyScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: funActivity,
+        page: () => FunActivity(),
         transition: Transition.rightToLeftWithFade),
   ];
 }

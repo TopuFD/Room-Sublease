@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:room_sublease/Utils/app_icons.dart';
 import 'package:room_sublease/controller/profile_controller/edit_profile_controller.dart';
+import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/helper/other_helper.dart';
 import 'package:room_sublease/utils/app_color.dart';
@@ -167,7 +168,7 @@ class EditProfileScreen extends StatelessWidget {
                     color: Color(0xFFF3EAE3),
                     border: Border.all(color: Color(0xFFE8E8E8))),
                 child: CustomTextField(
-                  hindText: "Select education level",
+                  hindText: "Write your bio",
                   fillColor: AppColors.transparent,
                   maxLines: 4,
                   textStyle: GoogleFonts.manrope(
@@ -236,23 +237,124 @@ class EditProfileScreen extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
               16.height,
+              //=========================================================================insta gram
               Container(
-                padding: EdgeInsets.only(left: 8, bottom: 8, right: 8),
+                padding: EdgeInsets.only(left: 10),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     color: Color(0xFFF3EAE3),
                     border: Border.all(color: Color(0xFFE8E8E8))),
-                child: CustomTextField(
-                  hindText: "Select education level",
-                  fillColor: AppColors.transparent,
-                  fieldBorderColor: AppColors.transparent,
-                  suffixIcon: SvgPicture.asset(AppIcons.instagram),
-                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      width: 250,
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: "amelia_2000",
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SvgPicture.asset(AppIcons.instagram),
+                      ),
+                  ],
+                )
               ),
+
+              24.height,
+              //=========================================================================fun activity
+              CommonText(
+                text: "Fun Activities",
+                fontSize: 16,
+                color: Color(0xFF161312),
+                fontWeight: FontWeight.w600,
+              ),
+              16.height,
+              Container(
+                  padding: EdgeInsets.only(left: 10,top: 8,bottom: 10),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Color(0xFFF3EAE3),
+                      border: Border.all(color: Color(0xFFE8E8E8))),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      profile.selectedColors.isNotEmpty
+                          ? Flexible(child: funyActivity())
+                          : CommonText(
+                              text: "Select Fun Activities",
+                              fontSize: 14,
+                              left: 8,
+                              color: Color.fromRGBO(22, 19, 18, 0.60),
+                              fontWeight: FontWeight.w600,
+                            ),
+                      InkWell(
+                        onTap: () {
+                          Get.toNamed(AppRoute.funActivity);
+                        },
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 8),
+                          child: Icon(Icons.keyboard_arrow_right),
+                        ),
+                      ),
+                    ],
+                  )),
+              30.height,
             ],
           ),
         ),
       ),
+    );
+  }
+
+  funyActivity() {
+    return Wrap(
+      spacing: 10,
+      children: profile.funyList.map((colorMap) {
+        final colorName = colorMap['title'] as String;
+        final color = colorMap['color'] as Color;
+        final isBorder = colorMap['isBorder'] as bool;
+
+        return Obx(() {
+          final isSelected = profile.selectedColors.contains(colorName);
+          return isSelected
+              ? Container(
+                  height: 50,
+                  margin: EdgeInsets.symmetric(vertical: 5.h),
+                  padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 5),
+                  decoration: BoxDecoration(
+                    color: color,
+                    borderRadius: BorderRadius.circular(100),
+                    border: isBorder == true
+                        ? Border.all(color: Color(0xFFE9DFD8), width: 1)
+                        : null,
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      CommonText(
+                        text: colorName,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xFF141415),
+                      ),
+                      if (isSelected) 8.width,
+                      if (isSelected)
+                        Icon(
+                          Icons.check,
+                          color: Colors.black,
+                          size: 20,
+                        ),
+                    ],
+                  ),
+                )
+              : SizedBox();
+        });
+      }).toList(),
     );
   }
 
@@ -276,8 +378,8 @@ class EditProfileScreen extends StatelessWidget {
                           borderRadius: 16,
                         ),
                         Positioned(
-                            right: 10,
-                            top: 10,
+                            right: 2,
+                            top: 2,
                             child: InkWell(
                               onTap: () {
                                 profile.images.remove(profile.images[index]);
@@ -286,13 +388,12 @@ class EditProfileScreen extends StatelessWidget {
                                 height: 20,
                                 width: 20,
                                 decoration: BoxDecoration(
-                                    color: AppColors.white,
-                                    border: Border.all(color: Colors.red),
+                                    color: AppColors.black,
+                                    
                                     shape: BoxShape.circle),
-                                child: Icon(
-                                  Icons.remove,
-                                  color: Colors.red,
-                                  size: 15,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(2),
+                                  child: SvgPicture.asset(AppIcons.cross2),
                                 ),
                               ),
                             ))
