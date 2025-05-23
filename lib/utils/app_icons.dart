@@ -37,4 +37,5 @@ class AppIcons {
   static const logout = "asset/icon/logout.svg";
   static const edit = "asset/icon/edit.svg";
   static const edit2 = "asset/icon/edit2.svg";
+  static const right = "asset/icon/right.svg";
 }
