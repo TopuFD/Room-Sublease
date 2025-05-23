@@ -74,7 +74,7 @@ class ProfileScreen extends StatelessWidget {
               icon: AppIcons.privacy,
               title: "Privacy Policy",
               ontap: () {
-                Get.toNamed(AppRoute.termConditionScreen);
+                Get.toNamed(AppRoute.privacyPolicyScreen);
               }),
           100.height,
           //==================================================================profile
