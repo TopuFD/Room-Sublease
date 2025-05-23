@@ -10,6 +10,9 @@ import 'package:room_sublease/view/comon_screen/complete_profile_screens/yoursel
 import 'package:room_sublease/view/comon_screen/image_viewer_screen.dart';
 import 'package:room_sublease/view/comon_screen/splash_screen/onboarding_screen.dart';
 import 'package:room_sublease/view/comon_screen/splash_screen/splash_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/location_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/preferance_selection_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/roommat_preferance_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/roommat_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/subleas_details_screen.dart';
 import 'package:room_sublease/view/screens/message_screens/messaging_screen.dart';
@@ -42,6 +45,12 @@ class AppRoute {
   static const String termConditionScreen = "/termConditionScreen";
   static const String privacyPolicyScreen = "/privacyPolicyScreen";
   static const String funActivity = "/funActivity";
+
+  //============================================================================================all add screen
+  //=========================================== looking for roommat all screen
+  static const String locationScreen = "/locationScreen";
+  static const String roomatPreferanceScreen = "/roomatPreferanceScreen";
+  static const String preferanceSelectionScreen = "/preferanceSelectionScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -127,6 +136,21 @@ class AppRoute {
     GetPage(
         name: funActivity,
         page: () => FunActivity(),
+        transition: Transition.rightToLeftWithFade),
+
+    //============================================================================================all add screen
+    //=========================================== looking for roommat all screen
+    GetPage(
+        name: locationScreen,
+        page: () => LocationScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: roomatPreferanceScreen,
+        page: () => RoommatPreferanceScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: preferanceSelectionScreen,
+        page: () => PreferanceSelectionScreen(),
         transition: Transition.rightToLeftWithFade),
   ];
 }

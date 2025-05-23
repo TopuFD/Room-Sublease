@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/instance_manager.dart';
 import 'package:room_sublease/Utils/app_icons.dart';
+import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
 
@@ -50,6 +51,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                         setState(() {
                           selectedIndex = 0;
                         });
+                        Get.toNamed(AppRoute.locationScreen);
                       },
                       icon: AppIcons.roommat,
                       title: "Looking for Roommates",
