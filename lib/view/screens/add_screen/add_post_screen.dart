@@ -74,6 +74,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                         setState(() {
                           selectedIndex = 2;
                         });
+                        Get.toNamed(AppRoute.faevScreen);
                       },
                       icon: AppIcons.friend,
                       title: "Looking to Make Friends",

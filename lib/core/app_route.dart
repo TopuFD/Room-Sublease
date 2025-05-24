@@ -19,6 +19,8 @@ import 'package:room_sublease/view/screens/add_screen/looking_sublease/housing_p
 import 'package:room_sublease/view/screens/add_screen/looking_sublease/monthly_budget_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/looking_sublease/sublease_done_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/looking_sublease/sublease_map_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/address_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/faev_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/roommat_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/subleas_details_screen.dart';
 import 'package:room_sublease/view/screens/message_screens/messaging_screen.dart';
@@ -64,6 +66,9 @@ class AppRoute {
   static const String monthlyBudgetScreen = "/monthlyBudgetScreen";
   static const String subleaseMapScreen = "/subleaseMapScreen";
   static const String subleasDoneScreen = "/subleasDoneScreen";
+    //=========================================== make Friend screens
+  static const String faevScreen = "/faevScreen";
+    static const String addressScreen = "/addressScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -188,6 +193,14 @@ class AppRoute {
     GetPage(
         name: subleasDoneScreen,
         page: () => SubleaseDoneScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: faevScreen,
+        page: () => FaevScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: addressScreen,
+        page: () => AddressScreen(),
         transition: Transition.rightToLeftWithFade),
   ];
 }
