@@ -9,5 +9,6 @@ class AppImage {
   static const welcome = "asset/image/welcome.png";
   static const verify = "asset/image/verify.png";
   static const wait = "asset/image/wait.png";
+  static const map = "asset/image/map.png";
 
 }

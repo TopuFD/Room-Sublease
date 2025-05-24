@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -63,6 +62,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                         setState(() {
                           selectedIndex = 1;
                         });
+                        Get.toNamed(AppRoute.bringFaevScreen);
                       },
                       icon: AppIcons.subleas,
                       title: "Looking to Sublease a Space",

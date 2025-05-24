@@ -13,6 +13,12 @@ import 'package:room_sublease/view/comon_screen/splash_screen/splash_screen.dart
 import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/location_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/preferance_selection_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/roommat_preferance_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/looking_sublease/apartment_amenitise_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/looking_sublease/bring_faev_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/looking_sublease/housing_preference_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/looking_sublease/monthly_budget_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/looking_sublease/sublease_done_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/looking_sublease/sublease_map_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/roommat_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/subleas_details_screen.dart';
 import 'package:room_sublease/view/screens/message_screens/messaging_screen.dart';
@@ -51,6 +57,13 @@ class AppRoute {
   static const String locationScreen = "/locationScreen";
   static const String roomatPreferanceScreen = "/roomatPreferanceScreen";
   static const String preferanceSelectionScreen = "/preferanceSelectionScreen";
+  //=========================================== looking subleas screens
+  static const String bringFaevScreen = "/bringFaevScreen";
+  static const String housingPreferenceScreen = "/housingPreferenceScreen";
+  static const String apartmentAmenitiesScreen = "/apartmentAmenitiesScreen";
+  static const String monthlyBudgetScreen = "/monthlyBudgetScreen";
+  static const String subleaseMapScreen = "/subleaseMapScreen";
+  static const String subleasDoneScreen = "/subleasDoneScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -151,6 +164,30 @@ class AppRoute {
     GetPage(
         name: preferanceSelectionScreen,
         page: () => PreferanceSelectionScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: bringFaevScreen,
+        page: () => BringFaevScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: housingPreferenceScreen,
+        page: () => HousingPreferenceScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: apartmentAmenitiesScreen,
+        page: () => ApartmentAmenitiseScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: monthlyBudgetScreen,
+        page: () => MonthlyBudgetScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: subleaseMapScreen,
+        page: () => SubleaseMapScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: subleasDoneScreen,
+        page: () => SubleaseDoneScreen(),
         transition: Transition.rightToLeftWithFade),
   ];
 }
