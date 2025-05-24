@@ -40,4 +40,5 @@ class AppIcons {
   static const right = "asset/icon/right.svg";
   static const location2 = "asset/icon/location2.svg";
   static const upgrade = "asset/icon/upgrade.svg";
+  static const ask = "asset/icon/ask.svg";
 }
