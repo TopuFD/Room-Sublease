@@ -1,0 +1,2 @@
+/Users/siamprodhan/Topu/Room-Sublease/android/app/.cxx/Debug/4j44642m/x86/CMakeFiles/edit_cache.dir
+/Users/siamprodhan/Topu/Room-Sublease/android/app/.cxx/Debug/4j44642m/x86/CMakeFiles/rebuild_cache.dir

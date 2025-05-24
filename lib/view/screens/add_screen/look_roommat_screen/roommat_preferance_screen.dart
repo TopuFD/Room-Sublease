@@ -204,41 +204,47 @@ class RoommatPreferanceScreen extends StatelessWidget {
                       isUpgrade: true,
                     ),
 
+
                     // // ============================================================Roommate wants to be friends,
-                    // CustomUpgradeCard(
-                    //   title: "Preferred political affiliation",
-                    //   value: "Democratic Party",
-                    // ),
+                    CustomUpgradeCard(
+                      title: "Roommate wants to be friends",
+                      value: "Yes",
+                    ),
+                    // // ============================================================Roommate wants to be friends,
+                    CustomUpgradeCard(
+                      title: "Preferred political affiliation",
+                      value: "Democratic Party",
+                    ),
                     // // ============================================================Preferred political affiliation
-                    // CustomUpgradeCard(
-                    //   title: "Roommate wants to be friends",
-                    //   value: "Preferred",
-                    // ),
+                    CustomUpgradeCard(
+                      title: "Roommate wants to be friends",
+                      value: "Preferred",
+                    ),
                     // // ============================================================Roommate goes out often
-                    // CustomUpgradeCard(
-                    //   title: "Roommate goes out often",
-                    //   value: "Preferred",
-                    // ),
+                    CustomUpgradeCard(
+                      title: "Roommate goes out often",
+                      value: "Preferred",
+                    ),
                     // // ============================================================Roommate was a member of Greek life
-                    // CustomUpgradeCard(
-                    //   title: "Roommate was a member of Greek life",
-                    //   value: "Preferred",
-                    // ),
+                    CustomUpgradeCard(
+                      title: "Roommate was a member of Greek life",
+                      value: "Preferred",
+                    ),
                     // // ============================================================Roommate is okay with sharing food
-                    // CustomUpgradeCard(
-                    //   title: "Roommate is okay with sharing food ",
-                    //   value: "Preferred",
-                    // ),
+                    CustomUpgradeCard(
+                      title: "Roommate is okay with sharing food ",
+                      value: "Preferred",
+                    ),
                     // // ============================================================No romantic visitors or overnight guests
-                    // CustomUpgradeCard(
-                    //   title: "No romantic visitors or overnight guests",
-                    //   value: "Preferred",
-                    // ),
+                    CustomUpgradeCard(
+                      title: "No romantic visitors or overnight guests",
+                      value: "Preferred",
+                    ),
                     // // ============================================================Roommate is okay with sharing clothes
-                    // CustomUpgradeCard(
-                    //   title: "Roommate is okay with sharing clothes",
-                    //   value: "Preferred",
-                    // ),
+                    CustomUpgradeCard(
+                      title: "Roommate is okay with sharing clothes",
+                      value: "Preferred",
+                    ),
                     32.height,
                     CommonButton(titleText: "Continue"),
                     20.height,
