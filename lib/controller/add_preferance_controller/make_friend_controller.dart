@@ -14,6 +14,14 @@ class MakeFriendController extends GetxController {
     "No",
   ];
   RxList<String> selcectExtro = <String>["Yes"].obs;
+  
+  //=================================================================extro friendly
+  List<String> oftenPref = [
+    "More than twice a week",
+    "A few times a month",
+    "Rarely"
+  ];
+  RxList<String> selcectOften = <String>["More than twice a week"].obs;
 
   //=================================================================select gender preference
   List<String> politicalPref = [

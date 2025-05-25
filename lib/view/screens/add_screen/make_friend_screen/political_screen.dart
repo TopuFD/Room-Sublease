@@ -30,7 +30,7 @@ class PoliticalScreen extends StatelessWidget {
                 color: Color(0xFFE9DFD8),
               ),
               Container(
-                width: Get.width * 0.55,
+                width: Get.width * 0.7,
                 height: 1,
                 color: Color(0xFFFF4427),
               ),
