@@ -27,6 +27,10 @@ import 'package:room_sublease/view/screens/add_screen/make_friend_screen/introve
 import 'package:room_sublease/view/screens/add_screen/make_friend_screen/ofenout_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/make_friend_screen/political_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/make_friend_screen/religion_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/describe_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/house_counting_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/live_address.dart';
+import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/property_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/roommat_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/subleas_details_screen.dart';
 import 'package:room_sublease/view/screens/message_screens/messaging_screen.dart';
@@ -81,6 +85,12 @@ class AppRoute {
     static const String greeklifeScreen = "/greeklifeScreen";
     static const String ofenoutScreen = "/ofenoutScreen";
     static const String politicalScreen = "/politicalScreen";
+    //=========================================== post sublease screens
+    static const String properDetailScreen = "/properDetailScreen";
+    static const String liveAddress = "/liveAddress";
+    static const String describeScreen = "/describeScreen";
+    static const String houseCountingScreen = "/houseCountingScreen";
+    static const String postPhotoScreen = "/postPhotoScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -238,6 +248,27 @@ class AppRoute {
     GetPage(
         name: ofenoutScreen,
         page: () => OfenoutScreen(),
+        transition: Transition.rightToLeftWithFade),
+//================================================================
+    GetPage(
+        name: properDetailScreen,
+        page: () => PropertyDetailsScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: liveAddress,
+        page: () => LiveAddress(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: describeScreen,
+        page: () => DescribeScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: houseCountingScreen,
+        page: () => HouseCountingScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: describeScreen,
+        page: () => DescribeScreen(),
         transition: Transition.rightToLeftWithFade),
 
   ];
