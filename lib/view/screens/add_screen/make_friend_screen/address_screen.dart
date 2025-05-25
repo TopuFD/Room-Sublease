@@ -78,7 +78,7 @@ class AddressScreen extends StatelessWidget {
             CommonButton(
               titleText: "Continue",
               onTap: () {
-                Get.toNamed(AppRoute.housingPreferenceScreen);
+                Get.toNamed(AppRoute.riligionScreen);
               },
             ),
             24.height,

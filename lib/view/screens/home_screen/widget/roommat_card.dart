@@ -65,12 +65,13 @@ class RoommatCard extends StatelessWidget {
                 imageSrc:
                     "https://img.freepik.com/free-photo/beautiful-girl-stands-park_8353-5084.jpg?semt=ais_hybrid&w=740",
                 imageType: ImageType.network,
-                height: 470.h,
+                height: Get.height * 0.45,
                 width: Get.width,
                 borderRadius: 28,
+                fill: BoxFit.cover,
               ),
               Container(
-                height: 415.h,
+                height: Get.height * 0.482,
                 width: Get.width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(28),

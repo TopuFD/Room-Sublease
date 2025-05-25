@@ -182,10 +182,10 @@ class RoommatDetailsScreen extends StatelessWidget {
                 imageSrc:
                     "https://img.freepik.com/premium-photo/beautiful-young-girl-with-professional-makeup-hairstyle-sitting-restaurant_2221-592.jpg",
                 imageType: ImageType.network,
-                height: 350,
+                height: Get.height * 0.45,
                 width: Get.width,
               ),
-              15.height,
+              30.height,
             ],
           ),
         ),
@@ -203,7 +203,7 @@ class RoommatDetailsScreen extends StatelessWidget {
 
         return Container(
           height: 50,
-          margin: EdgeInsets.symmetric(vertical: 5.h,horizontal: 0),
+          margin: EdgeInsets.symmetric(vertical: 5.h, horizontal: 0),
           padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 2),
           decoration: BoxDecoration(
             color: color,

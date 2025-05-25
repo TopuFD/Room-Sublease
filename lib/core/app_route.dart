@@ -20,7 +20,13 @@ import 'package:room_sublease/view/screens/add_screen/looking_sublease/monthly_b
 import 'package:room_sublease/view/screens/add_screen/looking_sublease/sublease_done_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/looking_sublease/sublease_map_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/make_friend_screen/address_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/extrovert_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/make_friend_screen/faev_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/greek_life_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/introvert_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/ofenout_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/political_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/religion_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/roommat_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/subleas_details_screen.dart';
 import 'package:room_sublease/view/screens/message_screens/messaging_screen.dart';
@@ -69,6 +75,12 @@ class AppRoute {
     //=========================================== make Friend screens
   static const String faevScreen = "/faevScreen";
     static const String addressScreen = "/addressScreen";
+    static const String riligionScreen = "/riligionScreen";
+    static const String introvertScreen = "/introvertScreen";
+    static const String extrovertScreen = "/extrovertScreen";
+    static const String greeklifeScreen = "/greeklifeScreen";
+    static const String ofenoutScreen = "/ofenoutScreen";
+    static const String politicalScreen = "/politicalScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -194,6 +206,7 @@ class AppRoute {
         name: subleasDoneScreen,
         page: () => SubleaseDoneScreen(),
         transition: Transition.rightToLeftWithFade),
+        //================================================================
     GetPage(
         name: faevScreen,
         page: () => FaevScreen(),
@@ -202,5 +215,30 @@ class AppRoute {
         name: addressScreen,
         page: () => AddressScreen(),
         transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: riligionScreen,
+        page: () => ReligionScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: introvertScreen,
+        page: () => IntrovertScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: extrovertScreen,
+        page: () => ExtrovertScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: greeklifeScreen,
+        page: () => GreekLifeScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: politicalScreen,
+        page: () => PoliticalScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: ofenoutScreen,
+        page: () => OfenoutScreen(),
+        transition: Transition.rightToLeftWithFade),
+
   ];
 }
