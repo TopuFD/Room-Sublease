@@ -8,8 +8,8 @@ import 'package:room_sublease/view/components/common_appbar/common_appbar.dart';
 import 'package:room_sublease/view/components/common_button/common_button.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
 
-class SelectFunScreen extends StatelessWidget {
-  SelectFunScreen({super.key});
+class ParsonTypeScreen extends StatelessWidget {
+  ParsonTypeScreen({super.key});
   final CompleteProfileController controller =
       Get.find<CompleteProfileController>();
 
@@ -25,7 +25,7 @@ class SelectFunScreen extends StatelessWidget {
             children: [
               10.height,
               CommonText(
-                text: "What do you like to do for fun?",
+                text: "What kind of person are you?",
                 fontSize: 28,
                 bottom: 10,
                 maxLines: 2,
@@ -34,7 +34,7 @@ class SelectFunScreen extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
               CommonText(
-                text: "Your vibe attracts your tribe. Define yours",
+                text: "Select what describes you",
                 fontSize: 16,
                 color: Color.fromRGBO(42, 41, 39, 0.60),
                 fontWeight: FontWeight.w500,
@@ -42,17 +42,17 @@ class SelectFunScreen extends StatelessWidget {
               10.height,
               Wrap(
                 spacing: 10,
-                children: controller.funyList.map((colorMap) {
+                children: controller.parsonList.map((colorMap) {
                   final colorName = colorMap['title'] as String;
                   final color = colorMap['color'] as Color;
                   final isBorder = colorMap['isBorder'] as bool;
 
                   return Obx(() {
                     final isSelected =
-                        controller.selectedColors.contains(colorName);
+                        controller.selectedParson.contains(colorName);
 
                     return GestureDetector(
-                      onTap: () => controller.toggleSelection(colorName),
+                      onTap: () => controller.toggleParson(colorName),
                       child: Container(
                         height: 50,
                         margin: EdgeInsets.symmetric(vertical: 5.h),
@@ -71,7 +71,7 @@ class SelectFunScreen extends StatelessWidget {
                           children: [
                             CommonText(
                               text: colorName,
-                              fontSize: 14,
+                              fontSize: 13,
                               fontWeight: FontWeight.w500,
                               color: Color(0xFF141415),
                             ),
@@ -90,9 +90,12 @@ class SelectFunScreen extends StatelessWidget {
                 }).toList(),
               ),
               20.height,
-              CommonButton(titleText: "Continue",onTap: () {
-                Get.toNamed(AppRoute.parsonTypeScreen);
-              },),
+              CommonButton(
+                titleText: "Continue",
+                onTap: () {
+                  Get.toNamed(AppRoute.yourselfScreen);
+                },
+              ),
               20.height,
             ],
           ),

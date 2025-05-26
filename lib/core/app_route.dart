@@ -3,6 +3,7 @@ import 'package:room_sublease/view/comon_screen/auth_screen/signin_screen.dart';
 import 'package:room_sublease/view/comon_screen/auth_screen/signup_chooser_screen.dart';
 import 'package:room_sublease/view/comon_screen/bottom_nav_bar_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/complete_profile_screen.dart';
+import 'package:room_sublease/view/comon_screen/complete_profile_screens/parson_type_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/select_fun_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/verify_identity.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/verify_waiting_screen.dart';
@@ -66,6 +67,7 @@ class AppRoute {
   static const String termConditionScreen = "/termConditionScreen";
   static const String privacyPolicyScreen = "/privacyPolicyScreen";
   static const String funActivity = "/funActivity";
+  static const String parsonTypeScreen = "/parsonTypeScreen";
 
   //============================================================================================all add screen
   //=========================================== looking for roommat all screen
@@ -79,23 +81,23 @@ class AppRoute {
   static const String monthlyBudgetScreen = "/monthlyBudgetScreen";
   static const String subleaseMapScreen = "/subleaseMapScreen";
   static const String subleasDoneScreen = "/subleasDoneScreen";
-    //=========================================== make Friend screens
+  //=========================================== make Friend screens
   static const String faevScreen = "/faevScreen";
-    static const String addressScreen = "/addressScreen";
-    static const String riligionScreen = "/riligionScreen";
-    static const String introvertScreen = "/introvertScreen";
-    static const String extrovertScreen = "/extrovertScreen";
-    static const String greeklifeScreen = "/greeklifeScreen";
-    static const String ofenoutScreen = "/ofenoutScreen";
-    static const String politicalScreen = "/politicalScreen";
-    //=========================================== post sublease screens
-    static const String properDetailScreen = "/properDetailScreen";
-    static const String liveAddress = "/liveAddress";
-    static const String describeScreen = "/describeScreen";
-    static const String houseCountingScreen = "/houseCountingScreen";
-    static const String postPhotoScreen = "/postPhotoScreen";
-    static const String postAmenitiesScreen = "/postAmenitiesScreen";
-    static const String giveDetailsScreen = "/giveDetailsScreen";
+  static const String addressScreen = "/addressScreen";
+  static const String riligionScreen = "/riligionScreen";
+  static const String introvertScreen = "/introvertScreen";
+  static const String extrovertScreen = "/extrovertScreen";
+  static const String greeklifeScreen = "/greeklifeScreen";
+  static const String ofenoutScreen = "/ofenoutScreen";
+  static const String politicalScreen = "/politicalScreen";
+  //=========================================== post sublease screens
+  static const String properDetailScreen = "/properDetailScreen";
+  static const String liveAddress = "/liveAddress";
+  static const String describeScreen = "/describeScreen";
+  static const String houseCountingScreen = "/houseCountingScreen";
+  static const String postPhotoScreen = "/postPhotoScreen";
+  static const String postAmenitiesScreen = "/postAmenitiesScreen";
+  static const String giveDetailsScreen = "/giveDetailsScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -121,6 +123,10 @@ class AppRoute {
     GetPage(
         name: selectFunScreen,
         page: () => SelectFunScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: parsonTypeScreen,
+        page: () => ParsonTypeScreen(),
         transition: Transition.rightToLeftWithFade),
     GetPage(
         name: yourselfScreen,
@@ -221,7 +227,7 @@ class AppRoute {
         name: subleasDoneScreen,
         page: () => SubleaseDoneScreen(),
         transition: Transition.rightToLeftWithFade),
-        //================================================================
+    //================================================================
     GetPage(
         name: faevScreen,
         page: () => FaevScreen(),
@@ -287,6 +293,5 @@ class AppRoute {
         name: giveDetailsScreen,
         page: () => GiveDetailsScreen(),
         transition: Transition.rightToLeftWithFade),
-
   ];
 }

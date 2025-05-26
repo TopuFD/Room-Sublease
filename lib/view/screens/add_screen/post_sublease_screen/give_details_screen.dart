@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/extentions/extentions.dart';
-import 'package:room_sublease/utils/app_icons.dart';
 import 'package:room_sublease/view/components/common_appbar/common_appbar.dart';
 import 'package:room_sublease/view/components/common_button/common_button.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
-import 'package:room_sublease/view/components/custom_text_field/custom_text_field.dart';
 import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/widgets/give_details_form.dart';
 
 class GiveDetailsScreen extends StatelessWidget {
@@ -27,7 +24,7 @@ class GiveDetailsScreen extends StatelessWidget {
                 color: Color(0xFFE9DFD8),
               ),
               Container(
-                width: Get.width * 0.3,
+                width: Get.width,
                 height: 1,
                 color: Color(0xFFFF4427),
               ),
