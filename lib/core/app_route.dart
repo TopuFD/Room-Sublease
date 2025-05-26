@@ -28,8 +28,11 @@ import 'package:room_sublease/view/screens/add_screen/make_friend_screen/ofenout
 import 'package:room_sublease/view/screens/add_screen/make_friend_screen/political_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/make_friend_screen/religion_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/describe_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/give_details_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/house_counting_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/house_photo_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/live_address.dart';
+import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/post_amenities_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/property_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/roommat_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/subleas_details_screen.dart';
@@ -91,6 +94,8 @@ class AppRoute {
     static const String describeScreen = "/describeScreen";
     static const String houseCountingScreen = "/houseCountingScreen";
     static const String postPhotoScreen = "/postPhotoScreen";
+    static const String postAmenitiesScreen = "/postAmenitiesScreen";
+    static const String giveDetailsScreen = "/giveDetailsScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -269,6 +274,18 @@ class AppRoute {
     GetPage(
         name: describeScreen,
         page: () => DescribeScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: postPhotoScreen,
+        page: () => HousePhotoScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: postAmenitiesScreen,
+        page: () => PostAmenitiesScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: giveDetailsScreen,
+        page: () => GiveDetailsScreen(),
         transition: Transition.rightToLeftWithFade),
 
   ];

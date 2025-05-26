@@ -105,7 +105,7 @@ class HouseCountingScreenState extends State<HouseCountingScreen> {
                 CommonButton(
                   titleText: "Continue",
                   onTap: () {
-                    Get.toNamed(AppRoute.riligionScreen);
+                    Get.toNamed(AppRoute.postPhotoScreen);
                   },
                 ),
                 40.height,

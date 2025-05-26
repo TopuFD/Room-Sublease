@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:room_sublease/controller/add_preferance_controller/make_friend_controller.dart';
+import 'package:room_sublease/controller/add_preferance_controller/post_sublease_controller.dart';
 import 'package:room_sublease/controller/add_preferance_controller/roommat_preferance_controller.dart';
 import 'package:room_sublease/controller/add_preferance_controller/sublease_controller.dart';
 import 'package:room_sublease/controller/auth_controller/complete_profile_controller.dart';
@@ -19,5 +20,6 @@ class DependencyInjection extends Bindings {
     Get.lazyPut(() => RoommatPreferanceController(), fenix: true);
     Get.lazyPut(() => SubleaseController(), fenix: true);
     Get.lazyPut(() => MakeFriendController(), fenix: true);
+    Get.lazyPut(() => PostSubleaseController(), fenix: true);
   }
 }
