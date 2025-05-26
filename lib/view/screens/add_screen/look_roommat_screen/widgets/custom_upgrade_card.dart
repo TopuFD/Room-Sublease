@@ -9,12 +9,15 @@ class CustomUpgradeCard extends StatelessWidget {
   final String title;
   final String value;
   bool isUpgrade;
+  VoidCallback ontap;
+
 
   CustomUpgradeCard({
     super.key,
     required this.title,
     this.value = "",
     this.isUpgrade = false,
+    required this.ontap
   });
 
   @override
@@ -81,74 +84,77 @@ class CustomUpgradeCard extends StatelessWidget {
                 ],
               ),
             )
-          : Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    // Left side text column
-                    SizedBox(
-                      width: 200,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+          : InkWell(
+            onTap: ontap,
+            child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      // Left side text column
+                      SizedBox(
+                        width: 200,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            CommonText(
+                              text: title,
+                              fontSize: 14,
+                              maxLines: 2,
+                              textAlign: TextAlign.start,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xFF161312),
+                            ),
+                            SizedBox(height: 5.h),
+                            CommonText(
+                              text: value,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: Color.fromRGBO(22, 19, 18, 0.60),
+                            ),
+                          ],
+                        ),
+                      ),
+            
+                      Row(
                         children: [
-                          CommonText(
-                            text: title,
-                            fontSize: 14,
-                            maxLines: 2,
-                            textAlign: TextAlign.start,
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xFF161312),
+                          Container(
+                            padding:
+                                EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                            decoration: BoxDecoration(
+                              color: Color.fromRGBO(244, 63, 0, 0.06),
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                SvgPicture.asset(AppIcons.upgrade),
+                                4.width,
+                                CommonText(
+                                  text: "Upgrade",
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Color(0xFFFF4427),
+                                ),
+                              ],
+                            ),
                           ),
-                          SizedBox(height: 5.h),
-                          CommonText(
-                            text: value,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            color: Color.fromRGBO(22, 19, 18, 0.60),
+                          SizedBox(width: 10.w),
+                          Icon(
+                            Icons.arrow_forward_ios,
+                            size: 15,
                           ),
                         ],
-                      ),
-                    ),
-
-                    Row(
-                      children: [
-                        Container(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 10, vertical: 7),
-                          decoration: BoxDecoration(
-                            color: Color.fromRGBO(244, 63, 0, 0.06),
-                            borderRadius: BorderRadius.circular(100),
-                          ),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              SvgPicture.asset(AppIcons.upgrade),
-                              4.width,
-                              CommonText(
-                                text: "Upgrade",
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0xFFFF4427),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(width: 10.w),
-                        Icon(
-                          Icons.arrow_forward_ios,
-                          size: 15,
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-                SizedBox(height: 7.h),
-                Divider(
-                  color: Color(0xFFE9DFD8),
-                )
-              ],
-            ),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 7.h),
+                  Divider(
+                    color: Color(0xFFE9DFD8),
+                  )
+                ],
+              ),
+          ),
     );
   }
 }
