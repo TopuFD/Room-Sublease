@@ -9,11 +9,13 @@ import 'package:room_sublease/view/components/common_text/common_text.dart';
 class CommonAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   Color bgColor;
+  Color imgColor;
 
   CommonAppbar({
     super.key,
     required this.title,
     this.bgColor = const Color(0xFFFCF3EC),
+    this.imgColor = const Color(0xFF000000)
   });
 
   @override
@@ -31,6 +33,7 @@ class CommonAppbar extends StatelessWidget implements PreferredSizeWidget {
         child: Icon(
           Icons.arrow_back_ios,
           size: 24.sp,
+          color: imgColor,
         ),
       ),
       title: title.isNotEmpty
@@ -45,6 +48,7 @@ class CommonAppbar extends StatelessWidget implements PreferredSizeWidget {
               imageType: ImageType.png,
               height: 25,
               width: 25,
+              imageColor: imgColor,
             ),
     );
   }

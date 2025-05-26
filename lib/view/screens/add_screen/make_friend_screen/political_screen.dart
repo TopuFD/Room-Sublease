@@ -86,7 +86,7 @@ class PoliticalScreen extends StatelessWidget {
                             return Checkbox(
                               value: makeFriend.isDeal.value,
                               fillColor:
-                                  MaterialStateProperty.all(Colors.transparent),
+                                  WidgetStateProperty.all(Colors.transparent),
                               checkColor: Colors.black,
                               onChanged: (value) {
                                 makeFriend.isDeal.value = value ?? false;
@@ -95,8 +95,8 @@ class PoliticalScreen extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(6),
                               ),
                               side:
-                                  MaterialStateBorderSide.resolveWith((states) {
-                                if (states.contains(MaterialState.selected)) {
+                                  WidgetStateBorderSide.resolveWith((states) {
+                                if (states.contains(WidgetState.selected)) {
                                   return BorderSide(
                                       color: Color(0xFFE9DFD8),
                                       width: 2); // active border

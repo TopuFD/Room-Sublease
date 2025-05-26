@@ -9,7 +9,7 @@ class CustomCheckbox extends StatefulWidget {
   final ValueChanged<List<String>>? onSelectionChanged;
   final bool isMinimum;
 
-  CustomCheckbox({
+  const CustomCheckbox({
     super.key,
     required this.items,
     this.initiallySelected,
@@ -87,7 +87,7 @@ class CustomCheckboxState extends State<CustomCheckbox> {
                   scale: 1.3,
                   child: Checkbox(
                     value: checked,
-                    fillColor: MaterialStateProperty.all(Colors.transparent),
+                    fillColor: WidgetStateProperty.all(Colors.transparent),
                     checkColor: Colors.black,
                     onChanged: (value) {
                       _onItemCheckedChange(item, value ?? false);
@@ -95,8 +95,8 @@ class CustomCheckboxState extends State<CustomCheckbox> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(6),
                     ),
-                    side: MaterialStateBorderSide.resolveWith((states) {
-                      if (states.contains(MaterialState.selected)) {
+                    side: WidgetStateBorderSide.resolveWith((states) {
+                      if (states.contains(WidgetState.selected)) {
                         return BorderSide(
                             color: Color(0xFFE9DFD8),
                             width: 2); // active border

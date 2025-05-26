@@ -8,64 +8,31 @@ import 'package:room_sublease/view/components/common_appbar/common_appbar.dart';
 import 'package:room_sublease/view/components/common_button/common_button.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
 
-class ReligionScreen extends StatefulWidget {
-  const ReligionScreen({super.key});
+class RoommatRiligiousScreen extends StatefulWidget {
+  const RoommatRiligiousScreen({super.key});
 
   @override
-  State<ReligionScreen> createState() => _ReligionScreenState();
+  State<RoommatRiligiousScreen> createState() => _RoommatRiligiousScreenState();
 }
 
-class _ReligionScreenState extends State<ReligionScreen> {
-  bool isDisplay = false;
+class _RoommatRiligiousScreenState extends State<RoommatRiligiousScreen> {
   bool isDeal = false;
+  bool isDisplay = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonAppbar(title: ""),
+      appBar: CommonAppbar(title: "Religious preference"),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16),
+        padding:  EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Stack(
-              children: [
-                Container(
-                  width: Get.width,
-                  height: 1,
-                  color: Color(0xFFE9DFD8),
-                ),
-                Container(
-                  width: Get.width * 0.45,
-                  height: 1,
-                  color: Color(0xFFFF4427),
-                ),
-              ],
-            ),
             24.height,
             CommonText(
-              text: "Do you practice any religion?",
-              fontSize: 24,
-              bottom: 5,
-              maxLines: 2,
+              text: "Religious preference",
+              fontSize: 16,
               textAlign: TextAlign.start,
               fontWeight: FontWeight.w600,
-              color: Color(0xFF161312),
-            ),
-            CommonText(
-              text: "Tell us more about you",
-              fontSize: 16,
-              maxLines: 2,
-              textAlign: TextAlign.start,
-              fontWeight: FontWeight.w500,
-              color: Color.fromRGBO(22, 19, 18, 0.60),
-            ),
-            32.height,
-            CommonText(
-              text: "Religious preference",
-              fontSize: 14,
-              maxLines: 2,
-              textAlign: TextAlign.start,
-              fontWeight: FontWeight.w500,
               color: Color(0xFF161312),
             ),
             24.height,
@@ -105,10 +72,10 @@ class _ReligionScreenState extends State<ReligionScreen> {
                 )
               ],
             ),
-            24.height,
+            32.height,
             Column(
               children: [
-                Row(
+                                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CommonText(
@@ -161,8 +128,7 @@ class _ReligionScreenState extends State<ReligionScreen> {
                     children: [
                       SvgPicture.asset(AppIcons.ask),
                       5.width,
-                      SizedBox(
-                        width: 275,
+                      Expanded(
                         child: CommonText(
                           text:
                               "Your answer is hidden from your profile unless you want to disclose it. This is purely for algorithm matching!",
@@ -176,9 +142,9 @@ class _ReligionScreenState extends State<ReligionScreen> {
                     ],
                   ),
                 ),
-                20.height,
               ],
             ),
+            20.height,
             Expanded(child: SizedBox()),
             CommonButton(
               titleText: "Continue",

@@ -148,7 +148,9 @@ class VerifyIdentity extends StatelessWidget {
               CommonButton(
                 titleText: "Continue",
                 onTap: () {
-                  Get.toNamed(AppRoute.verifyWaitingScreen);
+
+                  Get.toNamed(AppRoute.frameCameraScreen);
+                  // Get.toNamed(AppRoute.verifyWaitingScreen);
                 },
               )
             ],

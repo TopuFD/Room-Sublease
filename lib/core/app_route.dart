@@ -3,8 +3,10 @@ import 'package:room_sublease/view/comon_screen/auth_screen/signin_screen.dart';
 import 'package:room_sublease/view/comon_screen/auth_screen/signup_chooser_screen.dart';
 import 'package:room_sublease/view/comon_screen/bottom_nav_bar_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/complete_profile_screen.dart';
+import 'package:room_sublease/view/comon_screen/complete_profile_screens/frame_cemara_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/parson_type_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/select_fun_screen.dart';
+import 'package:room_sublease/view/comon_screen/complete_profile_screens/user_photo_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/verify_identity.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/verify_waiting_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/yourself_screen.dart';
@@ -14,6 +16,7 @@ import 'package:room_sublease/view/comon_screen/splash_screen/splash_screen.dart
 import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/location_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/preferance_selection_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/roommat_preferance_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/roommat_riligious_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/looking_sublease/apartment_amenitise_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/looking_sublease/bring_faev_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/looking_sublease/housing_preference_screen.dart';
@@ -38,6 +41,7 @@ import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/prope
 import 'package:room_sublease/view/screens/home_screen/roommat_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/subleas_details_screen.dart';
 import 'package:room_sublease/view/screens/message_screens/messaging_screen.dart';
+import 'package:room_sublease/view/screens/notification_screen/notification_screen.dart';
 import 'package:room_sublease/view/screens/profile_screens/edit_profile_screen.dart';
 import 'package:room_sublease/view/screens/profile_screens/privacy_policy_screen.dart';
 import 'package:room_sublease/view/screens/profile_screens/profile_details_screen.dart';
@@ -68,12 +72,15 @@ class AppRoute {
   static const String privacyPolicyScreen = "/privacyPolicyScreen";
   static const String funActivity = "/funActivity";
   static const String parsonTypeScreen = "/parsonTypeScreen";
+  static const String frameCameraScreen = "/frameCameraScreen";
+  static const String userImageScreen = "/userImageScreen";
 
   //============================================================================================all add screen
   //=========================================== looking for roommat all screen
   static const String locationScreen = "/locationScreen";
   static const String roomatPreferanceScreen = "/roomatPreferanceScreen";
   static const String preferanceSelectionScreen = "/preferanceSelectionScreen";
+  static const String roommatriligiousScreen = "/roommatriligiousScreen";
   //=========================================== looking subleas screens
   static const String bringFaevScreen = "/bringFaevScreen";
   static const String housingPreferenceScreen = "/housingPreferenceScreen";
@@ -98,6 +105,8 @@ class AppRoute {
   static const String postPhotoScreen = "/postPhotoScreen";
   static const String postAmenitiesScreen = "/postAmenitiesScreen";
   static const String giveDetailsScreen = "/giveDetailsScreen";
+  //=========================================== post sublease screens
+  static const String notificationScreen = "/notificationScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -139,6 +148,14 @@ class AppRoute {
     GetPage(
         name: verifyItentity,
         page: () => VerifyIdentity(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: frameCameraScreen,
+        page: () => FrameCemaraScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: userImageScreen,
+        page: () => UserPhotoScreen(),
         transition: Transition.rightToLeftWithFade),
     GetPage(
         name: verifyWaitingScreen,
@@ -227,6 +244,10 @@ class AppRoute {
         name: subleasDoneScreen,
         page: () => SubleaseDoneScreen(),
         transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: roommatriligiousScreen,
+        page: () => RoommatRiligiousScreen(),
+        transition: Transition.rightToLeftWithFade),
     //================================================================
     GetPage(
         name: faevScreen,
@@ -292,6 +313,13 @@ class AppRoute {
     GetPage(
         name: giveDetailsScreen,
         page: () => GiveDetailsScreen(),
+        transition: Transition.rightToLeftWithFade),
+
+
+//================================================================ notification screen
+    GetPage(
+        name: notificationScreen,
+        page: () => NotificationScreen(),
         transition: Transition.rightToLeftWithFade),
   ];
 }

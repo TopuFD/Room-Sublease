@@ -10,6 +10,7 @@ import 'package:room_sublease/view/components/common_text/common_text.dart';
 import 'package:room_sublease/view/components/round_checkbox/custom_checkbox.dart';
 import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/custom_toggole_selector.dart';
 
+// ignore: must_be_immutable
 class ApartmentAmenitiseScreen extends StatelessWidget {
   ApartmentAmenitiseScreen({super.key});
 

@@ -165,6 +165,18 @@ class RoommatPreferanceScreen extends StatelessWidget {
                       },
                     ),
 
+                    // // ============================================================Roommate is more extroverted
+                    CustomItem(
+                      title: "Religious preference",
+                      value: roommatPref.extroSelected, // ✅ pass RxString
+                      isDeal: roommatPref.isextroDeel,
+                      ontap: () {
+                        Get.toNamed(
+                          AppRoute.roommatriligiousScreen,
+                        );
+                      },
+                    ),
+
                     // ============================================================420 friendly
                     CustomItem(
                       title: "Roommate has a romantic partner",
@@ -207,7 +219,6 @@ class RoommatPreferanceScreen extends StatelessWidget {
                       title: "Roommate wants to be friends",
                       value: "Preferred",
                       ontap: () {
-                        
                         Get.toNamed(AppRoute.preferanceSelectionScreen,
                             arguments: {
                               "title": "Roommate wants to be friends",
@@ -248,7 +259,8 @@ class RoommatPreferanceScreen extends StatelessWidget {
                       ontap: () {
                         Get.toNamed(AppRoute.preferanceSelectionScreen,
                             arguments: {
-                              "title": "Roommate was involved in Greek life in college ",
+                              "title":
+                                  "Roommate was involved in Greek life in college ",
                               "prefsvalue": "gooseOut"
                             });
                       },
@@ -272,7 +284,8 @@ class RoommatPreferanceScreen extends StatelessWidget {
                       ontap: () {
                         Get.toNamed(AppRoute.preferanceSelectionScreen,
                             arguments: {
-                              "title": "No romantic visitors or overnight guests",
+                              "title":
+                                  "No romantic visitors or overnight guests",
                               "prefsvalue": "gooseOut"
                             });
                       },

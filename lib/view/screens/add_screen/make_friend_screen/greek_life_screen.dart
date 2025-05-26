@@ -74,7 +74,7 @@ class _GreekLifeScreenState extends State<GreekLifeScreen> {
                       child: Checkbox(
                         value: isYes,
                         fillColor:
-                            MaterialStateProperty.all(Colors.transparent),
+                            WidgetStateProperty.all(Colors.transparent),
                         checkColor: Colors.black,
                         onChanged: (value) {
                           setState(() {
@@ -84,8 +84,8 @@ class _GreekLifeScreenState extends State<GreekLifeScreen> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(6),
                         ),
-                        side: MaterialStateBorderSide.resolveWith((states) {
-                          if (states.contains(MaterialState.selected)) {
+                        side: WidgetStateBorderSide.resolveWith((states) {
+                          if (states.contains(WidgetState.selected)) {
                             return BorderSide(
                                 color: Color(0xFFE9DFD8),
                                 width: 2); // active border
@@ -141,7 +141,7 @@ class _GreekLifeScreenState extends State<GreekLifeScreen> {
                       child: Checkbox(
                         value: isNO,
                         fillColor:
-                            MaterialStateProperty.all(Colors.transparent),
+                            WidgetStateProperty.all(Colors.transparent),
                         checkColor: Colors.black,
                         onChanged: (value) {
                           setState(() {
@@ -151,8 +151,8 @@ class _GreekLifeScreenState extends State<GreekLifeScreen> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(6),
                         ),
-                        side: MaterialStateBorderSide.resolveWith((states) {
-                          if (states.contains(MaterialState.selected)) {
+                        side: WidgetStateBorderSide.resolveWith((states) {
+                          if (states.contains(WidgetState.selected)) {
                             return BorderSide(
                                 color: Color(0xFFE9DFD8),
                                 width: 2); // active border

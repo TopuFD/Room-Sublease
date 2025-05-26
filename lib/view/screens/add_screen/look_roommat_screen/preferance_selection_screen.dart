@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:room_sublease/controller/add_preferance_controller/roommat_preferance_controller.dart';
@@ -10,6 +9,7 @@ import 'package:room_sublease/view/components/common_text/common_text.dart';
 import 'package:room_sublease/view/components/round_checkbox/custom_checkbox.dart';
 import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/custom_toggole_selector.dart';
 
+// ignore: must_be_immutable
 class PreferanceSelectionScreen extends StatelessWidget {
   PreferanceSelectionScreen({
     super.key,
@@ -196,7 +196,7 @@ class PreferanceSelectionScreen extends StatelessWidget {
               ),
               Obx(() => Switch(
                     activeColor: Color(0xFF34C759),
-                    thumbColor: MaterialStateProperty.all(Colors.white),
+                    thumbColor: WidgetStateProperty.all(Colors.white),
                     value: isDeel.value,
                     onChanged: (value) {
                       isDeel.value = value;
@@ -226,7 +226,7 @@ class PreferanceSelectionScreen extends StatelessWidget {
                       return Checkbox(
                         value: roommatPref.isDisplay.value,
                         fillColor:
-                            MaterialStateProperty.all(Colors.transparent),
+                            WidgetStateProperty.all(Colors.transparent),
                         checkColor: Colors.black,
                         onChanged: (value) {
                           roommatPref.isDisplay.value = value ?? false;
@@ -234,8 +234,8 @@ class PreferanceSelectionScreen extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(6),
                         ),
-                        side: MaterialStateBorderSide.resolveWith((states) {
-                          if (states.contains(MaterialState.selected)) {
+                        side: WidgetStateBorderSide.resolveWith((states) {
+                          if (states.contains(WidgetState.selected)) {
                             return BorderSide(
                                 color: Color(0xFFE9DFD8),
                                 width: 2); // active border

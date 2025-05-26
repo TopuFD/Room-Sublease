@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/utils/app_image.dart';
-import 'package:room_sublease/view/comon_screen/bottom_nav_bar_screen.dart';
 import 'package:room_sublease/view/components/common_appbar/common_appbar.dart';
 import 'package:room_sublease/view/components/common_button/common_button.dart';
 import 'package:room_sublease/view/components/common_image/common_image.dart';
@@ -100,6 +99,7 @@ class SubleaseMapScreen extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
+                  // ignore: deprecated_member_use
                   color: Colors.black.withOpacity(0.3),
                 ), // 👈 Filter effect here
               ),
@@ -160,6 +160,7 @@ class SubleaseMapScreen extends StatelessWidget {
                 height: 42,
                 width: 42,
                 decoration: BoxDecoration(
+                  // ignore: deprecated_member_use
                   color: Colors.black.withOpacity(0.05),
                   shape: BoxShape.circle,
                 ),

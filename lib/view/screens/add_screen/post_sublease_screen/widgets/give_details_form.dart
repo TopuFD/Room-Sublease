@@ -243,7 +243,7 @@ class _GiveDetailsFormState extends State<GiveDetailsForm> {
           scale: 1.1,
           child: Checkbox(
             value: isUtility,
-            fillColor: MaterialStateProperty.all(Colors.transparent),
+            fillColor: WidgetStateProperty.all(Colors.transparent),
             checkColor: Colors.black,
             onChanged: (value) {
               setState(() {
@@ -253,8 +253,8 @@ class _GiveDetailsFormState extends State<GiveDetailsForm> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(6),
             ),
-            side: MaterialStateBorderSide.resolveWith((states) {
-              if (states.contains(MaterialState.selected)) {
+            side: WidgetStateBorderSide.resolveWith((states) {
+              if (states.contains(WidgetState.selected)) {
                 return BorderSide(
                     color: Color(0xFFE9DFD8), width: 2); // active border
               }
@@ -285,7 +285,7 @@ class _GiveDetailsFormState extends State<GiveDetailsForm> {
           scale: 1.1,
           child: Checkbox(
             value: isDiposit,
-            fillColor: MaterialStateProperty.all(Colors.transparent),
+            fillColor: WidgetStateProperty.all(Colors.transparent),
             checkColor: Colors.black,
             onChanged: (value) {
               setState(() {
@@ -295,8 +295,8 @@ class _GiveDetailsFormState extends State<GiveDetailsForm> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(6),
             ),
-            side: MaterialStateBorderSide.resolveWith((states) {
-              if (states.contains(MaterialState.selected)) {
+            side: WidgetStateBorderSide.resolveWith((states) {
+              if (states.contains(WidgetState.selected)) {
                 return BorderSide(
                     color: Color(0xFFE9DFD8), width: 2); // active border
               }

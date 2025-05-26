@@ -2,6 +2,19 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 class CompleteProfileController extends GetxController {
+  
+
+  RxString idImage = "".obs;
+  RxString userImage = "".obs;
+
+
+
+
+
+
+
+
+
   //====================================================================================for select fun screen
   final parsonList = <Map<String, dynamic>>[
     {

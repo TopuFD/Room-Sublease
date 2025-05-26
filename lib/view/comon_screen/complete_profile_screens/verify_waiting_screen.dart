@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/utils/app_image.dart';
 import 'package:room_sublease/view/components/common_button/common_button.dart';
@@ -37,7 +38,12 @@ class VerifyWaitingScreen extends StatelessWidget {
                 color: Color(0xFF100F0E),
               ),
               58.height,
-              CommonButton(titleText: "Go to Home")
+              CommonButton(
+                titleText: "Go to Home",
+                onTap: () {
+                  Get.toNamed(AppRoute.bottomNavScreen);
+                },
+              )
             ],
           ),
         ),

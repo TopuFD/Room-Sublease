@@ -5,6 +5,7 @@ import 'package:room_sublease/Utils/app_icons.dart';
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
 
+// ignore: must_be_immutable
 class CustomUpgradeCard extends StatelessWidget {
   final String title;
   final String value;
@@ -41,6 +42,7 @@ class CustomUpgradeCard extends StatelessWidget {
                         children: [
                           SvgPicture.asset(
                             AppIcons.upgrade,
+                            // ignore: deprecated_member_use
                             color: Colors.black,
                             height: 24,
                             width: 24,

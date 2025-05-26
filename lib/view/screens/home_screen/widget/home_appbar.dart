@@ -1,7 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:room_sublease/controller/bottom_nav_controller/bottom_nav_controller.dart';
+import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/utils/app_color.dart';
 import 'package:room_sublease/utils/app_icons.dart';
@@ -35,14 +37,13 @@ class HomeAppbar extends StatelessWidget implements PreferredSizeWidget {
               children: [
                 InkWell(
                   onTap: () {
-                    // Get.toNamed(AppRoute.notificationScreen);
+                    Get.toNamed(AppRoute.notificationScreen);
                   },
                   child: Container(
                     height: 45.h,
                     width: 45.w,
                     decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: AppColors.primaryColor),
+                        shape: BoxShape.circle, color: AppColors.primaryColor),
                     child: Padding(
                       padding: EdgeInsets.all(8.r),
                       child: SvgPicture.asset(
@@ -56,7 +57,7 @@ class HomeAppbar extends StatelessWidget implements PreferredSizeWidget {
                 16.width,
                 InkWell(
                   onTap: () {
-                    Scaffold.of(context).openDrawer();
+                    BottomNavController.instance.selectedIndex.value = 3;
                   },
                   child: CommonImage(
                     imageSrc:
