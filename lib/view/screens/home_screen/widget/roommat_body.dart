@@ -13,7 +13,7 @@ class RoommatBody extends StatelessWidget {
     return Align(
       alignment: Alignment.topCenter,
       child: SizedBox(
-        height: 500,
+        height: Get.height * 0.65,
         child: CardSwiper(
           cardsCount: homeController.cardList.length,
           numberOfCardsDisplayed: 3,

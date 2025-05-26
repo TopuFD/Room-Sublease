@@ -10,14 +10,22 @@ class CustomUpgradeCard extends StatelessWidget {
   final String value;
   bool isUpgrade;
   VoidCallback ontap;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 24fb0114aac037101a36de2cbe4e4e3f00659561
 
   CustomUpgradeCard({
     super.key,
     required this.title,
     this.value = "",
     this.isUpgrade = false,
+<<<<<<< HEAD
     required this.ontap
+=======
+    required this.ontap,
+      
+>>>>>>> 24fb0114aac037101a36de2cbe4e4e3f00659561
   });
 
   @override

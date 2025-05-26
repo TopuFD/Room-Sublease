@@ -82,7 +82,7 @@ class RoommatPreferanceScreen extends StatelessWidget {
                             });
                       },
                     ),
-                    // ============================================================420 friendly 
+                    // ============================================================420 friendly
                     CustomItem(
                       title: "420 friendly ",
                       listValue: roommatPref.selcectPetPref,
@@ -136,7 +136,7 @@ class RoommatPreferanceScreen extends StatelessWidget {
                             });
                       },
                     ),
-                    
+
                     // // ============================================================Roommate is more introverted
                     CustomItem(
                       title: "Roommate is more introverted",
@@ -165,9 +165,7 @@ class RoommatPreferanceScreen extends StatelessWidget {
                       },
                     ),
 
-
-
-                    // ============================================================420 friendly 
+                    // ============================================================420 friendly
                     CustomItem(
                       title: "Roommate has a romantic partner",
                       listValue: roommatPref.selcectPetPref,
@@ -181,7 +179,7 @@ class RoommatPreferanceScreen extends StatelessWidget {
                       },
                     ),
 
-                     // // ============================================================Roommate has a traditional 9-5 job 
+                    // // ============================================================Roommate has a traditional 9-5 job
                     CustomItem(
                       title: "Roommate has a traditional 9-5 job ",
                       value: roommatPref.jobSelected, // ✅ pass RxString
@@ -189,12 +187,12 @@ class RoommatPreferanceScreen extends StatelessWidget {
                       ontap: () {
                         Get.toNamed(AppRoute.preferanceSelectionScreen,
                             arguments: {
-                              "title": "Roommate has a traditional 9-5 job (goes to the office or works hybrid)",
+                              "title":
+                                  "Roommate has a traditional 9-5 job  (goes to the office or works hybrid)",
                               "prefsvalue": "job"
                             });
                       },
                     ),
-
 
                     // //===================================================================================================upgrade card
                     CustomUpgradeCard(
@@ -202,54 +200,95 @@ class RoommatPreferanceScreen extends StatelessWidget {
                       value:
                           "To set your preference to non-negotiable, upgrade now",
                       isUpgrade: true,
-                      ontap: (){},
+                      ontap: () {},
                     ),
-
+                    // // ============================================================Preferred political affiliation
+                    CustomUpgradeCard(
+                      title: "Roommate wants to be friends",
+                      value: "Preferred",
+                      ontap: () {
+                        
+                        Get.toNamed(AppRoute.preferanceSelectionScreen,
+                            arguments: {
+                              "title": "Roommate wants to be friends",
+                              "prefsvalue": "gooseOut"
+                            });
+                      },
+                    ),
 
                     // // ============================================================Roommate wants to be friends,
                     CustomUpgradeCard(
-                      title: "Roommate wants to be friends",
-                      value: "Yes",
+                      title: "Preferred political affiliation",
+                      value: "Democratic Party",
                       ontap: () {
-                        
+                        Get.toNamed(AppRoute.preferanceSelectionScreen,
+                            arguments: {
+                              "title": "Preferred political affiliation",
+                              "prefsvalue": "political"
+                            });
                       },
-                      
                     ),
-                    // // ============================================================Roommate wants to be friends,
-                    // CustomUpgradeCard(
-                    //   title: "Preferred political affiliation",
-                    //   value: "Democratic Party",
-                    // ),
-                    // // // ============================================================Preferred political affiliation
-                    // CustomUpgradeCard(
-                    //   title: "Roommate wants to be friends",
-                    //   value: "Preferred",
-                    // ),
-                    // // // ============================================================Roommate goes out often
-                    // CustomUpgradeCard(
-                    //   title: "Roommate goes out often",
-                    //   value: "Preferred",
-                    // ),
-                    // // // ============================================================Roommate was a member of Greek life
-                    // CustomUpgradeCard(
-                    //   title: "Roommate was a member of Greek life",
-                    //   value: "Preferred",
-                    // ),
-                    // // // ============================================================Roommate is okay with sharing food
-                    // CustomUpgradeCard(
-                    //   title: "Roommate is okay with sharing food ",
-                    //   value: "Preferred",
-                    // ),
-                    // // // ============================================================No romantic visitors or overnight guests
-                    // CustomUpgradeCard(
-                    //   title: "No romantic visitors or overnight guests",
-                    //   value: "Preferred",
-                    // ),
-                    // // // ============================================================Roommate is okay with sharing clothes
-                    // CustomUpgradeCard(
-                    //   title: "Roommate is okay with sharing clothes",
-                    //   value: "Preferred",
-                    // ),
+
+                    // // ============================================================Roommate goes out often
+                    CustomUpgradeCard(
+                      title: "Roommate goes out often",
+                      value: "Preferred",
+                      ontap: () {
+                        Get.toNamed(AppRoute.preferanceSelectionScreen,
+                            arguments: {
+                              "title": "Roommate goes out often",
+                              "prefsvalue": "gooseOut"
+                            });
+                      },
+                    ),
+                    // // ============================================================Roommate was a member of Greek life
+                    CustomUpgradeCard(
+                      title: "Roommate was a member of Greek life",
+                      value: "Preferred",
+                      ontap: () {
+                        Get.toNamed(AppRoute.preferanceSelectionScreen,
+                            arguments: {
+                              "title": "Roommate was involved in Greek life in college ",
+                              "prefsvalue": "gooseOut"
+                            });
+                      },
+                    ),
+                    // // ============================================================Roommate is okay with sharing food
+                    CustomUpgradeCard(
+                      title: "Roommate is okay with sharing food ",
+                      value: "Preferred",
+                      ontap: () {
+                        Get.toNamed(AppRoute.preferanceSelectionScreen,
+                            arguments: {
+                              "title": "Roommate is okay with sharing food",
+                              "prefsvalue": "gooseOut"
+                            });
+                      },
+                    ),
+                    // // ============================================================No romantic visitors or overnight guests
+                    CustomUpgradeCard(
+                      title: "No romantic visitors or overnight guests",
+                      value: "Preferred",
+                      ontap: () {
+                        Get.toNamed(AppRoute.preferanceSelectionScreen,
+                            arguments: {
+                              "title": "No romantic visitors or overnight guests",
+                              "prefsvalue": "gooseOut"
+                            });
+                      },
+                    ),
+                    // // ============================================================Roommate is okay with sharing clothes
+                    CustomUpgradeCard(
+                      title: "Roommate is okay with sharing clothes",
+                      value: "Preferred",
+                      ontap: () {
+                        Get.toNamed(AppRoute.preferanceSelectionScreen,
+                            arguments: {
+                              "title": "Roommate is okay with sharing clothes",
+                              "prefsvalue": "gooseOut"
+                            });
+                      },
+                    ),
                     32.height,
                     CommonButton(titleText: "Continue"),
                     20.height,

@@ -43,4 +43,12 @@ class RoommatPreferanceController extends GetxController {
     List<String> jobList =  ["Preferred","Not Preferred"];
 
     final RxString jobSelected = 'Preferred'.obs;
+
+    
+  //=================================================================select gender preference
+  List<String> politicalPref = ["Democratic Party", "Republican Party", "Libertarian Party","Green Party","Independent","Progressive","Conservative","Moderate","Socialist","Prefer not to say"];
+    RxList<String> selcectpolitacalPref = <String>["Democratic Party"].obs;
+    RxBool isPoliticalrDeel = false.obs;
+    RxBool isDisplay = false.obs;
+
 }

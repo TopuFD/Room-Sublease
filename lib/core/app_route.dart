@@ -13,6 +13,24 @@ import 'package:room_sublease/view/comon_screen/splash_screen/splash_screen.dart
 import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/location_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/preferance_selection_screen.dart';
 import 'package:room_sublease/view/screens/add_screen/look_roommat_screen/roommat_preferance_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/looking_sublease/apartment_amenitise_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/looking_sublease/bring_faev_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/looking_sublease/housing_preference_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/looking_sublease/monthly_budget_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/looking_sublease/sublease_done_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/looking_sublease/sublease_map_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/address_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/extrovert_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/faev_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/greek_life_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/introvert_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/ofenout_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/political_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/make_friend_screen/religion_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/describe_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/house_counting_screen.dart';
+import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/live_address.dart';
+import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/property_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/roommat_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/subleas_details_screen.dart';
 import 'package:room_sublease/view/screens/message_screens/messaging_screen.dart';
@@ -51,6 +69,28 @@ class AppRoute {
   static const String locationScreen = "/locationScreen";
   static const String roomatPreferanceScreen = "/roomatPreferanceScreen";
   static const String preferanceSelectionScreen = "/preferanceSelectionScreen";
+  //=========================================== looking subleas screens
+  static const String bringFaevScreen = "/bringFaevScreen";
+  static const String housingPreferenceScreen = "/housingPreferenceScreen";
+  static const String apartmentAmenitiesScreen = "/apartmentAmenitiesScreen";
+  static const String monthlyBudgetScreen = "/monthlyBudgetScreen";
+  static const String subleaseMapScreen = "/subleaseMapScreen";
+  static const String subleasDoneScreen = "/subleasDoneScreen";
+    //=========================================== make Friend screens
+  static const String faevScreen = "/faevScreen";
+    static const String addressScreen = "/addressScreen";
+    static const String riligionScreen = "/riligionScreen";
+    static const String introvertScreen = "/introvertScreen";
+    static const String extrovertScreen = "/extrovertScreen";
+    static const String greeklifeScreen = "/greeklifeScreen";
+    static const String ofenoutScreen = "/ofenoutScreen";
+    static const String politicalScreen = "/politicalScreen";
+    //=========================================== post sublease screens
+    static const String properDetailScreen = "/properDetailScreen";
+    static const String liveAddress = "/liveAddress";
+    static const String describeScreen = "/describeScreen";
+    static const String houseCountingScreen = "/houseCountingScreen";
+    static const String postPhotoScreen = "/postPhotoScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -152,5 +192,84 @@ class AppRoute {
         name: preferanceSelectionScreen,
         page: () => PreferanceSelectionScreen(),
         transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: bringFaevScreen,
+        page: () => BringFaevScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: housingPreferenceScreen,
+        page: () => HousingPreferenceScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: apartmentAmenitiesScreen,
+        page: () => ApartmentAmenitiseScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: monthlyBudgetScreen,
+        page: () => MonthlyBudgetScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: subleaseMapScreen,
+        page: () => SubleaseMapScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: subleasDoneScreen,
+        page: () => SubleaseDoneScreen(),
+        transition: Transition.rightToLeftWithFade),
+        //================================================================
+    GetPage(
+        name: faevScreen,
+        page: () => FaevScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: addressScreen,
+        page: () => AddressScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: riligionScreen,
+        page: () => ReligionScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: introvertScreen,
+        page: () => IntrovertScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: extrovertScreen,
+        page: () => ExtrovertScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: greeklifeScreen,
+        page: () => GreekLifeScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: politicalScreen,
+        page: () => PoliticalScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: ofenoutScreen,
+        page: () => OfenoutScreen(),
+        transition: Transition.rightToLeftWithFade),
+//================================================================
+    GetPage(
+        name: properDetailScreen,
+        page: () => PropertyDetailsScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: liveAddress,
+        page: () => LiveAddress(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: describeScreen,
+        page: () => DescribeScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: houseCountingScreen,
+        page: () => HouseCountingScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: describeScreen,
+        page: () => DescribeScreen(),
+        transition: Transition.rightToLeftWithFade),
+
   ];
 }
