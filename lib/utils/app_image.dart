@@ -10,5 +10,11 @@ class AppImage {
   static const verify = "asset/image/verify.png";
   static const wait = "asset/image/wait.png";
   static const map = "asset/image/map.png";
+  static const frame = "asset/image/frame.png";
+  static const id = "asset/image/id.png";
+  static const user = "asset/image/user.png";
+  static const sub1 = "asset/image/sub1.png";
+  static const sub2 = "asset/image/sub2.png";
+  static const sub3 = "asset/image/sub3.png";
 
 }

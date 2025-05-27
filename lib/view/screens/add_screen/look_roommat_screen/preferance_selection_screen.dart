@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:room_sublease/controller/add_preferance_controller/roommat_preferance_controller.dart';
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/utils/app_icons.dart';
+import 'package:room_sublease/view/comon_screen/show_subscription_dialog.dart/show_subscription_dialog.dart';
 import 'package:room_sublease/view/components/common_appbar/common_appbar.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
 import 'package:room_sublease/view/components/round_checkbox/custom_checkbox.dart';
@@ -65,7 +66,9 @@ class PreferanceSelectionScreen extends StatelessWidget {
                     isDeel: roommatPref.isPartnerDeel,
                     isCheckbox: true,
                     isMinimum: true,
-                    isUpgrade: true),
+                    isUpgrade: true,
+                    context: context
+                    ),
               //==================================================================================gender
               if (prefsValue == "beFriend")
                 checkItem(
@@ -74,7 +77,9 @@ class PreferanceSelectionScreen extends StatelessWidget {
                     isDeel: roommatPref.isfriendDeel,
                     isCheckbox: true,
                     isMinimum: true,
-                    isUpgrade: true),
+                    isUpgrade: true,
+                    context: context,
+                    ),
               //==================================================================================gender
               if (prefsValue == "work")
                 checkItem(
@@ -121,7 +126,8 @@ class PreferanceSelectionScreen extends StatelessWidget {
                     sliderSelect: roommatPref.jobSelected,
                     isDeel: false.obs,
                     isSlider: true,
-                    isUpgrade: true),
+                    isUpgrade: true,
+                    context: context,),
               //==================================================================================gender
               if (prefsValue == "political")
                 checkItem(
@@ -161,6 +167,7 @@ class PreferanceSelectionScreen extends StatelessWidget {
     bool isSlider = false,
     bool isDeal = false,
     bool isPolitical = false,
+    BuildContext? context,
   }) {
     return Column(
       children: [
@@ -312,25 +319,30 @@ class PreferanceSelectionScreen extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 10, vertical: 7),
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(244, 63, 0, 0.06),
-                          borderRadius: BorderRadius.circular(100),
-                        ),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SvgPicture.asset(AppIcons.upgrade),
-                            4.width,
-                            CommonText(
-                              text: "Upgrade",
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
-                              color: Color(0xFFFF4427),
-                            ),
-                          ],
+                      InkWell(
+                    onTap: () {
+                      showSubscriptionDialog(context!);
+                    },
+                        child: Container(
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(244, 63, 0, 0.06),
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SvgPicture.asset(AppIcons.upgrade),
+                              4.width,
+                              CommonText(
+                                text: "Upgrade",
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Color(0xFFFF4427),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],

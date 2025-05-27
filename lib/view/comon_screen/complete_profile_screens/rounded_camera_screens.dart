@@ -20,14 +20,14 @@ Future<ui.Image> loadUiImage(String assetPath) async {
   return frame.image;
 }
 
-class FrameCemaraScreen extends StatefulWidget {
-  const FrameCemaraScreen({super.key});
+class FrameWithImagePicker extends StatefulWidget {
+  const FrameWithImagePicker({super.key});
 
   @override
-  State<FrameCemaraScreen> createState() => _FrameCemaraScreenState();
+  State<FrameWithImagePicker> createState() => _FrameWithImagePickerState();
 }
 
-class _FrameCemaraScreenState extends State<FrameCemaraScreen> {
+class _FrameWithImagePickerState extends State<FrameWithImagePicker> {
   ui.Image? frameImage;
   final CompleteProfileController profile =
       Get.put(CompleteProfileController());
@@ -67,26 +67,29 @@ class _FrameCemaraScreenState extends State<FrameCemaraScreen> {
           Stack(
             alignment: Alignment.center,
             children: [
-              Container(
-                height: 223,
-                width: 343,
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(20)),
-              ),
+              if (frameImage != null)
+                SizedBox(
+                  width: 295,
+                  height: 385,
+                  child: CustomPaint(
+                    painter: FramePainter(frameImage!),
+                  ),
+                ),
               Obx(() {
-                return profile.idImage.isNotEmpty
-                    ? CommonImage(
-                          imageSrc: profile.idImage.value,
+                return profile.userImage.isNotEmpty
+                    ? ClipOval(
+                        child: CommonImage(
+                          imageSrc: profile.userImage.value,
                           imageType: ImageType.file,
-                          height: 220,
-                          width: 340,
-                        )
+                          height: 410,
+                          width: 300,
+                        ),
+                      )
                     : CommonImage(
-                        imageSrc: AppImage.id,
+                        imageSrc: AppImage.user,
                         imageType: ImageType.png,
-                        height: 220,
-                        width: 340,
+                        height: 410,
+                        width: 300,
                       );
               }),
             ],
@@ -94,26 +97,26 @@ class _FrameCemaraScreenState extends State<FrameCemaraScreen> {
           Expanded(child: SizedBox()),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
-            child: Obx((){
+            child: Obx(() {
               return CommonButton(
-              titleText: profile.idImage.isEmpty ? "Capture" : "Retake",
-              onTap: () async {
-                String image = await OtherHelper.openCamera() ?? "";
-                profile.idImage.value = image;
-              },
-              borderColor: Colors.transparent,
-            );
+                titleText: profile.userImage.isEmpty ? "Capture" : "Retake",
+                onTap: () async {
+                  String image = await OtherHelper.openCamera() ?? "";
+                  profile.userImage.value = image;
+                },
+                borderColor: Colors.transparent,
+              );
             }),
           ),
           20.height,
           Obx(() {
-            return profile.idImage.isNotEmpty
+            return profile.userImage.isNotEmpty
                 ? Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16),
                     child: CommonButton(
                       titleText: "Continue",
                       onTap: () {
-                        Get.toNamed(AppRoute.roundedCameraScreen);
+                        Get.toNamed(AppRoute.verifyWaitingScreen);
                       },
                       borderColor: Colors.transparent,
                     ),
@@ -135,58 +138,12 @@ class FramePainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    // প্রথমে ফ্রেম ইমেজ পুরো রেক্ট্যাঙ্গুলার এলাকায় আঁকো
     paintImage(
       canvas: canvas,
       rect: Rect.fromLTWH(0, 0, size.width, size.height),
       image: frameImage,
       fit: BoxFit.cover,
     );
-
-    // এখন রেক্ট্যাঙ্গুলার বর্ডার আঁকো
-    final paint = Paint()
-      ..color = Colors.green
-      ..strokeWidth = 2
-      ..style = PaintingStyle.stroke;
-
-    final rect = Rect.fromLTWH(0, 0, size.width, size.height);
-    canvas.drawRect(rect, paint);
-
-    // বর্ডারের চারপাশে ছোট tick line এড করবো
-    final tickPaint = Paint()
-      ..color = Colors.green
-      ..strokeWidth = 1;
-
-    final tickLength = 8.0;
-    final tickCountPerSide = 15; // প্রতি পাশে টিকের সংখ্যা
-
-    // টিকগুলো চারপাশে সমান ভাগে ভাগ করে রাখবো
-
-    // Top side ticks
-    for (int i = 0; i <= tickCountPerSide; i++) {
-      final dx = (size.width / tickCountPerSide) * i;
-      canvas.drawLine(Offset(dx, 0), Offset(dx, tickLength), tickPaint);
-    }
-
-    // Bottom side ticks
-    for (int i = 0; i <= tickCountPerSide; i++) {
-      final dx = (size.width / tickCountPerSide) * i;
-      canvas.drawLine(Offset(dx, size.height),
-          Offset(dx, size.height - tickLength), tickPaint);
-    }
-
-    // Left side ticks
-    for (int i = 0; i <= tickCountPerSide; i++) {
-      final dy = (size.height / tickCountPerSide) * i;
-      canvas.drawLine(Offset(0, dy), Offset(tickLength, dy), tickPaint);
-    }
-
-    // Right side ticks
-    for (int i = 0; i <= tickCountPerSide; i++) {
-      final dy = (size.height / tickCountPerSide) * i;
-      canvas.drawLine(Offset(size.width, dy),
-          Offset(size.width - tickLength, dy), tickPaint);
-    }
   }
 
   @override

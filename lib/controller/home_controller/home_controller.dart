@@ -26,7 +26,7 @@ class HomeController extends GetxController {
     {'title': 'Hiking', 'color': Color(0xFFFDDEC3), "isBorder": false},
     {'title': 'Comedy shows ', 'color': Color(0xFFFCD5D2), "isBorder": false},
     {
-      'title': 'SHosting dinners',
+      'title': 'Hosting dinners',
       'color': Color(0xFFCBDFFF),
       "isBorder": false
     },

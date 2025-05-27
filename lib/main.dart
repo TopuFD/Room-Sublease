@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/core/dependency.dart';
 import 'package:room_sublease/helper/prefs_helper.dart';
-
 void main() {
   action();
   runApp(const MyApp());
@@ -56,8 +55,9 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+        // home: FrameWithImagePicker(),
         getPages: AppRoute.pages,
-        initialRoute: AppRoute.splashScreen,
+        initialRoute: AppRoute.bottomNavScreen,
       ),
     );
   }

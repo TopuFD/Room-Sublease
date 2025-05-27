@@ -36,7 +36,7 @@ class CompleteProfileScreen extends StatelessWidget {
             children: [
               10.height,
               CommonText(
-                text: "Tell us about yourself?",
+                text: "Complete your profile!",
                 fontSize: 28,
                 bottom: 10,
                 maxLines: 2,
@@ -45,7 +45,7 @@ class CompleteProfileScreen extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
               CommonText(
-                text: "Pick your priorities—we’ll handle the search.",
+                text: "Add a photo & bio to complete your profile!",
                 fontSize: 16,
                 color: Color.fromRGBO(42, 41, 39, 0.60),
                 fontWeight: FontWeight.w500,

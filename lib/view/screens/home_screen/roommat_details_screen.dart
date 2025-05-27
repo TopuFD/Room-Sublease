@@ -182,7 +182,7 @@ class RoommatDetailsScreen extends StatelessWidget {
                 imageSrc:
                     "https://img.freepik.com/premium-photo/beautiful-young-girl-with-professional-makeup-hairstyle-sitting-restaurant_2221-592.jpg",
                 imageType: ImageType.network,
-                height: Get.height * 0.45,
+                height: Get.height * 0.5,
                 width: Get.width,
               ),
               30.height,

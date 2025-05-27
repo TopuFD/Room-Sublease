@@ -56,10 +56,10 @@ class SignupChooserScreen extends StatelessWidget {
                 onTap: () {
                   Get.toNamed(AppRoute.signinScreen);
                 },
-                titleText: "Next"),
+                titleText: "Sign in"),
             CommonButton(
               onTap: () {},
-              titleText: "Skip",
+              titleText: "Sign up",
               buttonColor: AppColors.transparent,
               borderColor: AppColors.transparent,
               titleColor: AppColors.black,

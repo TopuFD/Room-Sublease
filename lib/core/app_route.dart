@@ -5,6 +5,7 @@ import 'package:room_sublease/view/comon_screen/bottom_nav_bar_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/complete_profile_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/frame_cemara_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/parson_type_screen.dart';
+import 'package:room_sublease/view/comon_screen/complete_profile_screens/rounded_camera_screens.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/select_fun_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/user_photo_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/verify_identity.dart';
@@ -74,6 +75,7 @@ class AppRoute {
   static const String parsonTypeScreen = "/parsonTypeScreen";
   static const String frameCameraScreen = "/frameCameraScreen";
   static const String userImageScreen = "/userImageScreen";
+  static const String roundedCameraScreen = "/roundedCameraScreen";
 
   //============================================================================================all add screen
   //=========================================== looking for roommat all screen
@@ -157,9 +159,10 @@ class AppRoute {
         name: userImageScreen,
         page: () => UserPhotoScreen(),
         transition: Transition.rightToLeftWithFade),
+
     GetPage(
-        name: verifyWaitingScreen,
-        page: () => VerifyWaitingScreen(),
+        name: roundedCameraScreen,
+        page: () => FrameWithImagePicker(),
         transition: Transition.rightToLeftWithFade),
     GetPage(
         name: bottomNavScreen,
@@ -204,6 +207,10 @@ class AppRoute {
     GetPage(
         name: funActivity,
         page: () => FunActivity(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: verifyWaitingScreen,
+        page: () => VerifyWaitingScreen(),
         transition: Transition.rightToLeftWithFade),
 
     //============================================================================================all add screen
@@ -314,7 +321,6 @@ class AppRoute {
         name: giveDetailsScreen,
         page: () => GiveDetailsScreen(),
         transition: Transition.rightToLeftWithFade),
-
 
 //================================================================ notification screen
     GetPage(

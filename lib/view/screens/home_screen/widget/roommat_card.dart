@@ -35,7 +35,7 @@ class RoommatCard extends StatelessWidget {
             BoxShadow(
               color: Color(0x0CC7C7C7),
               blurRadius: 52,
-              offset: Offset(0, 87),
+              offset: Offset(0, 10),
               spreadRadius: 0,
             ),
             BoxShadow(
@@ -65,13 +65,13 @@ class RoommatCard extends StatelessWidget {
                 imageSrc:
                     "https://img.freepik.com/free-photo/beautiful-girl-stands-park_8353-5084.jpg?semt=ais_hybrid&w=740",
                 imageType: ImageType.network,
-                height: Get.height * 0.45,
+                height: MediaQuery.of(context).size.height * .55,
                 width: Get.width,
                 borderRadius: 28,
                 fill: BoxFit.cover,
               ),
               Container(
-                height: Get.height * 0.482,
+                height:MediaQuery.of(context).size.height * .487,
                 width: Get.width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(28),
@@ -177,7 +177,7 @@ class RoommatCard extends StatelessWidget {
           ),
           10.height,
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 10),
+            padding: EdgeInsets.symmetric(horizontal: 12.w,),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

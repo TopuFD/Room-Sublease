@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:room_sublease/Utils/app_icons.dart';
 import 'package:room_sublease/extentions/extentions.dart';
+import 'package:room_sublease/view/comon_screen/show_subscription_dialog.dart/show_subscription_dialog.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
 
 // ignore: must_be_immutable
@@ -18,7 +19,6 @@ class CustomUpgradeCard extends StatelessWidget {
     this.value = "",
     this.isUpgrade = false,
     required this.ontap,
-      
   });
 
   @override
@@ -70,25 +70,30 @@ class CustomUpgradeCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFFF4427),
-                      borderRadius: BorderRadius.circular(100),
-                    ),
-                    child: CommonText(
-                      text: "Upgrade",
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                      color: Color(0xFFFFFFFF),
+                  InkWell(
+                    onTap: () {
+                      showSubscriptionDialog(context);
+                    },
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                      decoration: BoxDecoration(
+                        color: Color(0xFFFF4427),
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      child: CommonText(
+                        text: "Upgrade",
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFFFFFFFF),
+                      ),
                     ),
                   ),
                 ],
               ),
             )
           : InkWell(
-            onTap: ontap,
-            child: Column(
+              onTap: ontap,
+              child: Column(
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -117,28 +122,33 @@ class CustomUpgradeCard extends StatelessWidget {
                           ],
                         ),
                       ),
-            
+
                       Row(
                         children: [
-                          Container(
-                            padding:
-                                EdgeInsets.symmetric(horizontal: 10, vertical: 7),
-                            decoration: BoxDecoration(
-                              color: Color.fromRGBO(244, 63, 0, 0.06),
-                              borderRadius: BorderRadius.circular(100),
-                            ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset(AppIcons.upgrade),
-                                4.width,
-                                CommonText(
-                                  text: "Upgrade",
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w500,
-                                  color: Color(0xFFFF4427),
-                                ),
-                              ],
+                          InkWell(
+                            onTap: () {
+                              showSubscriptionDialog(context);
+                            },
+                            child: Container(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 7),
+                              decoration: BoxDecoration(
+                                color: Color.fromRGBO(244, 63, 0, 0.06),
+                                borderRadius: BorderRadius.circular(100),
+                              ),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SvgPicture.asset(AppIcons.upgrade),
+                                  4.width,
+                                  CommonText(
+                                    text: "Upgrade",
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xFFFF4427),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                           SizedBox(width: 10.w),
@@ -156,7 +166,7 @@ class CustomUpgradeCard extends StatelessWidget {
                   )
                 ],
               ),
-          ),
+            ),
     );
   }
 }
