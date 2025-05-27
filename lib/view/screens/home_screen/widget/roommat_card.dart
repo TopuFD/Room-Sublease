@@ -8,13 +8,17 @@ import 'package:room_sublease/utils/app_icons.dart';
 import 'package:room_sublease/view/components/common_image/common_image.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
 
+// ignore: must_be_immutable
 class RoommatCard extends StatelessWidget {
-  const RoommatCard({super.key});
+  RoommatCard({super.key,required this.image});
+
+  String image;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: Get.width,
+      height: MediaQuery.of(context).size.height * .59,
       padding: EdgeInsets.only(bottom: 5),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(28),
@@ -59,125 +63,127 @@ class RoommatCard extends StatelessWidget {
           ]),
       child: Column(
         children: [
-          Stack(
-            children: [
-              CommonImage(
-                imageSrc:
-                    "https://img.freepik.com/free-photo/beautiful-girl-stands-park_8353-5084.jpg?semt=ais_hybrid&w=740",
-                imageType: ImageType.network,
-                height: MediaQuery.of(context).size.height * .55,
-                width: Get.width,
-                borderRadius: 28,
-                fill: BoxFit.cover,
-              ),
-              Container(
-                height:MediaQuery.of(context).size.height * .487,
-                width: Get.width,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(28),
-                  // ignore: deprecated_member_use
-                  color: Colors.black.withOpacity(0.4),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * .5,
+            child: Stack(
+              children: [
+                CommonImage(
+                  imageSrc:image,
+                  imageType: ImageType.network,
+                  borderRadius: 28,
+                  height: Get.height,
+                  width: Get.width,
+                  fill: BoxFit.cover,
                 ),
-              ),
-              Positioned(
-                bottom: 15,
-                left: 10,
-                right: 10,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 15, vertical: 10),
-                          decoration: BoxDecoration(
-                              color: Color.fromRGBO(255, 255, 255, 0.12),
-                              borderRadius: BorderRadius.circular(23)),
-                          child: Center(
-                            child: CommonText(
-                              text: "Just looking for friends!",
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              color: AppColors.white,
-                            ),
-                          ),
-                        ),
-                        10.height,
-                        CommonText(
-                          text: "Amelia, 25",
-                          fontSize: 24,
-                          fontWeight: FontWeight.w600,
-                          color: AppColors.white,
-                        ),
-                        5.height,
-                        CommonText(
-                          text: "Product designer @ Google",
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                          color: Color.fromRGBO(255, 255, 255, 0.70),
-                        ),
-                        10.height,
-                        Row(
-                          children: [
-                            Container(
-                              height: 28,
-                              width: 28,
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Color.fromRGBO(255, 255, 255, 0.12)),
-                              child: Center(
-                                child: SvgPicture.asset(AppIcons.location),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(28),
+                    // ignore: deprecated_member_use
+                    color: Colors.black.withOpacity(0.4),
+                  ),
+                ),
+                Positioned(
+                  bottom: 15,
+                  left: 10,
+                  right: 10,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 15, vertical: 10),
+                            decoration: BoxDecoration(
+                                color: Color.fromRGBO(255, 255, 255, 0.12),
+                                borderRadius: BorderRadius.circular(23)),
+                            child: Center(
+                              child: CommonText(
+                                text: "Just looking for friends!",
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.white,
                               ),
                             ),
-                            8.width,
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                CommonText(
-                                  text: "Prefrered area",
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w500,
-                                  color: AppColors.white,
-                                ),
-                                CommonText(
-                                  text: "Soho west village Chelsea",
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w500,
-                                  color: Color.fromRGBO(255, 255, 255, 0.60),
-                                ),
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                    Align(
-                      alignment: Alignment.bottomRight,
-                      child: Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 15, vertical: 11),
-                        decoration: BoxDecoration(
+                          ),
+                          10.height,
+                          CommonText(
+                            text: "Amelia, 25",
+                            fontSize: 24,
+                            fontWeight: FontWeight.w600,
                             color: AppColors.white,
-                            borderRadius: BorderRadius.circular(100)),
-                        child: CommonText(
-                          text: "94% match",
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xFF141415),
-                        ),
+                          ),
+                          5.height,
+                          CommonText(
+                            text: "Product designer @ Google",
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Color.fromRGBO(255, 255, 255, 0.70),
+                          ),
+                          10.height,
+                          Row(
+                            children: [
+                              Container(
+                                height: 28,
+                                width: 28,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Color.fromRGBO(255, 255, 255, 0.12)),
+                                child: Center(
+                                  child: SvgPicture.asset(AppIcons.location),
+                                ),
+                              ),
+                              8.width,
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  CommonText(
+                                    text: "Prefrered area",
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: AppColors.white,
+                                  ),
+                                  CommonText(
+                                    text: "Soho west village Chelsea",
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color.fromRGBO(255, 255, 255, 0.60),
+                                  ),
+                                ],
+                              )
+                            ],
+                          )
+                        ],
                       ),
-                    )
-                  ],
-                ),
-              )
-            ],
+                      Align(
+                        alignment: Alignment.bottomRight,
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 15, vertical: 11),
+                          decoration: BoxDecoration(
+                              color: AppColors.white,
+                              borderRadius: BorderRadius.circular(100)),
+                          child: CommonText(
+                            text: "94% match",
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xFF141415),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
           10.height,
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 12.w,),
+            padding: EdgeInsets.symmetric(
+              horizontal: 12.w,
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

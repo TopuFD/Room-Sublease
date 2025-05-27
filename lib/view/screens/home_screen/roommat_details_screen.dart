@@ -32,7 +32,7 @@ class RoommatDetailsScreen extends StatelessWidget {
           child: Column(
             children: [
               20.height,
-              RoommatCard(),
+              RoommatCard(image: "https://img.freepik.com/free-photo/beautiful-girl-stands-park_8353-5084.jpg?semt=ais_hybrid&w=740",),
               15.height,
               Align(
                 alignment: Alignment.centerLeft,

@@ -12,18 +12,15 @@ class RoommatBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.topCenter,
-      child: SizedBox(
-        height: Get.height * 0.65,
-        child: CardSwiper(
-          cardsCount: homeController.cardList.length,
-          numberOfCardsDisplayed: 3,
-          cardBuilder: (context, index, percentThresholdX, percentThresholdY) =>
-              InkWell(
-            onTap: () {
-              Get.toNamed(AppRoute.roommatDetailsScreen);
-            },
-            child: homeController.cardList[index],
-          ),
+      child: CardSwiper(
+        cardsCount: homeController.cardList.length,
+        numberOfCardsDisplayed: 3,
+        cardBuilder: (context, index, percentThresholdX, percentThresholdY) =>
+            InkWell(
+          onTap: () {
+            Get.toNamed(AppRoute.roommatDetailsScreen);
+          },
+          child: homeController.cardList[index],
         ),
       ),
     );
