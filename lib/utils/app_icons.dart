@@ -34,6 +34,7 @@ class AppIcons {
   static const subscription = "asset/icon/subscription.svg";
   static const term = "asset/icon/term.svg";
   static const privacy = "asset/icon/privacy.svg";
+  static const support = "asset/icon/support.svg";
   static const logout = "asset/icon/logout.svg";
   static const edit = "asset/icon/edit.svg";
   static const edit2 = "asset/icon/edit2.svg";

@@ -13,7 +13,6 @@ class DependencyInjection extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut(() => CompleteProfileController(), fenix: true);
-    Get.lazyPut(() => HomeController(), fenix: true);
     Get.lazyPut(() => ExpandableTextController(), fenix: true);
     Get.lazyPut(() => BottomNavController(), fenix: true);
     Get.lazyPut(() => EditProfileController(), fenix: true);
@@ -21,5 +20,6 @@ class DependencyInjection extends Bindings {
     Get.lazyPut(() => SubleaseController(), fenix: true);
     Get.lazyPut(() => MakeFriendController(), fenix: true);
     Get.lazyPut(() => PostSubleaseController(), fenix: true);
+    Get.lazyPut(() => HomeController(), fenix: true);
   }
 }

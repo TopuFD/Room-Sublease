@@ -12,78 +12,81 @@ class AddressScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CommonAppbar(title: ""),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Stack(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
+            children: [
+              Container(
+                width: Get.width,
+                height: 1,
+                color: Color(0xFFE9DFD8),
+              ),
+              Container(
+                width: Get.width * 0.3,
+                height: 1,
+                color: Color(0xFFFF4427),
+              ),
+            ],
+          ),
+          24.height,
+          Expanded(
+              child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  width: Get.width,
-                  height: 1,
-                  color: Color(0xFFE9DFD8),
+                CommonText(
+                  text: "Where do you live or plan to move?",
+                  fontSize: 24,
+                  bottom: 5,
+                  maxLines: 2,
+                  textAlign: TextAlign.start,
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xFF161312),
                 ),
-                Container(
-                  width: Get.width * 0.3,
-                  height: 1,
-                  color: Color(0xFFFF4427),
+                CommonText(
+                  text: "Please share your location",
+                  fontSize: 16,
+                  maxLines: 2,
+                  textAlign: TextAlign.start,
+                  fontWeight: FontWeight.w500,
+                  color: Color.fromRGBO(22, 19, 18, 0.60),
                 ),
+                32.height,
+                CommonText(
+                  text: "Location",
+                  fontSize: 14,
+                  maxLines: 2,
+                  textAlign: TextAlign.start,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xFF161312),
+                ),
+                15.height,
+                Container(
+                    padding: EdgeInsets.only(left: 10),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Color(0xFFF3EAE3),
+                        border: Border.all(color: Color(0xFFE8E8E8))),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Write your location",
+                        border: InputBorder.none,
+                      ),
+                    )),
+                Expanded(child: SizedBox()),
+                CommonButton(
+                  titleText: "Continue",
+                  onTap: () {
+                    Get.toNamed(AppRoute.riligionScreen);
+                  },
+                ),
+                24.height,
               ],
             ),
-            24.height,
-            CommonText(
-              text: "Where do you live or plan to move?",
-              fontSize: 24,
-              bottom: 5,
-              maxLines: 2,
-              textAlign: TextAlign.start,
-              fontWeight: FontWeight.w600,
-              color: Color(0xFF161312),
-            ),
-            CommonText(
-              text: "Please share your location",
-              fontSize: 16,
-              maxLines: 2,
-              textAlign: TextAlign.start,
-              fontWeight: FontWeight.w500,
-              color: Color.fromRGBO(22, 19, 18, 0.60),
-            ),
-            32.height,
-            
-            CommonText(
-              text: "Location",
-              fontSize: 14,
-              maxLines: 2,
-              textAlign: TextAlign.start,
-              fontWeight: FontWeight.w500,
-              color: Color(0xFF161312),
-            ),
-            15.height,
-            Container(
-                padding: EdgeInsets.only(left: 10),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Color(0xFFF3EAE3),
-                    border: Border.all(color: Color(0xFFE8E8E8))),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    hintText: "Write your location",
-                    border: InputBorder.none,
-                  ),
-                )
-              ),
-
-            Expanded(child: SizedBox()),
-            CommonButton(
-              titleText: "Continue",
-              onTap: () {
-                Get.toNamed(AppRoute.riligionScreen);
-              },
-            ),
-            24.height,
-          ],
-        ),
+          ))
+        ],
       ),
     );
   }

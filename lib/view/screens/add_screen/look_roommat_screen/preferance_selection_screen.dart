@@ -23,7 +23,7 @@ class PreferanceSelectionScreen extends StatelessWidget {
     String title = args["title"];
     String prefsValue = args["prefsvalue"];
     return Scaffold(
-      appBar: CommonAppbar(title: " Roommate preferences"),
+      appBar: CommonAppbar(title: " Roommate Preferences"),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),

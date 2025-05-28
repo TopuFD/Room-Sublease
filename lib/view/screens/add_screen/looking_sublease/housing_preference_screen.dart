@@ -66,6 +66,7 @@ class HousingPreferenceScreenState extends State<HousingPreferenceScreen> {
                   fontWeight: FontWeight.w500,
                   color: Color.fromRGBO(22, 19, 18, 0.60),
                 ),
+                32.height,
                 //=======================================================================>
                 // ================================================Furnished Apartment
                 CustomItem(

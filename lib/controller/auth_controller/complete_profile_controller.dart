@@ -5,6 +5,8 @@ class CompleteProfileController extends GetxController {
   RxString idImage = "".obs;
   RxString userImage = "".obs;
 
+  Rx<TextEditingController> ageCtl = TextEditingController().obs;
+
   //====================================================================================for select fun screen
   final parsonList = <Map<String, dynamic>>[
     {

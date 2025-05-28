@@ -99,10 +99,12 @@ class CompleteProfileScreen extends StatelessWidget {
                 child: CustomTextField(
                   hindText: "Select education level",
                   fillColor: AppColors.transparent,
+                  
                   maxLines: 4,
                   textStyle: GoogleFonts.manrope(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
+                    decoration: TextDecoration.none,
                     color: Color.fromRGBO(22, 19, 18, 0.50),
                   ),
                   hintStyle: GoogleFonts.manrope(

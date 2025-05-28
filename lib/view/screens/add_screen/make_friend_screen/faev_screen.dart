@@ -20,112 +20,119 @@ class FaevScreenState extends State<FaevScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CommonAppbar(title: ""),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Stack(
-              children: [
-                Container(
-                  width: Get.width,
-                  height: 1,
-                  color: Color(0xFFE9DFD8),
-                ),
-                Container(
-                  width: Get.width * 0.2,
-                  height: 1,
-                  color: Color(0xFFFF4427),
-                ),
-              ],
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
+            children: [
+              Container(
+                width: Get.width,
+                height: 1,
+                color: Color(0xFFE9DFD8),
+              ),
+              Container(
+                width: Get.width * 0.2,
+                height: 1,
+                color: Color(0xFFFF4427),
+              ),
+            ],
+          ),
+          24.height,
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CommonText(
+                    text: "What brings you to Faev",
+                    fontSize: 24,
+                    bottom: 5,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF161312),
+                  ),
+                  CommonText(
+                    text: "What brings you to Faev?",
+                    fontSize: 16,
+                    maxLines: 2,
+                    textAlign: TextAlign.start,
+                    fontWeight: FontWeight.w500,
+                    color: Color.fromRGBO(22, 19, 18, 0.60),
+                  ),
+                  15.height,
+                  Column(
+                    children: [
+                      item(
+                        ontap: () {
+                          setState(() {
+                            if (selectedIndices.contains(0)) {
+                              selectedIndices.remove(0);
+                            } else {
+                              selectedIndices.add(0);
+                            }
+                          });
+                        },
+                        title: "Moving for work",
+                        index: 0,
+                        isSelected: selectedIndices.contains(0),
+                      ),
+                      item(
+                        ontap: () {
+                          setState(() {
+                            if (selectedIndices.contains(1)) {
+                              selectedIndices.remove(1);
+                            } else {
+                              selectedIndices.add(1);
+                            }
+                          });
+                        },
+                        title: "Looking to make new friends",
+                        index: 1,
+                        isSelected: selectedIndices.contains(1),
+                      ),
+                      item(
+                        ontap: () {
+                          setState(() {
+                            if (selectedIndices.contains(2)) {
+                              selectedIndices.remove(2);
+                            } else {
+                              selectedIndices.add(2);
+                            }
+                          });
+                        },
+                        title: "New to the city looking to expand my circle",
+                        index: 2,
+                        isSelected: selectedIndices.contains(2),
+                      ),
+                      item(
+                        ontap: () {
+                          setState(() {
+                            if (selectedIndices.contains(3)) {
+                              selectedIndices.remove(3);
+                            } else {
+                              selectedIndices.add(3);
+                            }
+                          });
+                        },
+                        title: "Want to meet likeminded people",
+                        index: 3,
+                        isSelected: selectedIndices.contains(3),
+                      ),
+                    ],
+                  ),
+                  Expanded(child: SizedBox()),
+                  CommonButton(
+                    titleText: "Continue",
+                    onTap: () {
+                      Get.toNamed(AppRoute.addressScreen);
+                    },
+                  ),
+                  24.height,
+                ],
+              ),
             ),
-            24.height,
-            CommonText(
-              text: "What brings you to Faev",
-              fontSize: 24,
-              bottom: 5,
-              fontWeight: FontWeight.w600,
-              color: Color(0xFF161312),
-            ),
-            CommonText(
-              text: "What brings you to Faev?",
-              fontSize: 16,
-              maxLines: 2,
-              textAlign: TextAlign.start,
-              fontWeight: FontWeight.w500,
-              color: Color.fromRGBO(22, 19, 18, 0.60),
-            ),
-            15.height,
-            Column(
-              children: [
-                item(
-                  ontap: () {
-                    setState(() {
-                      if (selectedIndices.contains(0)) {
-                        selectedIndices.remove(0);
-                      } else {
-                        selectedIndices.add(0);
-                      }
-                    });
-                  },
-                  title: "Moving for work",
-                  index: 0,
-                  isSelected: selectedIndices.contains(0),
-                ),
-                item(
-                  ontap: () {
-                    setState(() {
-                      if (selectedIndices.contains(1)) {
-                        selectedIndices.remove(1);
-                      } else {
-                        selectedIndices.add(1);
-                      }
-                    });
-                  },
-                  title: "Looking to make new friends",
-                  index: 1,
-                  isSelected: selectedIndices.contains(1),
-                ),
-                item(
-                  ontap: () {
-                    setState(() {
-                      if (selectedIndices.contains(2)) {
-                        selectedIndices.remove(2);
-                      } else {
-                        selectedIndices.add(2);
-                      }
-                    });
-                  },
-                  title: "New to the city looking to expand my circle",
-                  index: 2,
-                  isSelected: selectedIndices.contains(2),
-                ),
-                item(
-                  ontap: () {
-                    setState(() {
-                      if (selectedIndices.contains(3)) {
-                        selectedIndices.remove(3);
-                      } else {
-                        selectedIndices.add(3);
-                      }
-                    });
-                  },
-                  title: "Want to meet likeminded people",
-                  index: 3,
-                  isSelected: selectedIndices.contains(3),
-                ),
-              ],
-            ),
-            Expanded(child: SizedBox()),
-            CommonButton(
-              titleText: "Continue",
-              onTap: () {
-                Get.toNamed(AppRoute.addressScreen);
-              },
-            ),
-            24.height,
-          ],
-        ),
+          )
+        ],
       ),
     );
   }

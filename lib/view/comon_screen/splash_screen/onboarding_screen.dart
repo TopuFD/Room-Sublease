@@ -8,7 +8,6 @@ import 'package:room_sublease/utils/app_color.dart';
 import 'package:room_sublease/utils/app_image.dart';
 import 'package:room_sublease/view/components/common_button/common_button.dart';
 import 'package:room_sublease/view/components/common_image/common_image.dart';
-import 'package:room_sublease/view/components/common_text/common_text.dart';
 
 // ignore: must_be_immutable
 class OnboardingScreen extends StatefulWidget {
@@ -87,18 +86,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 )
 
-                // CommonText(
-                //   text: title[currentIndex],
-                //   fontSize: 50,
-                //   top: 20,
-
-                //   textAlign: TextAlign.start,
-                //   color: Color(0xFF161312),
-                //   fontWeight: FontWeight.w900,
-
-                //   lineHeight: 1.1,
-                //   maxLines: 4,
-                // ),
                 ),
             30.height,
             CommonImage(

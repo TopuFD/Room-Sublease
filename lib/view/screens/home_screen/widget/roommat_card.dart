@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:room_sublease/controller/home_controller/home_controller.dart';
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/utils/app_color.dart';
 import 'package:room_sublease/utils/app_icons.dart';
@@ -10,7 +12,7 @@ import 'package:room_sublease/view/components/common_text/common_text.dart';
 
 // ignore: must_be_immutable
 class RoommatCard extends StatelessWidget {
-  RoommatCard({super.key,required this.image});
+  RoommatCard({super.key, required this.image});
 
   String image;
 
@@ -68,7 +70,7 @@ class RoommatCard extends StatelessWidget {
             child: Stack(
               children: [
                 CommonImage(
-                  imageSrc:image,
+                  imageSrc: image,
                   imageType: ImageType.network,
                   borderRadius: 28,
                   height: Get.height,
@@ -187,9 +189,21 @@ class RoommatCard extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                item(icon: AppIcons.cross2),
-                item(icon: AppIcons.star),
-                item(icon: AppIcons.favorite),
+                item(
+                  icon: AppIcons.cross2,
+                  onTap: () {
+                    HomeController.instance.swipeController
+                        .swipe(CardSwiperDirection.left);
+                  },
+                ),
+                10.width,
+                item(
+                  icon: AppIcons.favorite,
+                  onTap: () {
+                    HomeController.instance.swipeController
+                        .swipe(CardSwiperDirection.right);
+                  },
+                ),
               ],
             ),
           )
@@ -198,17 +212,23 @@ class RoommatCard extends StatelessWidget {
     );
   }
 
-  item({required String icon}) {
-    return Container(
-      height: 56.h,
-      width: 96.w,
-      decoration: BoxDecoration(
-          color: Color(0xFFF6F6F6), borderRadius: BorderRadius.circular(100)),
-      child: Center(
-        child: SvgPicture.asset(
-          icon,
-          height: 32,
-          width: 32,
+  item({required String icon, required VoidCallback onTap}) {
+    return Expanded(
+      child: InkWell(
+        onTap: onTap,
+        child: Container(
+          height: 56.h,
+          width: 96.w,
+          decoration: BoxDecoration(
+              color: Color(0xFFF6F6F6),
+              borderRadius: BorderRadius.circular(100)),
+          child: Center(
+            child: SvgPicture.asset(
+              icon,
+              height: 32,
+              width: 32,
+            ),
+          ),
         ),
       ),
     );

@@ -34,45 +34,49 @@ class SubleaseMapScreen extends StatelessWidget {
             ],
           ),
           24.height,
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CommonText(
-                  text:
-                      "Harold, choose your preferred areas to search for a sublease?",
-                  fontSize: 24,
-                  bottom: 8,
-                  maxLines: 2,
-                  textAlign: TextAlign.start,
-                  fontWeight: FontWeight.w600,
-                  color: Color(0xFF161312),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.w),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CommonText(
+                      text:
+                          "Harold, choose your preferred areas to search for a sublease?",
+                      fontSize: 24,
+                      bottom: 8,
+                      maxLines: 2,
+                      textAlign: TextAlign.start,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFF161312),
+                    ),
+                    CommonText(
+                      text: "Set your monthly rental budget",
+                      fontSize: 16,
+                      textAlign: TextAlign.start,
+                      fontWeight: FontWeight.w500,
+                      color: Color.fromRGBO(22, 19, 18, 0.60),
+                    ),
+                    32.height,
+                    mapSearchSection(),
+                    12.height,
+                    locationTagWidget(
+                        title: "Nightlife, cabarets", onRemove: () {}),
+                    locationTagWidget(
+                        title: "Nightlife, cabarets", onRemove: () {}),
+                    locationTagWidget(
+                        title: "Nightlife, cabarets", onRemove: () {}),
+                    40.height,
+                    CommonButton(
+                      titleText: "Continue",
+                      onTap: () {
+                        Get.toNamed(AppRoute.subleasDoneScreen);
+                      },
+                    )
+                  ],
                 ),
-                CommonText(
-                  text: "Set your monthly rental budget",
-                  fontSize: 16,
-                  textAlign: TextAlign.start,
-                  fontWeight: FontWeight.w500,
-                  color: Color.fromRGBO(22, 19, 18, 0.60),
-                ),
-                32.height,
-                mapSearchSection(),
-                12.height,
-                locationTagWidget(
-                    title: "Nightlife, cabarets", onRemove: () {}),
-                locationTagWidget(
-                    title: "Nightlife, cabarets", onRemove: () {}),
-                locationTagWidget(
-                    title: "Nightlife, cabarets", onRemove: () {}),
-                40.height,
-                CommonButton(
-                  titleText: "Continue",
-                  onTap: () {
-                    Get.toNamed(AppRoute.subleasDoneScreen);
-                  },
-                )
-              ],
+              ),
             ),
           )
         ],
@@ -111,8 +115,9 @@ class SubleaseMapScreen extends StatelessWidget {
         Positioned(
           top: 10,
           left: 10,
+          right: 10,
           child: Container(
-            width: 310,
+            width: Get.width,
             padding: EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
               color: Color(0xFFFCF3EC),

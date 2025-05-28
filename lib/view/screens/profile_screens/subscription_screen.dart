@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/utils/app_color.dart';
+import 'package:room_sublease/utils/app_image.dart';
 import 'package:room_sublease/view/components/common_appbar/common_appbar.dart';
 import 'package:room_sublease/view/components/common_button/common_button.dart';
 import 'package:room_sublease/view/components/common_image/common_image.dart';
@@ -56,12 +57,13 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                 ],
               ),
               35.height,
-              CommonButton(titleText: "Get Premium",),
+              CommonButton(
+                titleText: "Get Premium",
+              ),
               43.height,
               CommonImage(
-                imageSrc:
-                    "https://media.istockphoto.com/id/1743336675/photo/women-friends-relax-and-conversation-in-a-home-with-gossip-discussion-and-happy-in-a-living.jpg?s=612x612&w=0&k=20&c=fKmAExz118-vwl-RY8zD1DwmhOimxe_weSTf8tdeI6I=",
-                imageType: ImageType.network,
+                imageSrc: AppImage.subscription,
+                imageType: ImageType.png,
                 height: 207,
                 width: 310,
                 borderRadius: 24,
@@ -75,7 +77,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
 
   subscriptionPackages() {
     return Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 17),
+      padding: EdgeInsets.symmetric(horizontal: 17),
       child: Column(
         children: [
           Row(
@@ -146,7 +148,6 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
           onTap: ontap,
           child: AnimatedContainer(
             duration: Duration(milliseconds: 600),
-            height: 154,
             width: 121,
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
             decoration: BoxDecoration(

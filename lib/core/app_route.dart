@@ -48,6 +48,7 @@ import 'package:room_sublease/view/screens/profile_screens/edit_profile_screen.d
 import 'package:room_sublease/view/screens/profile_screens/privacy_policy_screen.dart';
 import 'package:room_sublease/view/screens/profile_screens/profile_details_screen.dart';
 import 'package:room_sublease/view/screens/profile_screens/subscription_screen.dart';
+import 'package:room_sublease/view/screens/profile_screens/support_screen.dart';
 import 'package:room_sublease/view/screens/profile_screens/term_condition_screen.dart';
 import 'package:room_sublease/view/screens/profile_screens/widget/fun_activity.dart';
 
@@ -71,6 +72,7 @@ class AppRoute {
   static const String editProfileScreen = "/editProfileScreen";
   static const String subscriptionScreen = "/subscriptionScreen";
   static const String termConditionScreen = "/termConditionScreen";
+  static const String supportScreen = "/supportScreen";
   static const String privacyPolicyScreen = "/privacyPolicyScreen";
   static const String funActivity = "/funActivity";
   static const String parsonTypeScreen = "/parsonTypeScreen";
@@ -208,6 +210,10 @@ class AppRoute {
     GetPage(
         name: privacyPolicyScreen,
         page: () => PrivacyPolicyScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: supportScreen,
+        page: () => SupportScreen(),
         transition: Transition.rightToLeftWithFade),
     GetPage(
         name: funActivity,

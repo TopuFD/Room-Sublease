@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:room_sublease/controller/add_preferance_controller/sublease_controller.dart';
 import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/extentions/extentions.dart';
+import 'package:room_sublease/helper/other_helper.dart';
 import 'package:room_sublease/utils/app_icons.dart';
 import 'package:room_sublease/view/components/common_appbar/common_appbar.dart';
 import 'package:room_sublease/view/components/common_button/common_button.dart';
@@ -154,15 +155,22 @@ class _MonthlyBudgetScreenState extends State<MonthlyBudgetScreen> {
                                 SizedBox(
                                   width: 250,
                                   child: TextFormField(
+                                    controller: sublease.moveInDate.value,
                                     decoration: InputDecoration(
                                       hintText: "Select date",
                                       border: InputBorder.none,
                                     ),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: SvgPicture.asset(AppIcons.date),
+                                InkWell(
+                                  onTap: () {
+                                    OtherHelper.datePicker(
+                                        sublease.moveInDate.value);
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: SvgPicture.asset(AppIcons.date),
+                                  ),
                                 ),
                               ],
                             )),
@@ -188,15 +196,22 @@ class _MonthlyBudgetScreenState extends State<MonthlyBudgetScreen> {
                                 SizedBox(
                                   width: 250,
                                   child: TextFormField(
+                                    controller: sublease.moveOutDate.value,
                                     decoration: InputDecoration(
                                       hintText: "Select date",
                                       border: InputBorder.none,
                                     ),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: SvgPicture.asset(AppIcons.date),
+                                InkWell(
+                                  onTap: () {
+                                    OtherHelper.datePicker(
+                                        sublease.moveOutDate.value);
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: SvgPicture.asset(AppIcons.date),
+                                  ),
                                 ),
                               ],
                             )),

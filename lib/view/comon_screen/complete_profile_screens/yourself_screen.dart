@@ -57,9 +57,13 @@ class YourselfScreen extends StatelessWidget {
                   ),
                   24.height,
                   CustomTextField(
+                    controller: controller.ageCtl.value,
                     titleText: "Your age",
                     hindText: "MM/DD/YYYY",
-                    suffixIcon: SvgPicture.asset(AppIcons.date),
+                    suffixIcon: InkWell(
+                        onTap: () {
+                          OtherHelper.datePicker(controller.ageCtl.value);
+                        }, child: SvgPicture.asset(AppIcons.date)),
                   ),
                 ],
               )),
@@ -85,7 +89,7 @@ class YourselfScreen extends StatelessWidget {
                         child: AnimatedContainer(
                           duration: Duration(milliseconds: 600),
                           height: 90,
-                          width: 120,
+                          width: 100,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               border: controller.selectedGender.value ==
@@ -98,7 +102,7 @@ class YourselfScreen extends StatelessWidget {
                                   : Color(0xFFFCF3EC)),
                           child: Padding(
                             padding: EdgeInsets.symmetric(
-                                horizontal: 16, vertical: 16),
+                                horizontal: 12, vertical: 16),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -180,7 +184,7 @@ class YourselfScreen extends StatelessWidget {
               SizedBox(
                 height: 56,
                 child: Container(
-                    padding: EdgeInsets.only(left: 8,right: 8),
+                    padding: EdgeInsets.only(left: 8, right: 8),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         color: Color(0xFFF3EAE3),

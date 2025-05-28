@@ -88,7 +88,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                         Get.toNamed(AppRoute.properDetailScreen);
                       },
                       icon: AppIcons.post,
-                      title: "Looking to post subleases",
+                      title: "Looking to post Subleases",
                       desce: "Post your sublease details",
                       index: 3),
                 ],

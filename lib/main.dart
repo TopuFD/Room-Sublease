@@ -17,7 +17,7 @@ action() async {
   DependencyInjection di = DependencyInjection();
   di.dependencies();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Color(0xFFFCF3EC),
+    statusBarColor: Color(0xFF3083F9),
     statusBarIconBrightness: Brightness.dark,
   ));
 }
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor:  Color(0xFFFCF3EC),
+      statusBarColor:  Color(0xFF3083F9),
     ));
     return ScreenUtilInit(
       designSize: const Size(393, 852),
@@ -55,7 +55,6 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        // home: FrameWithImagePicker(),
         getPages: AppRoute.pages,
         initialRoute: AppRoute.splashScreen,
       ),

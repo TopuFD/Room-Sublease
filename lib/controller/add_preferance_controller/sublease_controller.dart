@@ -1,6 +1,9 @@
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class SubleaseController extends GetxController{
+  Rx<TextEditingController> moveInDate = TextEditingController().obs;
+  Rx<TextEditingController> moveOutDate = TextEditingController().obs;
     //=================================================================Furnished Apartment
   List<String> apartmentPref = ["Yes", "No", "Flexible"];
   RxList<String> selcectApartment = <String>["Yes"].obs;

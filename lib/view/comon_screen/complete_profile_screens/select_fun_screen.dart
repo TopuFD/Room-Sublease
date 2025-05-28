@@ -45,7 +45,6 @@ class SelectFunScreen extends StatelessWidget {
                 children: controller.funyList.map((colorMap) {
                   final colorName = colorMap['title'] as String;
                   final color = colorMap['color'] as Color;
-                  final isBorder = colorMap['isBorder'] as bool;
 
                   return Obx(() {
                     final isSelected =

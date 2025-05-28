@@ -116,7 +116,7 @@ class OtherHelper {
       lastDate: DateTime(2101),
     );
     if (picked != null) {
-      controller.text = "${picked.day}/${picked.month}/${picked.year}";
+      controller.text = "${picked.month}/${picked.day}/${picked.year}";
       return "${picked.day}/${picked.month}/${picked.year}";
     }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:room_sublease/controller/bottom_nav_controller/bottom_nav_controller.dart';
@@ -10,11 +11,15 @@ import 'package:room_sublease/view/screens/profile_screens/profile_screen.dart';
 import '../../Utils/app_icons.dart';
 
 class CommonBottomNavBar extends StatelessWidget {
-  const CommonBottomNavBar({super.key});
+  CommonBottomNavBar({super.key});
+
+  final BottomNavController navController = Get.put(BottomNavController());
 
   @override
   Widget build(BuildContext context) {
-    final BottomNavController navController = Get.put(BottomNavController());
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Color(0xFFFCF3EC),
+    ));
 
     List<Widget> pages = [
       HomeScreen(),

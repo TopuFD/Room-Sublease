@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:room_sublease/core/app_route.dart';
@@ -54,6 +55,7 @@ class SignupChooserScreen extends StatelessWidget {
             150.height,
             CommonButton(
                 onTap: () {
+                  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Color(0xFFFCF3EC)));
                   Get.toNamed(AppRoute.signinScreen);
                 },
                 titleText: "Sign in"),

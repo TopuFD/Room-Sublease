@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:room_sublease/controller/add_preferance_controller/sublease_controller.dart';
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/utils/app_icons.dart';
+import 'package:room_sublease/view/comon_screen/show_subscription_dialog.dart/show_subscription_dialog.dart';
 import 'package:room_sublease/view/components/common_appbar/common_appbar.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
 import 'package:room_sublease/view/components/round_checkbox/custom_checkbox.dart';
@@ -101,30 +102,35 @@ class ApartmentAmenitiseScreen extends StatelessWidget {
                               color: Color.fromRGBO(22, 19, 18, 0.60),
                             ),
                           ),
-                          Row(
-                            children: [
-                              Container(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 10, vertical: 7),
-                                decoration: BoxDecoration(
-                                  color: Color.fromRGBO(244, 63, 0, 0.06),
-                                  borderRadius: BorderRadius.circular(100),
+                          InkWell(
+                            onTap: () {
+                              showSubscriptionDialog(context);
+                            },
+                            child: Row(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 10, vertical: 7),
+                                  decoration: BoxDecoration(
+                                    color: Color.fromRGBO(244, 63, 0, 0.06),
+                                    borderRadius: BorderRadius.circular(100),
+                                  ),
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      SvgPicture.asset(AppIcons.upgrade),
+                                      4.width,
+                                      CommonText(
+                                        text: "Upgrade",
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500,
+                                        color: Color(0xFFFF4427),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    SvgPicture.asset(AppIcons.upgrade),
-                                    4.width,
-                                    CommonText(
-                                      text: "Upgrade",
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w500,
-                                      color: Color(0xFFFF4427),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           )
                         ],
                       ),

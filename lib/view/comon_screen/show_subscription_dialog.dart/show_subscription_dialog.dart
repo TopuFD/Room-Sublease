@@ -43,11 +43,11 @@ class _SubscriptionDialogState extends State<SubscriptionDialog> {
     return Stack(
       children: [
         SizedBox(
-          height: 400,
+          height: 440.h,
           width: double.infinity,
           child: CarouselSlider(
             options: CarouselOptions(
-              height: 400,
+              height: 450.h,
               viewportFraction: 0.9,
               enlargeCenterPage: true,
               enableInfiniteScroll: false,
@@ -71,8 +71,8 @@ class _SubscriptionDialogState extends State<SubscriptionDialog> {
                           child: CommonImage(
                             imageSrc: item["image"],
                             imageType: ImageType.png,
-                            height: 213,
-                            width: 223,
+                            height: 200,
+                            width: 180,
                           ),
                         ),
                         20.height,
