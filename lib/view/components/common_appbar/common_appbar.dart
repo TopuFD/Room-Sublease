@@ -32,7 +32,7 @@ class CommonAppbar extends StatelessWidget implements PreferredSizeWidget {
         },
         child: Icon(
           Icons.arrow_back_ios,
-          size: 24.sp,
+          size: 24,
           color: imgColor,
         ),
       ),
@@ -54,5 +54,5 @@ class CommonAppbar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(50);
+  Size get preferredSize => const Size.fromHeight(52);
 }

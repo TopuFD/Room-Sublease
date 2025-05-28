@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -59,7 +58,7 @@ class YourselfScreen extends StatelessWidget {
                   24.height,
                   CustomTextField(
                     titleText: "Your age",
-                    hindText: "DD/MM/YYYY",
+                    hindText: "MM/DD/YYYY",
                     suffixIcon: SvgPicture.asset(AppIcons.date),
                   ),
                 ],
@@ -86,7 +85,7 @@ class YourselfScreen extends StatelessWidget {
                         child: AnimatedContainer(
                           duration: Duration(milliseconds: 600),
                           height: 90,
-                          width: 100,
+                          width: 120,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               border: controller.selectedGender.value ==
@@ -99,7 +98,7 @@ class YourselfScreen extends StatelessWidget {
                                   : Color(0xFFFCF3EC)),
                           child: Padding(
                             padding: EdgeInsets.symmetric(
-                                horizontal: 12, vertical: 16),
+                                horizontal: 16, vertical: 16),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,12 +130,12 @@ class YourselfScreen extends StatelessWidget {
               24.height,
               CustomTextField(
                 titleText: "What’s your job title?",
-                hindText: "Choose school",
+                hindText: "Enter your job title",
               ),
               24.height,
               CustomTextField(
                 titleText: "Where did you go to school?",
-                hindText: "Enter your job title",
+                hindText: "Choose school",
                 suffixIcon: Icon(
                   Icons.keyboard_arrow_down,
                   size: 24,
@@ -177,19 +176,34 @@ class YourselfScreen extends StatelessWidget {
                 color: Color(0xFF161312),
                 fontWeight: FontWeight.w600,
               ),
-              16.height,
-              Container(
-                padding: EdgeInsets.only(left: 8, bottom: 8, right: 8),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Color(0xFFF3EAE3),
-                    border: Border.all(color: Color(0xFFE8E8E8))),
-                child: CustomTextField(
-                  hindText: "Select education level",
-                  fillColor: AppColors.transparent,
-                  fieldBorderColor: AppColors.transparent,
-                  suffixIcon: SvgPicture.asset(AppIcons.instagram),
-                ),
+              14.height,
+              SizedBox(
+                height: 56,
+                child: Container(
+                    padding: EdgeInsets.only(left: 8,right: 8),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Color(0xFFF3EAE3),
+                        border: Border.all(color: Color(0xFFE8E8E8))),
+                    child: Center(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(vertical: 5),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            hintText: "Instagram handle",
+                            fillColor: AppColors.transparent,
+                            border: InputBorder.none,
+                            suffixIcon: SizedBox(
+                                height: 15,
+                                width: 15,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10),
+                                  child: SvgPicture.asset(AppIcons.instagram),
+                                )),
+                          ),
+                        ),
+                      ),
+                    )),
               ),
               24.height,
               CommonButton(

@@ -68,19 +68,38 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            32.height,
             Align(
-              alignment: Alignment.centerLeft,
-              child: CommonText(
-                text: title[currentIndex],
-                fontSize: 50,
-                top: 20,
-                textAlign: TextAlign.start,
-                color: Color(0xFF161312),
-                fontWeight: FontWeight.w900,
-                lineHeight: 1.1,
-                maxLines: 4,
-              ),
-            ),
+                alignment: Alignment.centerLeft,
+                child: SizedBox(
+                  width: 314,
+                  child: Text(
+                    title[currentIndex],
+                    maxLines: 4,
+                  
+                    style: TextStyle(
+                      fontSize: 64,
+                      fontFamily: "Schyler",
+                      color: Color(0xFF161312),
+                      fontWeight: FontWeight.w500,
+                      height: 0.9
+                    ),
+                  ),
+                )
+
+                // CommonText(
+                //   text: title[currentIndex],
+                //   fontSize: 50,
+                //   top: 20,
+
+                //   textAlign: TextAlign.start,
+                //   color: Color(0xFF161312),
+                //   fontWeight: FontWeight.w900,
+
+                //   lineHeight: 1.1,
+                //   maxLines: 4,
+                // ),
+                ),
             30.height,
             CommonImage(
               imageSrc: image[currentIndex],

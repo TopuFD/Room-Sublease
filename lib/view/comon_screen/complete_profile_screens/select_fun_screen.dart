@@ -23,7 +23,7 @@ class SelectFunScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              10.height,
+              15.height,
               CommonText(
                 text: "What do you like to do for fun?",
                 fontSize: 28,
@@ -59,11 +59,14 @@ class SelectFunScreen extends StatelessWidget {
                         padding:
                             EdgeInsets.symmetric(horizontal: 15.w, vertical: 5),
                         decoration: BoxDecoration(
-                          color: color,
+                          color: isSelected
+                              ? color
+                              : Colors.transparent, // শুধু select হলে রঙ দেখাবে
                           borderRadius: BorderRadius.circular(100),
-                          border: isBorder == true
-                              ? Border.all(color: Color(0xFFE9DFD8), width: 1)
-                              : null,
+                          border: Border.all(
+                            color: Color(0xFFE9DFD8),
+                            width: 1,
+                          ), // সব গুলোর বর্ডার থাকবে
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -90,10 +93,13 @@ class SelectFunScreen extends StatelessWidget {
                 }).toList(),
               ),
               20.height,
-              CommonButton(titleText: "Continue",onTap: () {
-                Get.toNamed(AppRoute.parsonTypeScreen);
-              },),
-              20.height,
+              CommonButton(
+                titleText: "Continue",
+                onTap: () {
+                  Get.toNamed(AppRoute.parsonTypeScreen);
+                },
+              ),
+              30.height,
             ],
           ),
         ),

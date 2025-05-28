@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:room_sublease/view/comon_screen/auth_screen/signin_screen.dart';
 import 'package:room_sublease/view/comon_screen/auth_screen/signup_chooser_screen.dart';
+import 'package:room_sublease/view/comon_screen/auth_screen/signup_screen.dart';
 import 'package:room_sublease/view/comon_screen/bottom_nav_bar_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/complete_profile_screen.dart';
 import 'package:room_sublease/view/comon_screen/complete_profile_screens/frame_cemara_screen.dart';
@@ -130,6 +131,10 @@ class AppRoute {
     GetPage(
         name: signinScreen,
         page: () => SigninScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: signupScreen,
+        page: () => SignupScreen(),
         transition: Transition.rightToLeftWithFade),
     GetPage(
         name: selectFunScreen,

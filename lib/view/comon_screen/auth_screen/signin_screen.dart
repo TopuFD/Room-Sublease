@@ -67,7 +67,7 @@ class SigninScreen extends StatelessWidget {
                       20.height,
                       CustomTextField(
                         titleText: "Password",
-                        hindText: "65465465",
+                        hindText: "*******",
                         isPassword: true,
         
                       ),

@@ -91,13 +91,15 @@ class _CustomTextFieldState extends State<CustomTextField> {
       children: [
         CommonText(
           text: widget.titleText,
-          fontSize: 18,
+          fontSize: 16,
+          fontWeight: FontWeight.w600,
           color: Color(0xFF141415),
         ),
         SizedBox(
           height: widget.fieldHeight,
           child: TextFormField(
             onTap: widget.onTap,
+            obscuringCharacter: "*",
             inputFormatters: widget.inputFormatters,
             onFieldSubmitted: widget.onFieldSubmitted,
             readOnly: widget.readOnly,

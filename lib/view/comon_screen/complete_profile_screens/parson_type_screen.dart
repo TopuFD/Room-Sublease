@@ -23,7 +23,7 @@ class ParsonTypeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              10.height,
+              15.height,
               CommonText(
                 text: "What kind of person are you?",
                 fontSize: 28,
@@ -45,7 +45,6 @@ class ParsonTypeScreen extends StatelessWidget {
                 children: controller.parsonList.map((colorMap) {
                   final colorName = colorMap['title'] as String;
                   final color = colorMap['color'] as Color;
-                  final isBorder = colorMap['isBorder'] as bool;
 
                   return Obx(() {
                     final isSelected =
@@ -59,11 +58,14 @@ class ParsonTypeScreen extends StatelessWidget {
                         padding:
                             EdgeInsets.symmetric(horizontal: 15.w, vertical: 5),
                         decoration: BoxDecoration(
-                          color: color,
+                          color: isSelected ? color : Colors.transparent,
                           borderRadius: BorderRadius.circular(100),
-                          border: isBorder == true
-                              ? Border.all(color: Color(0xFFE9DFD8), width: 1)
-                              : null,
+                          border: isSelected
+                              ? null
+                              : Border.all(
+                                  color: Color(0xFFE9DFD8),
+                                  width:
+                                      1), // selected হলে no border, না হলে border
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -96,7 +98,7 @@ class ParsonTypeScreen extends StatelessWidget {
                   Get.toNamed(AppRoute.yourselfScreen);
                 },
               ),
-              20.height,
+              30.height,
             ],
           ),
         ),

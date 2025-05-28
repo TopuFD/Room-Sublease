@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
         ),
         // home: FrameWithImagePicker(),
         getPages: AppRoute.pages,
-        initialRoute: AppRoute.bottomNavScreen,
+        initialRoute: AppRoute.splashScreen,
       ),
     );
   }

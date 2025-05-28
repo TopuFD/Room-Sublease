@@ -131,7 +131,7 @@ class SignupScreen extends StatelessWidget {
                     ),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        Get.toNamed(AppRoute.signupScreen);
+                        Get.toNamed(AppRoute.signinScreen);
                       }),
               ])),
               50.height,

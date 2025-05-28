@@ -136,7 +136,7 @@ class CompleteProfileScreen extends StatelessWidget {
                     onTap: () async {
                       var imagePath = await OtherHelper.openGallery();
                       if (imagePath != null && imagePath.isNotEmpty) {
-                        controller.images.add(imagePath);
+                        controller.completeProfileImages.add(imagePath);
                       }
                     },
                     child: AnimatedContainer(
@@ -157,18 +157,18 @@ class CompleteProfileScreen extends StatelessWidget {
                 : SizedBox();
           }),
           Obx(() {
-            return controller.images.length < 3 ? 24.height : 0.height;
+            return controller.completeProfileImages.length < 3 ? 24.height : 0.height;
           }),
           Row(
             children: [
-              ...List.generate(controller.images.length, (index) {
+              ...List.generate(controller.completeProfileImages.length, (index) {
                 return AnimatedContainer(
                   duration: Duration(microseconds: 800),
                   margin: EdgeInsets.only(right: 10),
                   child: Stack(
                     children: [
                       CommonImage(
-                        imageSrc: controller.images[index],
+                        imageSrc: controller.completeProfileImages[index],
                         imageType: ImageType.file,
                         height: 106,
                         width: 110,
@@ -179,8 +179,8 @@ class CompleteProfileScreen extends StatelessWidget {
                           bottom: 8,
                           child: InkWell(
                             onTap: () {
-                              controller.images
-                                  .remove(controller.images[index]);
+                              controller.completeProfileImages
+                                  .remove(controller.completeProfileImages[index]);
                             },
                             child: Container(
                               height: 14,
