@@ -22,12 +22,12 @@ class HomeController extends GetxController {
 
   //====================================================================================for select fun screen
   final funyList = <Map<String, dynamic>>[
-    {'title': 'pilates', 'color': Color(0xFFFDDEC3), "isBorder": false},
+    {'title': 'Pilates', 'color': Color(0xFFFDDEC3), "isBorder": false},
     {'title': 'Spa Days', 'color': Color(0xFFFCE9B2), "isBorder": false},
     {'title': 'Hiking', 'color': Color(0xFFFDDEC3), "isBorder": false},
-    {'title': 'Comedy shows ', 'color': Color(0xFFFCD5D2), "isBorder": false},
+    {'title': 'Comedy Shows ', 'color': Color(0xFFFCD5D2), "isBorder": false},
     {
-      'title': 'Hosting dinners',
+      'title': 'Hosting Dinners',
       'color': Color(0xFFCBDFFF),
       "isBorder": false
     },

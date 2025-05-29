@@ -42,19 +42,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                         });
                       },
                       isPopuler: true),
-                  20.width,
-                  item(
-                    title: "months",
-                    price: "79.99",
-                    monthCount: "6",
-                    index: 2,
-                    ontap: () {
-                      setState(() {
-                        currentIndex = 2;
-                      });
-                    },
-                  ),
-                ],
+                ],  
               ),
               35.height,
               CommonButton(

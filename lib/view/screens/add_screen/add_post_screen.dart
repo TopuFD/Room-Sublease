@@ -55,7 +55,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                       icon: AppIcons.roommat,
                       title: "Looking for Roommates",
                       desce:
-                          "Find compatible roommates to apartment search with.",
+                          "Find compatible roommates to apartment search with",
                       index: 0),
                   item(
                       ontap: () {
@@ -88,7 +88,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                         Get.toNamed(AppRoute.properDetailScreen);
                       },
                       icon: AppIcons.post,
-                      title: "Looking to post Subleases",
+                      title: "Looking to Post Subleases",
                       desce: "Post your sublease details",
                       index: 3),
                 ],

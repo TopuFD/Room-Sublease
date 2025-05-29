@@ -1,6 +1,7 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:room_sublease/controller/auth_controller/complete_profile_controller.dart';
 import 'package:room_sublease/core/app_route.dart';
@@ -64,35 +65,41 @@ class _FrameWithImagePickerState extends State<FrameWithImagePicker> {
             color: Colors.white,
           ),
           40.height,
-          Stack(
-            alignment: Alignment.center,
-            children: [
-              if (frameImage != null)
-                SizedBox(
-                  width: 295,
-                  height: 385,
-                  child: CustomPaint(
-                    painter: FramePainter(frameImage!),
+          SizedBox(
+            width: 295.w,
+            height: 400.h,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                if (frameImage != null)
+                  SizedBox(
+                    width: 295.w,
+                    height: 400.h,
+                    child: CustomPaint(
+                      painter: FramePainter(frameImage!),
+                    ),
                   ),
-                ),
-              Obx(() {
-                return profile.userImage.isNotEmpty
-                    ? ClipOval(
-                        child: CommonImage(
-                          imageSrc: profile.userImage.value,
-                          imageType: ImageType.file,
-                          height: 410,
-                          width: 300,
-                        ),
-                      )
-                    : CommonImage(
-                        imageSrc: AppImage.user,
-                        imageType: ImageType.png,
-                        height: 410,
-                        width: 300,
-                      );
-              }),
-            ],
+                Obx(() {
+                  return profile.userImage.isNotEmpty
+                      ? ClipOval(
+                          child: CommonImage(
+                            imageSrc: profile.userImage.value,
+                            imageType: ImageType.file,
+                          height: 425.h,
+                          width: 298.w,
+                            fill: BoxFit.cover,
+                          ),
+                        )
+                      : CommonImage(
+                          imageSrc: AppImage.user,
+                          imageType: ImageType.png,
+                          height: 425.h,
+                          width: 298.w,
+                          fill: BoxFit.cover,
+                        );
+                }),
+              ],
+            ),
           ),
           Expanded(child: SizedBox()),
           Padding(

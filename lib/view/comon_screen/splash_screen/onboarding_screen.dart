@@ -24,8 +24,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   List title = [
     "Ready to make the move?",
-    "Find your people, find your vibe",
-    "Because moving is hard enough"
+    "Find your vibe. Find your people.",
+    "Because moving is hard enough."
   ];
 
   @override

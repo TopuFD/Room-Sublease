@@ -97,7 +97,7 @@ class CompleteProfileScreen extends StatelessWidget {
                     color: Color(0xFFF3EAE3),
                     border: Border.all(color: Color(0xFFE8E8E8))),
                 child: CustomTextField(
-                  hindText: "Select education level",
+                  hindText: "Enter your bio...",
                   fillColor: AppColors.transparent,
                   
                   maxLines: 4,

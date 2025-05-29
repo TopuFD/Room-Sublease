@@ -18,38 +18,19 @@ class NotificationScreen extends StatelessWidget {
         width: Get.width,
         child: Column(
           children: [
-            notificationItem(title: "New venue is available here!"),
+            notificationItem(title: "Your Account is Verified successfull"),
             10.height,
-            notificationItem(title: "New venue is available here!"),
+            notificationItem(title: "New Roommat is mached"),
+            10.height,
+            notificationItem(title: "Your Account is Verified successfull"),
+            10.height,
+            notificationItem(title: "New Roommat is mached"),
+            10.height,
+            notificationItem(title: "Your Account is Verified successfull"),
+            10.height,
+            notificationItem(title: "New Roommat is mached"),
             10.height,
             
-            notificationItem(title: "New cinema is arrived!"),
-            10.height,
-            notificationItem(title: "New venue is available here!"),
-            10.height,
-            
-            notificationItem(title: "New cinema is arrived!"),
-            10.height,
-            notificationItem(title: "New venue is available here!"),
-            // CommonImage(
-            //   imageSrc: AppImage.notification,
-            //   imageType: ImageType.png,
-            //   height: 200,
-            //   width: 180,
-            // ),
-            // 20.height,
-            // CommonText(
-            //   text: AppString.noNotification,
-            //   fontSize: 22,
-            //   fontWeight: FontWeight.w700,
-            // ),
-            // CommonText(
-            //   text: AppString.yourNotification,
-            //   fontSize: 20,
-            //   maxLines: 3,
-            //   fontWeight: FontWeight.w400,
-            // ),
-            // 50.height,
           ],
         ),
       ),
@@ -71,7 +52,7 @@ class NotificationScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CommonText(
-                text: "New venue is available here!",
+                text: "New Roommat is Come",
                 fontSize: 18,
                 fontWeight: FontWeight.w700,
               ),
