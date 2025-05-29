@@ -50,8 +50,8 @@ class CommonImage extends StatelessWidget {
         imageSrc,
         // ignore: deprecated_member_use
         color: imageColor,
-        height: height.h,
-        width: width.w,
+        height: height,
+        width: width,
         fit: fill,
       );
     }
@@ -62,8 +62,8 @@ class CommonImage extends StatelessWidget {
         child: Image.file(
           File(imageSrc),
           color: imageColor,
-          height: height.h,
-          width: width.w,
+          height: height,
+          width: width,
           fit: fill,
           errorBuilder: (context, error, stackTrace) {
             if (kDebugMode) {
@@ -81,8 +81,8 @@ class CommonImage extends StatelessWidget {
         child: Image.asset(
           imageSrc,
           color: imageColor,
-          height: height.h,
-          width: width.w,
+          height: height,
+          width: width,
           fit: fill,
           errorBuilder: (context, error, stackTrace) {
             if (kDebugMode) {
@@ -99,8 +99,8 @@ class CommonImage extends StatelessWidget {
         child: Image.asset(
           imageSrc,
           color: imageColor,
-          height: height.h,
-          width: width.w,
+          height: height,
+          width: width,
           fit: fill,
           errorBuilder: (context, error, stackTrace) {
             if (kDebugMode) {
@@ -150,6 +150,6 @@ class CommonImage extends StatelessWidget {
       );
     }
 
-    return SizedBox(height: height.h, width: width.w, child: imageWidget);
+    return SizedBox(height: height, width: width, child: imageWidget);
   }
 }

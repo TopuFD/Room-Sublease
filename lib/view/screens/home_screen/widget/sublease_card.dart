@@ -49,8 +49,8 @@ class SubleaseCard extends StatelessWidget {
                       imageSrc:
                           "https://t4.ftcdn.net/jpg/04/18/33/19/360_F_418331990_19XPoUYZzDhLVoWbItLAfkHb0GhkZoEQ.jpg",
                       imageType: ImageType.network,
-                      height: 143,
-                      width: 160,
+                      height: 130,
+                      width: 145,
                       borderRadius: 4,
                     ),
                   ),
@@ -65,8 +65,8 @@ class SubleaseCard extends StatelessWidget {
                       imageSrc:
                           "https://i.pinimg.com/474x/99/54/8a/99548af51d74f323b630a15621d78599.jpg",
                       imageType: ImageType.network,
-                      height: 143,
-                      width: 160,
+                      height: 130,
+                      width: 145,
                       borderRadius: 4,
                     ),
                   )

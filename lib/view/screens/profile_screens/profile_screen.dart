@@ -89,7 +89,7 @@ class ProfileScreen extends StatelessWidget {
               60.height,
               //==================================================================profile
               item(icon: AppIcons.logout, title: "Log Out", ontap: () {}),
-              60.height,
+              80.height,
             ],
           ),
         ),

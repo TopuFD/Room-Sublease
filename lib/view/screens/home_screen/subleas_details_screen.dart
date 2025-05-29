@@ -155,30 +155,7 @@ class SubleasDetailsScreen extends StatelessWidget {
                     AppIcons.instagram2,
                   ),
                   8.width,
-                  Expanded(
-                    child: RichText(
-                        maxLines: 3,
-                        text: TextSpan(children: [
-                          TextSpan(
-                              text: "Match with ",
-                              style: GoogleFonts.manrope(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w500,
-                                  color: Color(0xFF161312))),
-                          TextSpan(
-                              text: "Amelia",
-                              style: GoogleFonts.manrope(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w700,
-                                  color: Color(0xFF161312))),
-                          TextSpan(
-                              text: " to see their Instagram username.",
-                              style: GoogleFonts.manrope(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w500,
-                                  color: Color(0xFF161312))),
-                        ])),
-                  ),
+                  CommonText(text: "harold_keith06",fontSize: 16,fontWeight: FontWeight.w500,color: Color(0xFF161312),)
                 ],
               ),
               15.height,

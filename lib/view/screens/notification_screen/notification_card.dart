@@ -31,7 +31,7 @@ class NotificationCard extends StatelessWidget {
             children: [
               CommonText(
                 text:
-                    "Your child’s father has decided to pick up the student early!",
+                    "Your account has been successfully verified.",
                 fontSize: 18,
                 maxLines: 3,
                 textAlign: TextAlign.start,

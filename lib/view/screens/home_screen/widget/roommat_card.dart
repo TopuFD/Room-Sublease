@@ -20,7 +20,7 @@ class RoommatCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: Get.width,
-      height: MediaQuery.of(context).size.height * .59,
+      height: 450,
       padding: EdgeInsets.only(bottom: 5),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(28),
@@ -73,14 +73,13 @@ class RoommatCard extends StatelessWidget {
                   imageSrc: image,
                   imageType: ImageType.network,
                   borderRadius: 28,
-                  height: Get.height,
+                  height: 450,
                   width: Get.width,
                   fill: BoxFit.cover,
                 ),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(28),
-                    // ignore: deprecated_member_use
                     color: Colors.black.withOpacity(0.4),
                   ),
                 ),

@@ -310,53 +310,98 @@ class EditProfileScreen extends StatelessWidget {
     );
   }
 
-  funyActivity() {
-    return Wrap(
-      spacing: 10,
-      children: profile.funyList.map((colorMap) {
-        final colorName = colorMap['title'] as String;
-        final color = colorMap['color'] as Color;
-        final isBorder = colorMap['isBorder'] as bool;
+  // funyActivity() {
+  //   return Wrap(
+  //     spacing: 10,
+  //     children: profile.funyList.map((colorMap) {
+  //       final colorName = colorMap['title'] as String;
+  //       final color = colorMap['color'] as Color;
+  //       final isBorder = colorMap['isBorder'] as bool;
 
-        return Obx(() {
-          final isSelected = profile.selectedColors.contains(colorName);
-          return isSelected
-              ? Container(
-                  height: 50,
-                  margin: EdgeInsets.symmetric(vertical: 5.h),
-                  padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 5),
-                  decoration: BoxDecoration(
-                    color: color,
-                    borderRadius: BorderRadius.circular(100),
-                    border: isBorder == true
-                        ? Border.all(color: Color(0xFFE9DFD8), width: 1)
-                        : null,
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      CommonText(
-                        text: colorName,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xFF141415),
-                      ),
-                      if (isSelected) 8.width,
-                      if (isSelected)
-                        Icon(
-                          Icons.check,
-                          color: Colors.black,
-                          size: 20,
-                        ),
-                    ],
-                  ),
-                )
-              : SizedBox();
-        });
-      }).toList(),
-    );
-  }
+  //       return Obx(() {
+  //         final isSelected = profile.selectedColors.contains(colorName);
+  //         return isSelected
+  //             ? Container(
+  //                 height: 50,
+  //                 margin: EdgeInsets.symmetric(vertical: 5.h),
+  //                 padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 5),
+  //                 decoration: BoxDecoration(
+  //                   color: color,
+  //                   borderRadius: BorderRadius.circular(100),
+  //                   border: isBorder == true
+  //                       ? Border.all(color: Color(0xFFE9DFD8), width: 1)
+  //                       : null,
+  //                 ),
+  //                 child: Row(
+  //                   mainAxisSize: MainAxisSize.min,
+  //                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //                   children: [
+  //                     CommonText(
+  //                       text: colorName,
+  //                       fontSize: 14,
+  //                       fontWeight: FontWeight.w500,
+  //                       color: Color(0xFF141415),
+  //                     ),
+  //                     if (isSelected) 8.width,
+  //                     if (isSelected)
+  //                       Icon(
+  //                         Icons.check,
+  //                         color: Colors.black,
+  //                         size: 20,
+  //                       ),
+  //                   ],
+  //                 ),
+  //               )
+  //             : SizedBox();
+  //       });
+  //     }).toList(),
+  //   );
+  // }
+  funyActivity() {
+  return Wrap(
+    spacing: 10,
+    children: profile.funyList.map((colorMap) {
+      final colorName = colorMap['title'] as String;
+      final originalColor = colorMap['color'] as Color;
+      final isBorder = colorMap['isBorder'] as bool;
+
+      return Obx(() {
+        final isSelected = profile.selectedColors.contains(colorName);
+
+        return Container(
+          height: 50,
+          margin: EdgeInsets.symmetric(vertical: 5.h),
+          padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 5),
+          decoration: BoxDecoration(
+            color: isSelected == false ? Color(0xFFFCF3EC) : originalColor,
+            borderRadius: BorderRadius.circular(100),
+            border: Border.all(color: Color(0xFFE9DFD8), width: 1),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CommonText(
+                text: colorName,
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+                color: Color(0xFF141415),
+              ),
+              if (isSelected) SizedBox(width: 8.w),
+              if (isSelected)
+                Icon(
+                  Icons.check,
+                  color: Colors.black,
+                  size: 20,
+                ),
+            ],
+          ),
+        );
+      });
+    }).toList(),
+  );
+}
+
 
   imageUpload() {
     return Row(
@@ -367,7 +412,7 @@ class EditProfileScreen extends StatelessWidget {
               if (profile.images.isNotEmpty)
                 ...List.generate(profile.images.length, (index) {
                   return Container(
-                    margin: EdgeInsets.only(right: 15),
+                    margin: EdgeInsets.only(right: 10),
                     child: Stack(
                       children: [
                         CommonImage(
@@ -378,8 +423,8 @@ class EditProfileScreen extends StatelessWidget {
                           borderRadius: 16,
                         ),
                         Positioned(
-                            right: 2,
-                            top: 2,
+                            right: 4,
+                            top: 4,
                             child: InkWell(
                               onTap: () {
                                 profile.images.remove(profile.images[index]);

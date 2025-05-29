@@ -62,75 +62,75 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           width: 25,
         ),
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.w),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            32.height,
-            Align(
-                alignment: Alignment.centerLeft,
-                child: SizedBox(
-                  width: 314,
-                  child: Text(
-                    title[currentIndex],
-                    maxLines: 4,
-                    style: TextStyle(
-                        fontSize: 64,
-                        fontFamily: "Schyler",
-                        color: Color(0xFF161312),
-                        fontWeight: FontWeight.w500,
-                        height: 0.9),
-                  ),
-                )),
-            30.height,
-            CommonImage(
-              imageSrc: image[currentIndex],
-              imageType: ImageType.png,
-              height: 272,
-              width: 327,
-            ),
-            Expanded(
-                child: SizedBox(
-              height: 32,
-            )),
-            CommonButton(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24.w),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              32.height,
+              Align(
+                  alignment: Alignment.centerLeft,
+                  child: SizedBox(
+                    width: 314,
+                    child: Text(
+                      title[currentIndex],
+                      maxLines: 4,
+                      style: TextStyle(
+                          fontSize: 64,
+                          fontFamily: "Schyler",
+                          color: Color(0xFF161312),
+                          fontWeight: FontWeight.w500,
+                          height: 0.9),
+                    ),
+                  )),
+              30.height,
+              CommonImage(
+                imageSrc: image[currentIndex],
+                imageType: ImageType.png,
+                height: 230,
+                width: 327,
+              ),
+              60.height,
+              CommonButton(
+                  onTap: () {
+                    if (currentIndex < 2) {
+                      setState(() {
+                        currentIndex++;
+                      });
+        
+                      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+                        statusBarColor: currentIndex == 0
+                            ? AppColors.brown50
+                            : currentIndex == 1
+                                ? const Color(0xFFF5E2D1)
+                                : const Color(0xFFFFC7C2),
+                      ));
+                    } else {
+                      Get.toNamed(AppRoute.signupChooserScreen);
+        
+                      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+                        statusBarColor: AppColors.blue50,
+                      ));
+                    }
+                  },
+                  titleText: "Next",borderColor: Colors.transparent,),
+              CommonButton(
                 onTap: () {
-                  if (currentIndex < 2) {
-                    setState(() {
-                      currentIndex++;
-                    });
-
-                    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-                      statusBarColor: currentIndex == 0
-                          ? AppColors.brown50
-                          : currentIndex == 1
-                              ? const Color(0xFFF5E2D1)
-                              : const Color(0xFFFFC7C2),
-                    ));
-                  } else {
-                    Get.toNamed(AppRoute.signupChooserScreen);
-
-                    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-                      statusBarColor: AppColors.blue50,
-                    ));
-                  }
+                  Get.toNamed(AppRoute.signupChooserScreen);
+                  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+                    statusBarColor: AppColors.blue50,
+                  ));
+                
                 },
-                titleText: "Next"),
-            CommonButton(
-              onTap: () {
-                Get.toNamed(AppRoute.signupChooserScreen);
-                SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-                  statusBarColor: AppColors.blue50,
-                ));
-              },
-              titleText: "Skip",
-              buttonColor: AppColors.transparent,
-              borderColor: AppColors.transparent,
-              titleColor: AppColors.black,
-            ),
-            50.height,
-          ],
+                titleText: "Skip",
+                buttonColor: AppColors.transparent,
+                borderColor: AppColors.transparent,
+                titleColor: AppColors.black,
+              ),
+              50.height,
+            ],
+          ),
         ),
       ),
     );

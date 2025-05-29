@@ -14,7 +14,6 @@ class SignupChooserScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       backgroundColor: AppColors.blue50,
       appBar: AppBar(
@@ -55,10 +54,11 @@ class SignupChooserScreen extends StatelessWidget {
             150.height,
             CommonButton(
                 onTap: () {
-                  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Color(0xFFFCF3EC)));
+                  SystemChrome.setSystemUIOverlayStyle(
+                      SystemUiOverlayStyle(statusBarColor: Color(0xFFFCF3EC)));
                   Get.toNamed(AppRoute.signinScreen);
                 },
-                titleText: "Sign in"),
+                titleText: "Sign in",borderColor: Colors.transparent,),
             CommonButton(
               onTap: () {},
               titleText: "Sign up",

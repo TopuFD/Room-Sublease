@@ -222,7 +222,7 @@ class _MonthlyBudgetScreenState extends State<MonthlyBudgetScreen> {
                           text: "I am looking for a",
                           fontSize: 16,
                           color: Color(0xFF161312),
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w800,
                         ),
                         15.height,
                         CustomCheckbox(

@@ -74,7 +74,7 @@ class HouseCountingScreenState extends State<HouseCountingScreen> {
                 ),
                 15.height,
                 buildRoomCounterTile(
-                  title: "Bath room",
+                  title: "Bathroom",
                   count: bathroom,
                   onIncrement: () => setState(() => bathroom++),
                   onDecrement: () => setState(() {

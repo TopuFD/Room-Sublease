@@ -198,7 +198,7 @@ class PreferanceSelectionScreen extends StatelessWidget {
               CommonText(
                 text: "Dealbreaker",
                 fontSize: 16,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w700,
                 color: Color(0xFF161312),
               ),
               Obx(() => Switch(
@@ -224,7 +224,7 @@ class PreferanceSelectionScreen extends StatelessWidget {
                   CommonText(
                     text: "Display preference on profile",
                     fontSize: 16,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w700,
                     color: Color(0xFF161312),
                   ),
                   Transform.scale(

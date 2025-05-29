@@ -231,11 +231,12 @@ class YourselfScreen extends StatelessWidget {
       children: [
         Obx(() {
           return Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               if (controller.images.isNotEmpty)
                 ...List.generate(controller.images.length, (index) {
                   return Container(
-                    margin: EdgeInsets.only(right: 15),
+                    margin: EdgeInsets.only(right: 10),
                     child: Stack(
                       children: [
                         CommonImage(

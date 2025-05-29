@@ -15,7 +15,6 @@ import 'package:room_sublease/view/components/common_button/common_button.dart';
 
 import 'package:room_sublease/view/components/common_image/common_image.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
-import 'package:room_sublease/view/components/custom_text_field/custom_text_field.dart';
 
 // ignore: must_be_immutable
 class CompleteProfileScreen extends StatelessWidget {
@@ -91,29 +90,35 @@ class CompleteProfileScreen extends StatelessWidget {
               ),
 
               Container(
-                padding: EdgeInsets.only(left: 8, bottom: 8, right: 8),
+                width: Get.width,
+                padding: EdgeInsets.only(
+                  left: 8,
+                  bottom: 8,
+                ),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     color: Color(0xFFF3EAE3),
                     border: Border.all(color: Color(0xFFE8E8E8))),
-                child: CustomTextField(
-                  hindText: "Enter your bio...",
-                  fillColor: AppColors.transparent,
-                  maxLines: 4,
-                  textStyle: GoogleFonts.manrope(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                    decoration: TextDecoration.none,
-                    color: Color.fromRGBO(22, 19, 18, 0.50),
-                  ),
-                  hintStyle: GoogleFonts.manrope(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                    color: Color.fromRGBO(22, 19, 18, 0.50),
-                  ),
-                  fieldHeight: 80,
-                  fieldBorderColor: AppColors.transparent,
-                ),
+                child: SizedBox(
+                    width: Get.width,
+                    child: TextFormField(
+                      maxLines: 4,
+                      decoration: InputDecoration(
+                          hintText:
+                              "Tell us why you are moving, what you are looking for, and who your ideal roommate would be....",
+                          labelStyle: GoogleFonts.manrope(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            decoration: TextDecoration.none,
+                            color: Color.fromRGBO(22, 19, 18, 0.50),
+                          ),
+                          hintStyle: GoogleFonts.manrope(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                            color: Color.fromRGBO(22, 19, 18, 0.50),
+                          ),
+                          border: InputBorder.none),
+                    )),
               ),
               33.height,
               CommonButton(
@@ -131,41 +136,59 @@ class CompleteProfileScreen extends StatelessWidget {
   }
 
   imageUpload() {
-    return Obx(() {
-      return Column(
-        children: [
-          Obx(() {
-            return controller.images.length < 3
-                ? InkWell(
-                    onTap: () async {
-                      var imagePath = await OtherHelper.openGallery();
-                      if (imagePath != null && imagePath.isNotEmpty) {
-                        controller.completeProfileImages.add(imagePath);
-                      }
-                    },
-                    child: AnimatedContainer(
-                      duration: Duration(milliseconds: 800),
-                      height: 115,
-                      width: Get.width,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Color(0xFFE6E9EA),
-                        ),
-                        borderRadius: BorderRadius.circular(16),
+    return Column(
+      children: [
+        Obx(() {
+          return controller.images.length < 3
+              ? InkWell(
+                  onTap: () async {
+                    var imagePath = await OtherHelper.openGallery();
+                    if (imagePath != null && imagePath.isNotEmpty) {
+                      controller.completeProfileImages.add(imagePath);
+                    }
+                  },
+                  child: AnimatedContainer(
+                    duration: Duration(milliseconds: 800),
+                    height: 115,
+                    width: Get.width,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Color(0xFFE6E9EA),
                       ),
-                      child: Center(
-                        child: SvgPicture.asset(AppIcons.upload),
-                      ),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                  )
-                : SizedBox();
-          }),
-          Obx(() {
-            return controller.completeProfileImages.length < 3
-                ? 24.height
-                : 0.height;
-          }),
-          Row(
+                    child: Center(
+                      child: SvgPicture.asset(AppIcons.upload),
+                    ),
+                  ),
+                )
+              : SizedBox();
+        }),
+        Obx(() {
+          return controller.completeProfileImages.length < 3
+              ? 24.height
+              : 0.height;
+        }),
+        Obx(() {
+          return controller.completeProfileImages.isEmpty
+              ? Row(
+                  children: [
+                    ...List.generate(3, (index) {
+                      return Container(
+                        width: 100,
+                        height: 90,
+                        margin: EdgeInsets.only(right: 10),
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Color(0xFFE9DFD8)),
+                            borderRadius: BorderRadius.circular(20)),
+                      );
+                    })
+                  ],
+                )
+              : SizedBox();
+        }),
+        Obx(() {
+          return Row(
             children: [
               ...List.generate(controller.completeProfileImages.length,
                   (index) {
@@ -206,9 +229,9 @@ class CompleteProfileScreen extends StatelessWidget {
                 );
               })
             ],
-          )
-        ],
-      );
-    });
+          );
+        })
+      ],
+    );
   }
 }

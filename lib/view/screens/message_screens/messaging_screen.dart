@@ -80,41 +80,49 @@ class _MessagingScreenState extends State<MessagingScreen> {
           ),
           //=================================================footer part
           Padding(
-            padding:  EdgeInsets.only(left: 16,top: 10,right: 16,bottom: 20),
+            padding: EdgeInsets.only(left: 16, top: 10, right: 16, bottom: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
                       border: Border.all(color: Color(0xFFAAAAAA)),
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(
                           height: 20,
                           width: 20,
-                          child: SvgPicture.asset(AppIcons.imoji)),
-                      10.width,
-                      SizedBox(
-                        width: 230,
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            hintText: "Search messages...",
-                            border: InputBorder.none,
+                          child: SvgPicture.asset(AppIcons.imoji),
+                        ),
+                        SizedBox(width: 10),
+                        Expanded(
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                              hintText: "Search messages...",
+                              border: InputBorder.none,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-                SvgPicture.asset(AppIcons.send)
+                SizedBox(width: 10),
+                SizedBox(
+                  height: 45,
+                  width: 45,
+                  child: SvgPicture.asset(AppIcons.send),
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

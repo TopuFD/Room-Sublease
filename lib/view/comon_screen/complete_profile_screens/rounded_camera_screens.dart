@@ -65,41 +65,37 @@ class _FrameWithImagePickerState extends State<FrameWithImagePicker> {
             color: Colors.white,
           ),
           40.height,
-          SizedBox(
-            width: 295.w,
-            height: 400.h,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                if (frameImage != null)
-                  SizedBox(
-                    width: 295.w,
-                    height: 400.h,
-                    child: CustomPaint(
-                      painter: FramePainter(frameImage!),
-                    ),
+          Stack(
+            alignment: Alignment.center,
+            children: [
+              if (frameImage != null)
+                SizedBox(
+                  width: 290,
+                  height: 380,
+                  child: CustomPaint(
+                    painter: FramePainter(frameImage!),
                   ),
-                Obx(() {
-                  return profile.userImage.isNotEmpty
-                      ? ClipOval(
-                          child: CommonImage(
-                            imageSrc: profile.userImage.value,
-                            imageType: ImageType.file,
-                          height: 425.h,
-                          width: 298.w,
-                            fill: BoxFit.cover,
-                          ),
-                        )
-                      : CommonImage(
-                          imageSrc: AppImage.user,
-                          imageType: ImageType.png,
-                          height: 425.h,
-                          width: 298.w,
+                ),
+              Obx(() {
+                return profile.userImage.isNotEmpty
+                    ? ClipOval(
+                        child: CommonImage(
+                          imageSrc: profile.userImage.value,
+                          imageType: ImageType.file,
+                          width: 271,
+                          height: 358,
                           fill: BoxFit.cover,
-                        );
-                }),
-              ],
-            ),
+                        ),
+                      )
+                    : CommonImage(
+                        imageSrc: AppImage.user,
+                        imageType: ImageType.png,
+                        width: 271,
+                        height: 358,
+                        fill: BoxFit.cover,
+                      );
+              }),
+            ],
           ),
           Expanded(child: SizedBox()),
           Padding(
@@ -116,20 +112,30 @@ class _FrameWithImagePickerState extends State<FrameWithImagePicker> {
             }),
           ),
           20.height,
-          Obx(() {
-            return profile.userImage.isNotEmpty
-                ? Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
-                    child: CommonButton(
-                      titleText: "Continue",
-                      onTap: () {
-                        Get.toNamed(AppRoute.verifyWaitingScreen);
-                      },
-                      borderColor: Colors.transparent,
-                    ),
-                  )
-                : SizedBox();
-          }),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: CommonButton(
+              titleText: "Continue",
+              onTap: () {
+                Get.toNamed(AppRoute.verifyWaitingScreen);
+              },
+              borderColor: Colors.transparent,
+            ),
+          ),
+          // Obx(() {
+          //   return profile.userImage.isNotEmpty
+          //       ? Padding(
+          //           padding: EdgeInsets.symmetric(horizontal: 16),
+          //           child: CommonButton(
+          //             titleText: "Continue",
+          //             onTap: () {
+          //               Get.toNamed(AppRoute.verifyWaitingScreen);
+          //             },
+          //             borderColor: Colors.transparent,
+          //           ),
+          //         )
+          //       : SizedBox();
+          // }),
           40.height,
         ],
       ),

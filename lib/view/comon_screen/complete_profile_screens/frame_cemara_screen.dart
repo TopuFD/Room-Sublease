@@ -81,16 +81,16 @@ class _FrameCemaraScreenState extends State<FrameCemaraScreen> {
                 Obx(() {
                   return profile.idImage.isNotEmpty
                       ? CommonImage(
-                            imageSrc: profile.idImage.value,
-                            imageType: ImageType.file,
-                            height: 220,
-                            width: 340,
-                          )
+                          imageSrc: profile.idImage.value,
+                          imageType: ImageType.file,
+                          height: 200,
+                          width: 300,
+                        )
                       : CommonImage(
                           imageSrc: AppImage.id,
                           imageType: ImageType.png,
-                          height: 220,
-                          width: 340,
+                          height: 200,
+                          width: 300,
                         );
                 }),
               ],
@@ -98,32 +98,42 @@ class _FrameCemaraScreenState extends State<FrameCemaraScreen> {
             Expanded(child: SizedBox()),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16),
-              child: Obx((){
+              child: Obx(() {
                 return CommonButton(
-                titleText: profile.idImage.isEmpty ? "Capture" : "Retake",
-                onTap: () async {
-                  String image = await OtherHelper.openCamera() ?? "";
-                  profile.idImage.value = image;
-                },
-                borderColor: Colors.transparent,
-              );
+                  titleText: profile.idImage.isEmpty ? "Capture" : "Retake",
+                  onTap: () async {
+                    String image = await OtherHelper.openCamera() ?? "";
+                    profile.idImage.value = image;
+                  },
+                  borderColor: Colors.transparent,
+                );
               }),
             ),
             20.height,
-            Obx(() {
-              return profile.idImage.isNotEmpty
-                  ? Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
-                      child: CommonButton(
-                        titleText: "Continue",
-                        onTap: () {
-                          Get.toNamed(AppRoute.roundedCameraScreen);
-                        },
-                        borderColor: Colors.transparent,
-                      ),
-                    )
-                  : SizedBox();
-            }),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: CommonButton(
+                titleText: "Continue",
+                onTap: () {
+                  Get.toNamed(AppRoute.roundedCameraScreen);
+                },
+                borderColor: Colors.transparent,
+              ),
+            ),
+            // Obx(() {
+            //   return profile.idImage.isNotEmpty
+            //       ? Padding(
+            //           padding: EdgeInsets.symmetric(horizontal: 16),
+            //           child: CommonButton(
+            //             titleText: "Continue",
+            //             onTap: () {
+            //               Get.toNamed(AppRoute.roundedCameraScreen);
+            //             },
+            //             borderColor: Colors.transparent,
+            //           ),
+            //         )
+            //       : SizedBox();
+            // }),
             40.height,
           ],
         ),
