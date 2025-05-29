@@ -63,7 +63,8 @@ class YourselfScreen extends StatelessWidget {
                     suffixIcon: InkWell(
                         onTap: () {
                           OtherHelper.datePicker(controller.ageCtl.value);
-                        }, child: SvgPicture.asset(AppIcons.date)),
+                        },
+                        child: SvgPicture.asset(AppIcons.date)),
                   ),
                 ],
               )),
@@ -88,6 +89,7 @@ class YourselfScreen extends StatelessWidget {
                         },
                         child: AnimatedContainer(
                           duration: Duration(milliseconds: 600),
+                          margin: EdgeInsets.symmetric(horizontal: 4),
                           height: 90,
                           width: 100,
                           decoration: BoxDecoration(

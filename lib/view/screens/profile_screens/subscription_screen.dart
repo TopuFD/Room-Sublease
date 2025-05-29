@@ -42,7 +42,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                         });
                       },
                       isPopuler: true),
-                ],  
+                ],
               ),
               35.height,
               CommonButton(
@@ -106,7 +106,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CommonText(
-                text: "Unlimited rematch",
+                text: "Unlimited Rematch",
                 fontSize: 18,
                 fontWeight: FontWeight.w400,
                 color: Color(0xFF070707),
