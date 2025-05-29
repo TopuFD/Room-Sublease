@@ -97,9 +97,8 @@ class CompleteProfileScreen extends StatelessWidget {
                     color: Color(0xFFF3EAE3),
                     border: Border.all(color: Color(0xFFE8E8E8))),
                 child: CustomTextField(
-                  hindText: "Select education level",
+                  hindText: "Enter your bio...",
                   fillColor: AppColors.transparent,
-                  
                   maxLines: 4,
                   textStyle: GoogleFonts.manrope(
                     fontSize: 14,
@@ -117,9 +116,12 @@ class CompleteProfileScreen extends StatelessWidget {
                 ),
               ),
               33.height,
-              CommonButton(titleText: "Continue",onTap: () {
-                Get.toNamed(AppRoute.verifyItentity);
-              },),
+              CommonButton(
+                titleText: "Continue",
+                onTap: () {
+                  Get.toNamed(AppRoute.verifyItentity);
+                },
+              ),
               24.height,
             ],
           ),
@@ -159,11 +161,14 @@ class CompleteProfileScreen extends StatelessWidget {
                 : SizedBox();
           }),
           Obx(() {
-            return controller.completeProfileImages.length < 3 ? 24.height : 0.height;
+            return controller.completeProfileImages.length < 3
+                ? 24.height
+                : 0.height;
           }),
           Row(
             children: [
-              ...List.generate(controller.completeProfileImages.length, (index) {
+              ...List.generate(controller.completeProfileImages.length,
+                  (index) {
                 return AnimatedContainer(
                   duration: Duration(microseconds: 800),
                   margin: EdgeInsets.only(right: 10),
@@ -181,8 +186,8 @@ class CompleteProfileScreen extends StatelessWidget {
                           bottom: 8,
                           child: InkWell(
                             onTap: () {
-                              controller.completeProfileImages
-                                  .remove(controller.completeProfileImages[index]);
+                              controller.completeProfileImages.remove(
+                                  controller.completeProfileImages[index]);
                             },
                             child: Container(
                               height: 14,

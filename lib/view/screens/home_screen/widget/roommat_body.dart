@@ -15,7 +15,7 @@ class RoommatBody extends StatelessWidget {
       child: CardSwiper(
         controller: homeController.swipeController,
         cardsCount: homeController.cardList.length,
-        padding: EdgeInsetsGeometry.symmetric(horizontal: 24, vertical: 12),
+        // padding: EdgeInsetsGeometry.symmetric(horizontal: 24, vertical: 12),
         duration: Duration(milliseconds: 400),
         numberOfCardsDisplayed: 3,
         cardBuilder: (context, index, percentThresholdX, percentThresholdY) =>

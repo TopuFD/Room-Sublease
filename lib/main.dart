@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         getPages: AppRoute.pages,
-        initialRoute: AppRoute.splashScreen,
+        initialRoute: AppRoute.bottomNavScreen,
       ),
     );
   }

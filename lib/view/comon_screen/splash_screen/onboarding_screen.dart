@@ -24,8 +24,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   List title = [
     "Ready to make the move?",
-    "Find your people, find your vibe",
-    "Because moving is hard enough"
+    "Find your vibe. Find your people.",
+    "Because moving is hard enough."
   ];
 
   @override
@@ -75,18 +75,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   child: Text(
                     title[currentIndex],
                     maxLines: 4,
-                  
                     style: TextStyle(
-                      fontSize: 64,
-                      fontFamily: "Schyler",
-                      color: Color(0xFF161312),
-                      fontWeight: FontWeight.w500,
-                      height: 0.9
-                    ),
+                        fontSize: 64,
+                        fontFamily: "Schyler",
+                        color: Color(0xFF161312),
+                        fontWeight: FontWeight.w500,
+                        height: 0.9),
                   ),
-                )
-
-                ),
+                )),
             30.height,
             CommonImage(
               imageSrc: image[currentIndex],
@@ -94,7 +90,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               height: 272,
               width: 327,
             ),
-            Expanded(child: SizedBox()),
+            Expanded(
+                child: SizedBox(
+              height: 32,
+            )),
             CommonButton(
                 onTap: () {
                   if (currentIndex < 2) {
