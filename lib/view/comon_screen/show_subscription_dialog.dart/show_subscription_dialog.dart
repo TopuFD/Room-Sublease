@@ -21,7 +21,7 @@ class _SubscriptionDialogState extends State<SubscriptionDialog> {
   final List subscription = [
     {
       "image": AppImage.sub1,
-      "title": "Faey Premium",
+      "title": "Faev Premium",
       "titleHighlight": "m",
       "description": "The best way to find the right match"
     },
@@ -38,7 +38,7 @@ class _SubscriptionDialogState extends State<SubscriptionDialog> {
     },
     
     {
-      "image": AppImage.sub2,
+      "image": AppImage.sub4,
       "title": "Unlimited Swipes & Messaging",
       "description": "Contact as many matches as you’d like!"
     },
@@ -78,8 +78,8 @@ class _SubscriptionDialogState extends State<SubscriptionDialog> {
                           child: CommonImage(
                             imageSrc: item["image"],
                             imageType: ImageType.png,
-                            height: 200,
-                            width: 180,
+                            height: 205,
+                            width: 213,
                           ),
                         ),
                         20.height,

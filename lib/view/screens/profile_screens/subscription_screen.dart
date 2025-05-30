@@ -23,40 +23,44 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            children: [
-              33.height,
-              subscriptionPackages(),
-              34.height,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  item(
-                      title: "month",
-                      price: "9.99",
-                      monthCount: "1",
-                      index: 1,
-                      ontap: () {
-                        setState(() {
-                          currentIndex = 1;
-                        });
-                      },
-                      isPopuler: true),
-                ],
-              ),
-              35.height,
-              CommonButton(
-                titleText: "Get Premium",
-              ),
-              43.height,
-              CommonImage(
-                imageSrc: AppImage.subscription,
-                imageType: ImageType.png,
-                height: 207,
-                width: 310,
-                borderRadius: 24,
-              )
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                33.height,
+                subscriptionPackages(),
+                34.height,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    item(
+                        title: "month",
+                        price: "9.99",
+                        monthCount: "1",
+                        index: 1,
+                        ontap: () {
+                          setState(() {
+                            currentIndex = 1;
+                          });
+                        },
+                        isPopuler: true),
+                  ],
+                ),
+                35.height,
+                CommonButton(
+                  titleText: "Get Premium",
+                ),
+                43.height,
+                CommonImage(
+                  imageSrc: AppImage.subscription,
+                  imageType: ImageType.png,
+                  height: 207,
+                  width: 310,
+                  borderRadius: 24,
+                ),
+                20.height,
+
+              ],
+            ),
           ),
         ),
       ),
@@ -90,7 +94,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CommonText(
-                text: "Unlimited Messages",
+                text: "Unlimited Messaging",
                 fontSize: 18,
                 fontWeight: FontWeight.w400,
                 color: Color(0xFF070707),
@@ -106,7 +110,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CommonText(
-                text: "Unlimited Rematch",
+                text: "Unlimited Swiping",
                 fontSize: 18,
                 fontWeight: FontWeight.w400,
                 color: Color(0xFF070707),
@@ -117,6 +121,39 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
               )
             ],
           ),
+          10.height,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CommonText(
+                text: "Unlimited Filters",
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+                color: Color(0xFF070707),
+              ),
+              Icon(
+                Icons.check,
+                color: AppColors.blueDeep,
+              )
+            ],
+          ),
+          10.height,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CommonText(
+                text: "Unlimited Boosting",
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+                color: Color(0xFF070707),
+              ),
+              Icon(
+                Icons.check,
+                color: AppColors.blueDeep,
+              )
+            ],
+          ),
+          10.height,
         ],
       ),
     );

@@ -15,8 +15,9 @@ class AppImage {
   static const user = "asset/image/user.png";
   static const sub1 = "asset/image/sub1.png";
   static const sub2 = "asset/image/sub2.png";
-  static const sub3 = "asset/image/sub3.png";
+  static const sub3 = "asset/image/sub11.png";
   static const subscription = "asset/image/subscription.png";
   static const mim = "asset/image/mim.png";
+  static const sub4 = "asset/image/sub4.png";
 
 }

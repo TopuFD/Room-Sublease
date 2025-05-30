@@ -9,8 +9,8 @@ class SubleaseController extends GetxController{
   RxList<String> selcectApartment = <String>["Yes"].obs;
   
     //=================================================================Amenities
-  List<String> amenitiesPref = ["gym", "laundry", "pool"];
-  RxList<String> selcectAmenities = <String>["gym"].obs;
+  List<String> amenitiesPref = ["Gym", "Laundry", "Pool"];
+  RxList<String> selcectAmenities = <String>["Gym"].obs;
 
       //=================================================================Furnished Apartment
   List<String> internet = ["Yes", "No", "Flexible"];
