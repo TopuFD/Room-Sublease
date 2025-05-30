@@ -43,6 +43,7 @@ import 'package:room_sublease/view/screens/add_screen/post_sublease_screen/prope
 import 'package:room_sublease/view/screens/home_screen/roommat_details_screen.dart';
 import 'package:room_sublease/view/screens/home_screen/subleas_details_screen.dart';
 import 'package:room_sublease/view/screens/message_screens/messaging_screen.dart';
+import 'package:room_sublease/view/screens/message_screens/see_user_profile.dart';
 import 'package:room_sublease/view/screens/notification_screen/notification_screen.dart';
 import 'package:room_sublease/view/screens/profile_screens/edit_profile_screen.dart';
 import 'package:room_sublease/view/screens/profile_screens/privacy_policy_screen.dart';
@@ -112,6 +113,7 @@ class AppRoute {
   static const String giveDetailsScreen = "/giveDetailsScreen";
   //=========================================== post sublease screens
   static const String notificationScreen = "/notificationScreen";
+  static const String userProfileScreen = "/userProfileScreen";
 
   static List<GetPage> pages = [
     GetPage(
@@ -337,6 +339,10 @@ class AppRoute {
     GetPage(
         name: notificationScreen,
         page: () => NotificationScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: userProfileScreen,
+        page: () => SeeUserProfile(),
         transition: Transition.rightToLeftWithFade),
   ];
 }

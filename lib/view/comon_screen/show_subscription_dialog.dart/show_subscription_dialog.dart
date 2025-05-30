@@ -35,7 +35,13 @@ class _SubscriptionDialogState extends State<SubscriptionDialog> {
       "title": "Boost Your Profile",
       "description":
           "No more reposting for “visibility”, get shown to all your matches daily"
-    }
+    },
+    
+    {
+      "image": AppImage.sub2,
+      "title": "Unlimited Swipes & Messaging",
+      "description": "Contact as many matches as you’d like!"
+    },
   ];
 
   @override
@@ -52,6 +58,7 @@ class _SubscriptionDialogState extends State<SubscriptionDialog> {
               enlargeCenterPage: true,
               enableInfiniteScroll: false,
               autoPlay: true,
+              reverse: false,
               onPageChanged: (index, reason) {
                 setState(() {
                   currentIndex = index;
@@ -78,7 +85,9 @@ class _SubscriptionDialogState extends State<SubscriptionDialog> {
                         20.height,
                         CommonText(
                           text: item["title"],
-                          fontSize: 26,
+                          fontSize: 24,
+                          maxLines: 2,
+                          textAlign: TextAlign.start,
                           color: Color(0xFF161312),
                           fontWeight: FontWeight.w600,
                         ),
@@ -108,7 +117,7 @@ class _SubscriptionDialogState extends State<SubscriptionDialog> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ...List.generate(3, (index) {
+                    ...List.generate(4, (index) {
                       return currentIndex == index
                           ? AnimatedContainer(
                               margin: EdgeInsets.symmetric(horizontal: 2),

@@ -80,7 +80,7 @@ class _GiveDetailsFormState extends State<GiveDetailsForm> {
         diposit(),
         20.height,
         CommonText(
-          text: "Nots",
+          text: "Notes",
           fontSize: 16,
           bottom: 10,
           maxLines: 2,
@@ -148,7 +148,7 @@ class _GiveDetailsFormState extends State<GiveDetailsForm> {
                 )),
             10.width,
             Container(
-              width: Get.width * .69,
+              width: Get.width * .65,
               height: 50,
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 3),
               decoration: BoxDecoration(
@@ -207,7 +207,7 @@ class _GiveDetailsFormState extends State<GiveDetailsForm> {
                 )),
             10.width,
             Container(
-              width: Get.width * .69,
+              width: Get.width * .65,
               height: 50,
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 3),
               decoration: BoxDecoration(

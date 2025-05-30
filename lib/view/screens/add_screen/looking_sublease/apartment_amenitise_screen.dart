@@ -41,7 +41,7 @@ class ApartmentAmenitiseScreen extends StatelessWidget {
               CustomCheckbox(
                 items: sublease.amenitiesPref,
                 initiallySelected: sublease.selcectAmenities,
-                isMinimum: true,
+                isMinimum: false,
                 onSelectionChanged: (selected) {
                   sublease.selcectAmenities.value = selected;
                 },

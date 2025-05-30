@@ -230,7 +230,7 @@ class _MonthlyBudgetScreenState extends State<MonthlyBudgetScreen> {
                           initiallySelected: sublease.selcectparking,
                           isMinimum: false,
                           onSelectionChanged: (selected) {
-                            sublease.selcectparking.value = selected;
+                            sublease.selcectLooking.value = selected;
                           },
                         ),
 

@@ -145,6 +145,7 @@ class CompleteProfileController extends GetxController {
     {'title': 'Hiking', 'color': Color(0xFFFDDEC3), "isBorder": false},
     {'title': 'Book Clubs', 'color': Color(0xFFCBDFFF), "isBorder": true},
     {'title': 'Shopping', 'color': Color(0xFFFDDEC3), "isBorder": false},
+    {'title': 'Live Music', 'color': Color(0xFFCBDFFF), "isBorder": true},
     {
       'title': 'Trying New Coffee/Matcha Shops',
       'color': Color(0xFFFCE9B2),
@@ -155,18 +156,17 @@ class CompleteProfileController extends GetxController {
       'color': Color(0xFFE8D0FC),
       "isBorder": true
     },
-    {'title': 'Live Music', 'color': Color(0xFFCBDFFF), "isBorder": true},
     {
       'title': 'Going to Sports Games',
       'color': Color(0xFFFDDEC3),
       "isBorder": true
     },
     {'title': 'Bar Hopping', 'color': Color(0xFFFCD5D2), "isBorder": true},
-    {
-      'title': 'Going To The Movie Theater',
-      'color': Color(0xFFE8D0FC),
-      "isBorder": false
-    },
+    // {
+    //   'title': 'Going To The Movie Theater',
+    //   'color': Color(0xFFE8D0FC),
+    //   "isBorder": false
+    // },
     {
       'title': 'Going To The Beach',
       'color': Color(0xFFFCD5D2),

@@ -61,7 +61,7 @@ class HomeAppbar extends StatelessWidget implements PreferredSizeWidget {
                   },
                   child: CommonImage(
                     imageSrc:
-                        "https://www.shutterstock.com/image-photo/portrait-one-young-happy-cheerful-600nw-1980856400.jpg",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2-x5vE0brboTxYw_enQTr0nuaGSVAIdn0dw&s",
                     imageType: ImageType.network,
                     height: 44,
                     width: 44,

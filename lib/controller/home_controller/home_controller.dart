@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:get/get.dart';
+import 'package:room_sublease/utils/app_image.dart';
 import 'package:room_sublease/view/screens/home_screen/widget/roommat_card.dart';
 
 class HomeController extends GetxController {
@@ -13,24 +14,19 @@ class HomeController extends GetxController {
 
   List<Widget> cardList = [
     RoommatCard(
-      image:
-          "https://img.freepik.com/free-photo/beautiful-girl-stands-park_8353-5084.jpg?semt=ais_hybrid&w=740",
+      image: AppImage.mim,
     ),
     RoommatCard(
-      image:
-          "https://st.depositphotos.com/1015583/2130/i/450/depositphotos_21307971-stock-photo-shining-girl.jpg",
+      image:AppImage.mim,
     ),
     RoommatCard(
-      image:
-          "https://img.freepik.com/premium-photo/beautiful-young-girl-with-professional-makeup-hairstyle-sitting-restaurant_2221-592.jpg",
+      image:AppImage.mim,
     ),
     RoommatCard(
-      image:
-          "https://img.freepik.com/free-photo/smiley-businesswoman-posing-city-with-arms-crossed_23-2148767033.jpg",
+      image:AppImage.mim,
     ),
     RoommatCard(
-      image:
-          "https://img.freepik.com/free-photo/young-woman-new-york-city-daytime_23-2149488470.jpg?semt=ais_hybrid&w=740",
+      image:AppImage.mim,
     ),
   ];
 

@@ -80,7 +80,7 @@ class PostAmenitiesScreenState extends State<PostAmenitiesScreen> {
                   ),
                   // ================================================Apartment Amenities
                   CustomItem(
-                    title: "Apartment Amenities",
+                    title: "The Apartment has Ameneties ",
                     listValue: sublease.selcectAmenities,
                     isDeal: false.obs,
                     ontap: () {

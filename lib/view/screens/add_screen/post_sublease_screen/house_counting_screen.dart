@@ -56,7 +56,7 @@ class HouseCountingScreenState extends State<HouseCountingScreen> {
                   color: Color(0xFF161312),
                 ),
                 CommonText(
-                  text: "Tell us about your place",
+                  text: "Tell us about your space",
                   fontSize: 16,
                   maxLines: 2,
                   textAlign: TextAlign.start,

@@ -18,7 +18,7 @@ class MessageUserCard extends StatelessWidget {
             children: [
               CommonImage(
                 imageSrc:
-                    "https://img.freepik.com/premium-photo/beautiful-young-girl-with-professional-makeup-hairstyle-sitting-restaurant_2221-592.jpg",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2-x5vE0brboTxYw_enQTr0nuaGSVAIdn0dw&s",
                 imageType: ImageType.network,
                 height: 52,
                 width: 52,

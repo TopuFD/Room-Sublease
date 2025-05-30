@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:get/instance_manager.dart';
+import 'package:room_sublease/core/app_route.dart';
 import 'package:room_sublease/extentions/extentions.dart';
 import 'package:room_sublease/utils/app_color.dart';
 import 'package:room_sublease/utils/app_icons.dart';
-import 'package:room_sublease/view/components/common_appbar/common_appbar.dart';
+import 'package:room_sublease/view/components/common_image/common_image.dart';
 import 'package:room_sublease/view/components/common_text/common_text.dart';
 
 class MessagingScreen extends StatefulWidget {
@@ -58,8 +61,44 @@ class _MessagingScreenState extends State<MessagingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonAppbar(
-        title: "Sabrina Wah",
+      appBar: AppBar(
+        backgroundColor: Color(0xFFFCF3EC),
+        elevation: 0,
+        title: InkWell(
+          onTap: () {
+            Get.toNamed(AppRoute.userProfileScreen);
+          },
+          child: Row(
+            children: [
+              CommonImage(
+                imageSrc:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2-x5vE0brboTxYw_enQTr0nuaGSVAIdn0dw&s",
+                imageType: ImageType.network,
+                borderRadius: 100,
+                height: 35,
+                width: 35,
+              ),
+              10.width,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CommonText(
+                    text: "Sabrina Wah",
+                    fontSize: 16,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  CommonText(
+                    text: "Online",
+                    fontSize: 13,
+                    color: Colors.green,
+                    fontWeight: FontWeight.w600,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
       ),
       body: Column(
         children: [

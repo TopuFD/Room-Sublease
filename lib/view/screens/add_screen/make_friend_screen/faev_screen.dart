@@ -52,7 +52,7 @@ class FaevScreenState extends State<FaevScreen> {
                     color: Color(0xFF161312),
                   ),
                   CommonText(
-                    text: "What brings you to Faev?",
+                    text: "Tell us about you!",
                     fontSize: 16,
                     maxLines: 2,
                     textAlign: TextAlign.start,
@@ -100,7 +100,7 @@ class FaevScreenState extends State<FaevScreen> {
                             }
                           });
                         },
-                        title: "New to the city looking to expand my circle",
+                        title: "New to the city and looking to expand my circle",
                         index: 2,
                         isSelected: selectedIndices.contains(2),
                       ),

@@ -17,5 +17,6 @@ class AppImage {
   static const sub2 = "asset/image/sub2.png";
   static const sub3 = "asset/image/sub3.png";
   static const subscription = "asset/image/subscription.png";
+  static const mim = "asset/image/mim.png";
 
 }

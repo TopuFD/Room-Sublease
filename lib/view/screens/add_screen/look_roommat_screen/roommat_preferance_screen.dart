@@ -210,7 +210,7 @@ class RoommatPreferanceScreen extends StatelessWidget {
                     CustomUpgradeCard(
                       title: "Upgrade",
                       value:
-                          "To set your preference to non-negotiable, upgrade now",
+                          "To set your preferences to non-negotiable upgrade now",
                       isUpgrade: true,
                       ontap: () {},
                     ),

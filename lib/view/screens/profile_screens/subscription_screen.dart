@@ -33,7 +33,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                 children: [
                   item(
                       title: "month",
-                      price: "19.99",
+                      price: "9.99",
                       monthCount: "1",
                       index: 1,
                       ontap: () {

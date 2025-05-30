@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       statusBarColor:  Color(0xFF3083F9),
     ));
     return ScreenUtilInit(
-      designSize: const Size(393, 852),
+      designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
       child: GetMaterialApp(

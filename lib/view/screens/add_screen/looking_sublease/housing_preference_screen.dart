@@ -81,7 +81,7 @@ class HousingPreferenceScreenState extends State<HousingPreferenceScreen> {
                 ),
                 // ================================================Apartment Amenities
                 CustomItem(
-                  title: "Apartment Amenities",
+                  title: "The Apartment has Ameneties",
                   listValue: sublease.selcectAmenities,
                   isDeal: false.obs,
                   ontap: () {

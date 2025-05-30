@@ -188,12 +188,12 @@ class EditProfileScreen extends StatelessWidget {
               24.height,
               CustomTextField(
                 titleText: "What’s your job title?",
-                hindText: "Choose school",
+                hindText: "Enter your job title",
               ),
               24.height,
               CustomTextField(
                 titleText: "Where did you go to school?",
-                hindText: "Enter your job title",
+                hindText: "Choose school",
                 suffixIcon: Icon(
                   Icons.keyboard_arrow_down,
                   size: 24,
@@ -363,6 +363,7 @@ class EditProfileScreen extends StatelessWidget {
     children: profile.funyList.map((colorMap) {
       final colorName = colorMap['title'] as String;
       final originalColor = colorMap['color'] as Color;
+      // ignore: unused_local_variable
       final isBorder = colorMap['isBorder'] as bool;
 
       return Obx(() {

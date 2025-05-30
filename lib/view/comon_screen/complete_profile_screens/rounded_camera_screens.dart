@@ -1,7 +1,6 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:room_sublease/controller/auth_controller/complete_profile_controller.dart';
 import 'package:room_sublease/core/app_route.dart';
